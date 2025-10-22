@@ -1,0 +1,8 @@
+# vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
+# Start time: 02:06:55 on Oct 23,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: morse_top.sv(22): Module 'morse_design' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 02:06:55 on Oct 23,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
