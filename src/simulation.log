@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 15:38:42 on Oct 28,2025
+# Start time: 15:51:30 on Oct 28,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
@@ -54,12 +54,12 @@
 # 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test reset_test...
+# UVM_INFO @ 0: reporter [RNTST] Running test morse_character_test...
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # ------------------------------------------------------------------------
 # Name                        Type                             Size  Value
 # ------------------------------------------------------------------------
-# uvm_test_top                reset_test                       -     @471 
+# uvm_test_top                morse_character_test             -     @471 
 #   morse_environment         morse_environment                -     @478 
 #     morse_active_agt        morse_active_agent               -     @493 
 #       morse_active_driv     morse_driver                     -     @636 
@@ -95,31 +95,141 @@
 #         put_export          uvm_put_imp                      -     @568 
 # ------------------------------------------------------------------------
 # 
-# RESET APPLIED
+# ** Error: ASSERTION FAILED: Multiple inputs high at 5
+#    Time: 5 ns Started: 5 ns  Scope: top.vif.A2 File: morse_interface.sv Line: 62 Expr: dot_inp+dash_inp+char_space_inp+word_space_inp<=1
+# ** Error: ASSERTION FAILED: s_out is unknown at 5
+#    Time: 5 ns Started: 5 ns  Scope: top.vif.A1 File: morse_interface.sv Line: 52 Expr: ~$isunknown(sout)
+# ** Error: ASSERTION FAILED: Multiple inputs high at 15
+#    Time: 15 ns Started: 15 ns  Scope: top.vif.A2 File: morse_interface.sv Line: 62 Expr: dot_inp+dash_inp+char_space_inp+word_space_inp<=1
+# ** Error: ASSERTION FAILED: s_out is unknown at 15
+#    Time: 15 ns Started: 15 ns  Scope: top.vif.A1 File: morse_interface.sv Line: 52 Expr: ~$isunknown(sout)
+# ** Error: ASSERTION FAILED: Multiple inputs high at 25
+#    Time: 25 ns Started: 25 ns  Scope: top.vif.A2 File: morse_interface.sv Line: 62 Expr: dot_inp+dash_inp+char_space_inp+word_space_inp<=1
+# ** Error: ASSERTION FAILED: s_out is unknown at 25
+#    Time: 25 ns Started: 25 ns  Scope: top.vif.A1 File: morse_interface.sv Line: 52 Expr: ~$isunknown(sout)
 # UVM_INFO morse_scoreboard.sv(75) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] actual = 0 | expected = ff , MISMATCH
 # UVM_INFO morse_scoreboard.sv(77) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] buffer size = 0
 # UVM_INFO morse_scoreboard.sv(90) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] Reset detected | buffer cleared and sout=0xFF verified
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 45: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO morse_subscriber.sv(106) @ 45: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 42.86%,
-# UVM_INFO morse_subscriber.sv(107) @ 45: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 0.00%
-# Passes = 0 | Fails = 1
+# --------------------------------------------------------------------------------------------------------------------------------
+# Name                           Type                 Size  Value                                                                 
+# --------------------------------------------------------------------------------------------------------------------------------
+# req                            morse_sequence_item  -     @818                                                                  
+#   rst                          integral             1     'h0                                                                   
+#   dot_inp                      integral             1     'h0                                                                   
+#   dash_inp                     integral             1     'h1                                                                   
+#   char_space_inp               integral             1     'h0                                                                   
+#   word_space_inp               integral             1     'h0                                                                   
+#   sout                         integral             8     'h0xx                                                                 
+#   begin_time                   time                 64    25                                                                    
+#   end_time                     time                 64    45                                                                    
+#   depth                        int                  32    'd2                                                                   
+#   parent sequence (name)       string               4     seq1                                                                  
+#   parent sequence (full name)  string               70    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr.seq1
+#   sequencer                    string               65    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr     
+# --------------------------------------------------------------------------------------------------------------------------------
+# UVM_INFO morse_scoreboard.sv(69) @ 55: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(71) @ 55: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(98) @ 55: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# --------------------------------------------------------------------------------------------------------------------------------
+# Name                           Type                 Size  Value                                                                 
+# --------------------------------------------------------------------------------------------------------------------------------
+# req                            morse_sequence_item  -     @847                                                                  
+#   rst                          integral             1     'h1                                                                   
+#   dot_inp                      integral             1     'h1                                                                   
+#   dash_inp                     integral             1     'h0                                                                   
+#   char_space_inp               integral             1     'h0                                                                   
+#   word_space_inp               integral             1     'h0                                                                   
+#   sout                         integral             8     'h0xx                                                                 
+#   begin_time                   time                 64    45                                                                    
+#   end_time                     time                 64    65                                                                    
+#   depth                        int                  32    'd2                                                                   
+#   parent sequence (name)       string               4     seq1                                                                  
+#   parent sequence (full name)  string               70    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr.seq1
+#   sequencer                    string               65    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr     
+# --------------------------------------------------------------------------------------------------------------------------------
+# UVM_INFO morse_scoreboard.sv(69) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(71) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(105) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 1 2
+# --------------------------------------------------------------------------------------------------------------------------------
+# Name                           Type                 Size  Value                                                                 
+# --------------------------------------------------------------------------------------------------------------------------------
+# req                            morse_sequence_item  -     @851                                                                  
+#   rst                          integral             1     'h1                                                                   
+#   dot_inp                      integral             1     'h0                                                                   
+#   dash_inp                     integral             1     'h1                                                                   
+#   char_space_inp               integral             1     'h0                                                                   
+#   word_space_inp               integral             1     'h0                                                                   
+#   sout                         integral             8     'h0xx                                                                 
+#   begin_time                   time                 64    65                                                                    
+#   end_time                     time                 64    85                                                                    
+#   depth                        int                  32    'd2                                                                   
+#   parent sequence (name)       string               4     seq1                                                                  
+#   parent sequence (full name)  string               70    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr.seq1
+#   sequencer                    string               65    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr     
+# --------------------------------------------------------------------------------------------------------------------------------
+# UVM_INFO morse_scoreboard.sv(69) @ 95: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(71) @ 95: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(98) @ 95: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 2 1
+# --------------------------------------------------------------------------------------------------------------------------------
+# Name                           Type                 Size  Value                                                                 
+# --------------------------------------------------------------------------------------------------------------------------------
+# req                            morse_sequence_item  -     @855                                                                  
+#   rst                          integral             1     'h1                                                                   
+#   dot_inp                      integral             1     'h1                                                                   
+#   dash_inp                     integral             1     'h0                                                                   
+#   char_space_inp               integral             1     'h0                                                                   
+#   word_space_inp               integral             1     'h0                                                                   
+#   sout                         integral             8     'h0xx                                                                 
+#   begin_time                   time                 64    85                                                                    
+#   end_time                     time                 64    105                                                                   
+#   depth                        int                  32    'd2                                                                   
+#   parent sequence (name)       string               4     seq1                                                                  
+#   parent sequence (full name)  string               70    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr.seq1
+#   sequencer                    string               65    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr     
+# --------------------------------------------------------------------------------------------------------------------------------
+# UVM_INFO morse_scoreboard.sv(75) @ 145: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] actual = ff | expected = 72 , MISMATCH
+# UVM_INFO morse_scoreboard.sv(77) @ 145: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# --------------------------------------------------------------------------------------------------------------------------------
+# Name                           Type                 Size  Value                                                                 
+# --------------------------------------------------------------------------------------------------------------------------------
+# req                            morse_sequence_item  -     @859                                                                  
+#   rst                          integral             1     'h1                                                                   
+#   dot_inp                      integral             1     'h0                                                                   
+#   dash_inp                     integral             1     'h0                                                                   
+#   char_space_inp               integral             1     'h1                                                                   
+#   word_space_inp               integral             1     'h0                                                                   
+#   sout                         integral             8     'h0xx                                                                 
+#   begin_time                   time                 64    105                                                                   
+#   end_time                     time                 64    155                                                                   
+#   depth                        int                  32    'd2                                                                   
+#   parent sequence (name)       string               4     seq1                                                                  
+#   parent sequence (full name)  string               70    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr.seq1
+#   sequencer                    string               65    uvm_test_top.morse_environment.morse_active_agt.morse_active_seqr     
+# --------------------------------------------------------------------------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 155: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO morse_subscriber.sv(106) @ 155: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 82.14%,
+# UVM_INFO morse_subscriber.sv(107) @ 155: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 0.00%
+# Passes = 3 | Fails = 2
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   10
+# UVM_INFO :   21
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [Questa UVM]     2
 # [RNTST]     1
+# [SCOREBOARD-CHAR]     2
+# [SCOREBOARD-DASH]     3
+# [SCOREBOARD-DOT]     6
 # [SCOREBOARD-RESET]     3
 # [TEST_DONE]     1
 # [UVMTOP]     1
 # [morse_coverage]     2
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 45 ns  Iteration: 62  Instance: /top
+#    Time: 155 ns  Iteration: 64  Instance: /top
 # Saving coverage database on exit...
-# End time: 15:38:46 on Oct 28,2025, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 0
+# End time: 15:51:34 on Oct 28,2025, Elapsed time: 0:00:04
+# Errors: 6, Warnings: 0
