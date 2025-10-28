@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 15:51:29 on Oct 28,2025
+Start time: 15:55:01 on Oct 28,2025
 vlog -sv "+acc" "+cover" "+fcover" -l top.log top.sv 
 -- Compiling module morse_top
 -- Compiling module trans_fsm
@@ -9,12 +9,7 @@ vlog -sv "+acc" "+cover" "+fcover" -l top.log top.sv
 -- Compiling package morse_pkg
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 -- Compiling interface morse_assertions
--- Compiling package top_sv_unit
--- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
--- Importing package morse_pkg
--- Compiling module top
-
-Top level modules:
-	top
-End time: 15:51:29 on Oct 28,2025, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
+** Error: (vlog-13069) ** while parsing file included at top.sv(6)
+** at morse_assertions.sv(33): near "endproperty": syntax error, unexpected "SystemVerilog keyword 'endproperty'".
+End time: 15:55:01 on Oct 28,2025, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
