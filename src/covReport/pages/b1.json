@@ -335,13 +335,13 @@ b871:[{dummy:0},
 ,{cr:'m',t:'A',z:'		if(get_is_active() == UVM_PASSIVE) begin	',f:'morse_passive_agent.sv',l:'22',h:'0',c:'r'}
 ]}],
 b885:[{dummy:0},
-{anchor:'cvg886',items:[{z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'84',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
+{anchor:'cvg886',items:[{z:'	function void write_passive_mon_cg(morse_sequence_item passive_mon_seq);...',f:'morse_subscriber.sv',l:'84',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'	function void write_passive_mon_cg(morse_sequence_item passive_mon_seq);...',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'	function void write_passive_mon_cg(morse_sequence_item passive_mon_seq);...',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
 ]},
-{anchor:'cvg887',items:[{z:'		output_coverage.sample();',f:'morse_subscriber.sv',l:'85',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'		output_coverage.sample();',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'		output_coverage.sample();',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
+{anchor:'cvg887',items:[{z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'85',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
 ]}],
 b964:[{dummy:0},
 {anchor:'cvg965',items:[{z:'	`uvm_object_utils_begin(morse_sequence_item)',f:'morse_sequence_item.sv',l:'21',c:'R',p:'0.00'}
@@ -679,13 +679,13 @@ b1093:[{dummy:0},
 ,{cr:'m',t:'A',z:'		if(get_is_active() == UVM_PASSIVE) begin	',f:'morse_passive_agent.sv',l:'22',h:'0',c:'r'}
 ]}],
 b1107:[{dummy:0},
-{anchor:'cvg1108',items:[{z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'84',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
+{anchor:'cvg1108',items:[{z:'	function void write_passive_mon_cg(morse_sequence_item passive_mon_seq);...',f:'morse_subscriber.sv',l:'84',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'	function void write_passive_mon_cg(morse_sequence_item passive_mon_seq);...',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'	function void write_passive_mon_cg(morse_sequence_item passive_mon_seq);...',f:'morse_subscriber.sv',l:'84',h:'0',c:'r'}
 ]},
-{anchor:'cvg1109',items:[{z:'		output_coverage.sample();',f:'morse_subscriber.sv',l:'85',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'		output_coverage.sample();',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'		output_coverage.sample();',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
+{anchor:'cvg1109',items:[{z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'85',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'		passive_mon = passive_mon_seq;',f:'morse_subscriber.sv',l:'85',h:'0',c:'r'}
 ]}],
 dummyEnd:0
 };
