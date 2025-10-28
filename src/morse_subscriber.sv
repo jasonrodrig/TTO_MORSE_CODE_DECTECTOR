@@ -21,7 +21,8 @@ class morse_coverage extends uvm_component;
 	//------------------------------------------------------//
 
     covergroup input_coverage;
-    RESET_CP : coverpoint active_mon.reset {
+   
+    RESET_CP : coverpoint active_mon.rst {
         bins reset_bin[] = {0, 1};
     }
     DOT_INP_CP :coverpoint active_mon.dot_inp {
