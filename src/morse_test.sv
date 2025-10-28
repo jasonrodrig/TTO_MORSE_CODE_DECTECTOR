@@ -5,7 +5,7 @@ class morse_test extends uvm_test;
 
 	// handle declaration for morse_environment and morse_test
 	morse_environment morse_env;
-	morse_sequence seq;
+	morse_base_sequence seq;
 
 	//------------------------------------------------------//
 	//    Creating a new constructor for morse_test           //  
@@ -23,7 +23,7 @@ class morse_test extends uvm_test;
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
 		morse_env = morse_environment::type_id::create("morse_environment", this);
-		seq = morse_sequence::type_id::create("morse_seq");
+		seq = morse_base_sequence::type_id::create("morse_seq");
 	endfunction : build_phase
 
 	//------------------------------------------------------//
