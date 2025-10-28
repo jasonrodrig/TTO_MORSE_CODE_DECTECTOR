@@ -259,7 +259,7 @@ class morse_alphanumeric_sequence extends morse_base_sequence;
 endclass
 
 //------------------------------------------------------//
-//              morse alphanummeric sequence            //  
+//                 word paring sequence                 //  
 //------------------------------------------------------//
 
 class word_parsing_sequence extends morse_base_sequence;
@@ -333,4 +333,86 @@ class word_parsing_sequence extends morse_base_sequence;
 	endtask
 endclass
 
+//------------------------------------------------------//
+//                 word paring sequence                 //  
+//------------------------------------------------------//
+
+class word_sequence extends morse_base_sequence;
+	`uvm_object_utils(word_sequence)
+
+	rand int index;
+	string text[5] = { "S O S" , "HELLO" , "9MORSE6" , "CODE123" , "555WORLD"  };
+
+	constraint range{index inside {[0:4]};}
+
+	function new(string name="word_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+		string morse_table[string];
+		string alphanumeric;
+		string selected_text;
+		// Morse lookup table for letters
+		morse_table["a"] = ".-";
+		morse_table["b"] = "-...";
+		morse_table["c"] = "-.-.";
+		morse_table["d"] = "-..";
+		morse_table["e"] = ".";
+		morse_table["f"] = "..-.";
+		morse_table["g"] = "--.";
+		morse_table["h"] = "....";
+		morse_table["i"] = "..";
+		morse_table["j"] = ".---";
+		morse_table["k"] = "-.-";
+		morse_table["l"] = ".-..";
+		morse_table["m"] = "--";
+		morse_table["n"] = "-.";
+		morse_table["o"] = "---";
+		morse_table["p"] = ".--.";
+		morse_table["q"] = "--.-";
+		morse_table["r"] = ".-.";
+		morse_table["s"] = "...";
+		morse_table["t"] = "-";
+		morse_table["u"] = "..-";
+		morse_table["v"] = "...-";
+		morse_table["w"] = ".--";
+		morse_table["x"] = "-..-";
+		morse_table["y"] = "-.--";
+		morse_table["z"] = "--..";
+		morse_table["1"] = ".----";
+		morse_table["2"] = "..---";
+		morse_table["3"] = "...--";
+		morse_table["4"] = "....-";
+		morse_table["5"] = ".....";
+		morse_table["6"] = "-....";
+		morse_table["7"] = "--...";
+		morse_table["8"] = "---..";
+		morse_table["9"] = "----.";
+		morse_table["0"] = "-----";
+
+		if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize index")
+
+		selected_text = text[index];
+		//$display(" Randomly selected text = %s", selected_text);
+
+		foreach(selected_text[i]) begin
+			alphanumeric = selected_text.substr(i,i);
+
+			if (alphanumeric == " ") begin
+				send_word_space(); // space between word
+			end
+			else if (morse_table.exists(alphanumeric)) begin
+				string code = morse_table[alphanumeric];
+				foreach (code[j]) begin
+					if (code[j] == ".")
+						send_dot();
+					else if (code[j] == "-")
+						send_dash();
+				end
+				send_char_space(); // space between characters
+			end
+		end
+	endtask
+endclass
 
