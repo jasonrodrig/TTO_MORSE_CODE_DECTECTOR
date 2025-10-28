@@ -2,13 +2,8 @@ var g_data = {
 f9:{
 scopes:[{link:'z.htm?f=0&s=9',val:'work.trans_fsm'}]
 ,FSMs:[{dummy:0}
-<<<<<<< HEAD
 ,{anchor:'cvg79',items:[{c:'R',p:'31.73',z:'state'}
 ,{cr:'c',s:'1',z:'s_idle',h:'5',c:'g'}
-=======
-,{anchor:'cvg85',items:[{c:'R',p:'39.74',z:'state'}
-,{cr:'c',s:'1',z:'s_idle',h:'6',c:'g'}
->>>>>>> 22dc1450b5ddeba53058f7210c0b03752901adff
 ,{cr:'m',z:'s_idle -> s_word_1',h:'0',c:'r'}
 ,{cr:'c',z:'s_idle -> s_char_1',h:'1',c:'g'}
 ,{cr:'c',z:'s_idle -> s_dash',h:'2',c:'g'}
@@ -49,16 +44,11 @@ scopes:[{link:'z.htm?f=0&s=9',val:'work.trans_fsm'}]
 
 ],
 },
-f81:{
-scopes:[{s:'12',b:'1',val:'top'},{s:'52',b:'0',val:'DUT'},{link:'z.htm?f=0&s=81',val:'trans'}]
+f75:{
+scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'0',val:'DUT'},{link:'z.htm?f=0&s=75',val:'trans'}]
 ,FSMs:[{dummy:0}
-<<<<<<< HEAD
 ,{anchor:'cvg79',items:[{c:'R',p:'31.73',z:'state'}
 ,{cr:'c',s:'1',z:'s_idle',h:'5',c:'g'}
-=======
-,{anchor:'cvg85',items:[{c:'R',p:'39.74',z:'state'}
-,{cr:'c',s:'1',z:'s_idle',h:'6',c:'g'}
->>>>>>> 22dc1450b5ddeba53058f7210c0b03752901adff
 ,{cr:'m',z:'s_idle -> s_word_1',h:'0',c:'r'}
 ,{cr:'c',z:'s_idle -> s_char_1',h:'1',c:'g'}
 ,{cr:'c',z:'s_idle -> s_dash',h:'2',c:'g'}
@@ -102,13 +92,8 @@ scopes:[{s:'12',b:'1',val:'top'},{s:'52',b:'0',val:'DUT'},{link:'z.htm?f=0&s=81'
 f10:{
 scopes:[{link:'z.htm?f=0&s=10',val:'work.rec_fsm'}]
 ,FSMs:[{dummy:0}
-<<<<<<< HEAD
 ,{anchor:'cvg147',items:[{c:'R',p:'7.56',z:'state'}
 ,{cr:'c',s:'1',z:'reset_state',h:'3',c:'g'}
-=======
-,{anchor:'cvg153',items:[{c:'R',p:'7.56',z:'state'}
-,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
->>>>>>> 22dc1450b5ddeba53058f7210c0b03752901adff
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
 ,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
 ,{cr:'m',s:'1',z:'t',h:'0',c:'r'}
@@ -230,16 +215,11 @@ scopes:[{link:'z.htm?f=0&s=10',val:'work.rec_fsm'}]
 
 ],
 },
-f108:{
-scopes:[{s:'12',b:'1',val:'top'},{s:'52',b:'1',val:'DUT'},{link:'z.htm?f=0&s=108',val:'rec'}]
+f102:{
+scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'1',val:'DUT'},{link:'z.htm?f=0&s=102',val:'rec'}]
 ,FSMs:[{dummy:0}
-<<<<<<< HEAD
 ,{anchor:'cvg147',items:[{c:'R',p:'7.56',z:'state'}
 ,{cr:'c',s:'1',z:'reset_state',h:'3',c:'g'}
-=======
-,{anchor:'cvg153',items:[{c:'R',p:'7.56',z:'state'}
-,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
->>>>>>> 22dc1450b5ddeba53058f7210c0b03752901adff
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
 ,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
 ,{cr:'m',s:'1',z:'t',h:'0',c:'r'}
