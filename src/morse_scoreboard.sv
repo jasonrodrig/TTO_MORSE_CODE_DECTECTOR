@@ -10,8 +10,8 @@ class morse_scoreboard extends uvm_scoreboard;
 	`uvm_component_utils(morse_scoreboard)
 
 	// analysis fifo declaration for both active_monitor and passive_monitor	
-    uvm_analysis_fifo #(morse_sequence_item) active_scb_fifo;
-    uvm_analysis_fifo #(morse_sequence_item) passive_scb_fifo;
+    uvm_tlm_analysis_fifo#(morse_sequence_item) active_scb_fifo;
+    uvm_tlm_analysis_fifo#(morse_sequence_item) passive_scb_fifo;
 
 	// Creating PASS AND FAIL decleration
 	int PASS, FAIL;
