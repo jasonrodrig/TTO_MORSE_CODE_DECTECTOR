@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 12:53:13 on Oct 28,2025
+Start time: 14:19:31 on Oct 28,2025
 vlog -sv "+acc" "+cover" "+fcover" -l morse_top.log morse_top.sv 
 -- Compiling interface morse_interface
 ** Note: (vlog-2286) morse_packages.sv(1): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
@@ -45,5 +45,5 @@ vlog -sv "+acc" "+cover" "+fcover" -l morse_top.log morse_top.sv
 ** at morse_scoreboard.sv(261): (vlog-7027) The name ('sformatf') was not found in the current scope.  Please verify the spelling of the name 'sformatf'.
 -- Compiling interface morse_assertions
 ** Error: morse_top.sv(9): (vlog-13006) Could not find the package (morse_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-End time: 12:53:13 on Oct 28,2025, Elapsed time: 0:00:00
+End time: 14:19:32 on Oct 28,2025, Elapsed time: 0:00:01
 Errors: 38, Warnings: 0
