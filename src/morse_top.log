@@ -1,0 +1,49 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 14:24:42 on Oct 28,2025
+vlog -sv "+acc" "+cover" "+fcover" -l morse_top.log morse_top.sv 
+-- Compiling interface morse_interface
+** Note: (vlog-2286) morse_packages.sv(1): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package morse_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(164): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(166): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(170): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(172): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(174): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(176): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(180): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(182): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(184): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(186): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(188): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(190): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(192): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(194): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(198): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(200): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(202): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(204): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(206): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(208): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(210): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(212): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(214): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(216): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(218): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(220): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(226): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(228): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(230): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(232): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(234): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(236): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(238): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(240): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(242): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): (vlog-2998) morse_scoreboard.sv(244): Case item comparison:  Cannot mix packed and unpacked types in this operation.
+** Error (suppressible): ** while parsing file included at morse_top.sv(5)
+** at morse_scoreboard.sv(261): (vlog-7027) The name ('sformatf') was not found in the current scope.  Please verify the spelling of the name 'sformatf'.
+-- Compiling interface morse_assertions
+** Error: morse_top.sv(9): (vlog-13006) Could not find the package (morse_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+End time: 14:24:43 on Oct 28,2025, Elapsed time: 0:00:01
+Errors: 38, Warnings: 0

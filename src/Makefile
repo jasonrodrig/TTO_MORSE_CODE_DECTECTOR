@@ -35,5 +35,7 @@ simulate:
  
 clean:
 	rm -rf transcript work/
+	rm ./covReport/covsummary.html
+	rm morse_top.log
 	clear
 	clear
