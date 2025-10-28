@@ -1,4 +1,4 @@
-`include "morse_defines.sv"
+
 class morse_scoreboard extends uvm_scoreboard;
 
     // handle decleration for morse_sequnce item sorting input and output transaction signals   
@@ -17,7 +17,7 @@ class morse_scoreboard extends uvm_scoreboard;
   
    //buffer to store the pattern
   bit [2:0]buffer[$];
-
+  //int buffer[$];
    //to track size
    bit [2:0]size;
 
@@ -87,7 +87,7 @@ class morse_scoreboard extends uvm_scoreboard;
      // RESET condition
     if (expected.rst == 0) begin
       check_and_report("SCOREBOARD-RESET", 8'hFF, actual.sout, 1); 
-      `uvm_info("SCOREBOARD-RESET", "Reset detected — buffer cleared and sout=0xFF verified", UVM_LOW);
+      `uvm_info("SCOREBOARD-RESET", "Reset detected | buffer cleared and sout=0xFF verified", UVM_LOW);
       return;
     end
     
@@ -205,7 +205,7 @@ class morse_scoreboard extends uvm_scoreboard;
     // WORD_SPACE condition
     else if (expected.word_space_inp==1 && expected.dot_inp==0 && expected.dash_inp==0 && expected.char_space_inp==0) begin
       check_and_report("SCOREBOARD-WORD", 8'h20, actual.sout, 0); // ASCII space (' ')
-      `uvm_info("SCOREBOARD-WORD", "Word boundary detected — buffer cleared", UVM_LOW);
+      `uvm_info("SCOREBOARD-WORD", "Word boundary detected | buffer cleared", UVM_LOW);
     end
     else begin
       `uvm_info("SCOREBOARD",$sformatf("Multiple inputs are high at same cycle"),UVM_LOW);

@@ -1,8 +1,125 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 14:32:34 on Oct 28,2025
+# Start time: 15:38:42 on Oct 28,2025
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: morse_top.sv(22): Module 'morse_design' is not defined.
-# Optimization failed
-# Error loading design
-# End time: 14:32:35 on Oct 28,2025, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
+# ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.morse_interface(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.morse_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.morse_interface(fast)
+# Loading work.morse_assertions(fast)
+# Loading work.morse_top(fast)
+# Loading work.trans_fsm(fast)
+# Loading work.rec_fsm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test reset_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------------
+# Name                        Type                             Size  Value
+# ------------------------------------------------------------------------
+# uvm_test_top                reset_test                       -     @471 
+#   morse_environment         morse_environment                -     @478 
+#     morse_active_agt        morse_active_agent               -     @493 
+#       morse_active_driv     morse_driver                     -     @636 
+#         rsp_port            uvm_analysis_port                -     @651 
+#         seq_item_port       uvm_seq_item_pull_port           -     @643 
+#       morse_active_mon      morse_active_monitor             -     @768 
+#         active_mon_port     uvm_analysis_port                -     @779 
+#       morse_active_seqr     morse_sequencer                  -     @659 
+#         rsp_export          uvm_analysis_export              -     @666 
+#         seq_item_export     uvm_seq_item_pull_imp            -     @760 
+#         arbitration_queue   array                            0     -    
+#         lock_queue          array                            0     -    
+#         num_last_reqs       integral                         32    'd1  
+#         num_last_rsps       integral                         32    'd1  
+#     morse_coverage          morse_coverage                   -     @608 
+#       cov_active_mon_port   uvm_analysis_imp_active_mon_cg   -     @615 
+#       cov_passive_mon_port  uvm_analysis_imp_passive_mon_cg  -     @623 
+#     morse_passive_agt       morse_passive_agent              -     @500 
+#       morse_passive_mon     morse_passive_monitor            -     @795 
+#         passive_mon_port    uvm_analysis_port                -     @802 
+#     morse_scoreboard        morse_scoreboard                 -     @507 
+#       active_scb_fifo       uvm_tlm_analysis_fifo #(T)       -     @514 
+#         analysis_export     uvm_analysis_imp                 -     @553 
+#         get_ap              uvm_analysis_port                -     @545 
+#         get_peek_export     uvm_get_peek_imp                 -     @529 
+#         put_ap              uvm_analysis_port                -     @537 
+#         put_export          uvm_put_imp                      -     @521 
+#       passive_scb_fifo      uvm_tlm_analysis_fifo #(T)       -     @561 
+#         analysis_export     uvm_analysis_imp                 -     @600 
+#         get_ap              uvm_analysis_port                -     @592 
+#         get_peek_export     uvm_get_peek_imp                 -     @576 
+#         put_ap              uvm_analysis_port                -     @584 
+#         put_export          uvm_put_imp                      -     @568 
+# ------------------------------------------------------------------------
+# 
+# RESET APPLIED
+# UVM_INFO morse_scoreboard.sv(75) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] actual = 0 | expected = ff , MISMATCH
+# UVM_INFO morse_scoreboard.sv(77) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(90) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] Reset detected | buffer cleared and sout=0xFF verified
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 45: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO morse_subscriber.sv(106) @ 45: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 42.86%,
+# UVM_INFO morse_subscriber.sv(107) @ 45: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 0.00%
+# Passes = 0 | Fails = 1
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   10
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD-RESET]     3
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [morse_coverage]     2
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 45 ns  Iteration: 62  Instance: /top
+# Saving coverage database on exit...
+# End time: 15:38:46 on Oct 28,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
