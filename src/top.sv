@@ -19,14 +19,14 @@ module top;
 	morse_interface vif(clk);
 
 	// design instantiation
-	morse_design DUT(
-		.CLK(vif.clk),
-		.RST(vif.rst),
-		.DOT_INP(vif.dot_inp),
-		.DASH_INP(vif.dash_inp),
-		.CHAR_SPACE_INP(vif.char_space_inp),
-		.WORD_SPACE_INP(vif.word_space_inp),
-		.SOUT(vif.sout)
+	morse_top DUT(
+		.clk(vif.clk),
+		.rst(vif.rst),
+		.dot_inp(vif.dot_inp),
+		.dash_inp(vif.dash_inp),
+		.char_space_inp(vif.char_space_inp),
+		.word_space_inp(vif.word_space_inp),
+		.sout(vif.sout)
 	);
 	
 	// instantiating assertion signals
