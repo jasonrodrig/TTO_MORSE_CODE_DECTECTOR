@@ -1,7 +1,7 @@
 `include "uvm_macros.svh"
 package morse_pkg;
   import uvm_pkg::*;
-	`include "morse_defines.sv"
+  `include "morse_defines.sv"
   `include "morse_sequence_item.sv"
   `include "morse_sequence.sv"
   `include "morse_sequencer.sv"

@@ -1,3 +1,4 @@
+
 class morse_environment extends uvm_env;
 
 	// declaring handle for morse_active_agent, morse_passive_agent,
@@ -42,11 +43,9 @@ class morse_environment extends uvm_env;
 	//------------------------------------------------------//
 
 	function void connect_phase(uvm_phase phase);
-		morse_active_agt.morse_active_mon.active_mon_port.connect(morse_scb.active_scb_port);
+      		morse_active_agt.morse_active_mon.active_mon_port.connect(morse_scb.active_scb_fifo.analysis_export);
 		morse_active_agt.morse_active_mon.active_mon_port.connect(morse_cov.cov_active_mon_port);
-		morse_passive_agt.morse_passive_mon.passive_mon_port.connect(morse_scb.passive_scb_port);	
+      		morse_passive_agt.morse_passive_mon.passive_mon_port.connect(morse_scb.passive_scb_fifo.analysis_export);	
 		morse_passive_agt.morse_passive_mon.passive_mon_port.connect(morse_cov.cov_passive_mon_port);
 	endfunction
 endclass
-
-
