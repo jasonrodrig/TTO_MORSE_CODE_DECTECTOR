@@ -49,8 +49,8 @@ module top;
 
 	// initatiating morse_regresion_test 
 	initial begin 
-	//	run_test("morse_test");
-	  	run_test("morse_character_test");
+	//	run_test("reset_test");
+	   run_test("morse_character_test");
   //  run_test("morse_number_test");
   //  run_test("morse_alphanumeric_test");
   // 	run_test("word_parsing_test");

@@ -54,6 +54,7 @@ class reset_sequence extends uvm_sequence#(morse_sequence_item);
 	endfunction
 
 	task body();
+		$display("RESET APPLIED");
 		`uvm_do_with(req,{ req.rst == 0; } )
 	endtask
 endclass 

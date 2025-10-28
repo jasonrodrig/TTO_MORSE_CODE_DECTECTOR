@@ -2,27 +2,27 @@ var g_data = {
 f9:{
 scopes:[{link:'z.htm?f=0&s=9',val:'work.trans_fsm'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg79',items:[{c:'R',p:'39.74',z:'state'}
-,{cr:'c',s:'1',z:'s_idle',h:'6',c:'g'}
+,{anchor:'cvg79',items:[{c:'R',p:'3.84',z:'state'}
+,{cr:'c',s:'1',z:'s_idle',h:'2',c:'g'}
 ,{cr:'m',z:'s_idle -> s_word_1',h:'0',c:'r'}
-,{cr:'c',z:'s_idle -> s_char_1',h:'2',c:'g'}
-,{cr:'c',z:'s_idle -> s_dash',h:'1',c:'g'}
-,{cr:'c',z:'s_idle -> s_dot',h:'2',c:'g'}
+,{cr:'m',z:'s_idle -> s_char_1',h:'0',c:'r'}
+,{cr:'m',z:'s_idle -> s_dash',h:'0',c:'r'}
+,{cr:'m',z:'s_idle -> s_dot',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'s_word_1',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_1',h:'2',c:'g'}
-,{cr:'c',z:'s_char_1 -> s_char_2',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_char_1',h:'0',c:'r'}
+,{cr:'m',z:'s_char_1 -> s_char_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_char_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_dash',h:'1',c:'g'}
-,{cr:'c',z:'s_dash -> s_idle',h:'1',c:'g'}
-,{cr:'c',s:'1',z:'s_dot',h:'2',c:'g'}
-,{cr:'c',z:'s_dot -> s_idle',h:'2',c:'g'}
-,{cr:'c',s:'1',z:'s_char_2',h:'1',c:'g'}
-,{cr:'c',z:'s_char_2 -> s_char_3',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_dash',h:'0',c:'r'}
+,{cr:'m',z:'s_dash -> s_idle',h:'0',c:'r'}
+,{cr:'m',s:'1',z:'s_dot',h:'0',c:'r'}
+,{cr:'m',z:'s_dot -> s_idle',h:'0',c:'r'}
+,{cr:'m',s:'1',z:'s_char_2',h:'0',c:'r'}
+,{cr:'m',z:'s_char_2 -> s_char_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_char_2 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_3',h:'1',c:'g'}
-,{cr:'c',z:'s_char_3 -> s_idle',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_char_3',h:'0',c:'r'}
+,{cr:'m',z:'s_char_3 -> s_idle',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_word_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_idle',h:'0',c:'r'}
@@ -47,27 +47,27 @@ scopes:[{link:'z.htm?f=0&s=9',val:'work.trans_fsm'}]
 f75:{
 scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'0',val:'DUT'},{link:'z.htm?f=0&s=75',val:'trans'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg79',items:[{c:'R',p:'39.74',z:'state'}
-,{cr:'c',s:'1',z:'s_idle',h:'6',c:'g'}
+,{anchor:'cvg79',items:[{c:'R',p:'3.84',z:'state'}
+,{cr:'c',s:'1',z:'s_idle',h:'2',c:'g'}
 ,{cr:'m',z:'s_idle -> s_word_1',h:'0',c:'r'}
-,{cr:'c',z:'s_idle -> s_char_1',h:'2',c:'g'}
-,{cr:'c',z:'s_idle -> s_dash',h:'1',c:'g'}
-,{cr:'c',z:'s_idle -> s_dot',h:'2',c:'g'}
+,{cr:'m',z:'s_idle -> s_char_1',h:'0',c:'r'}
+,{cr:'m',z:'s_idle -> s_dash',h:'0',c:'r'}
+,{cr:'m',z:'s_idle -> s_dot',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'s_word_1',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_1',h:'2',c:'g'}
-,{cr:'c',z:'s_char_1 -> s_char_2',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_char_1',h:'0',c:'r'}
+,{cr:'m',z:'s_char_1 -> s_char_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_char_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_dash',h:'1',c:'g'}
-,{cr:'c',z:'s_dash -> s_idle',h:'1',c:'g'}
-,{cr:'c',s:'1',z:'s_dot',h:'2',c:'g'}
-,{cr:'c',z:'s_dot -> s_idle',h:'2',c:'g'}
-,{cr:'c',s:'1',z:'s_char_2',h:'1',c:'g'}
-,{cr:'c',z:'s_char_2 -> s_char_3',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_dash',h:'0',c:'r'}
+,{cr:'m',z:'s_dash -> s_idle',h:'0',c:'r'}
+,{cr:'m',s:'1',z:'s_dot',h:'0',c:'r'}
+,{cr:'m',z:'s_dot -> s_idle',h:'0',c:'r'}
+,{cr:'m',s:'1',z:'s_char_2',h:'0',c:'r'}
+,{cr:'m',z:'s_char_2 -> s_char_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_char_2 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_3',h:'1',c:'g'}
-,{cr:'c',z:'s_char_3 -> s_idle',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_char_3',h:'0',c:'r'}
+,{cr:'m',z:'s_char_3 -> s_idle',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_word_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_idle',h:'0',c:'r'}
@@ -92,28 +92,28 @@ scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'0',val:'DUT'},{link:'z.htm?f=0&s=75'
 f10:{
 scopes:[{link:'z.htm?f=0&s=10',val:'work.rec_fsm'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg147',items:[{c:'R',p:'7.56',z:'state'}
-,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
+,{anchor:'cvg147',items:[{c:'R',p:'1.25',z:'state'}
+,{cr:'c',s:'1',z:'reset_state',h:'2',c:'g'}
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
-,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
+,{cr:'m',z:'reset_state -> e',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'t',h:'0',c:'r'}
 ,{cr:'m',z:'t -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'t -> m',h:'0',c:'r'}
 ,{cr:'m',z:'t -> n',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'e',h:'2',c:'g'}
+,{cr:'m',s:'1',z:'e',h:'0',c:'r'}
 ,{cr:'m',z:'e -> reset_state',h:'0',c:'r'}
-,{cr:'c',z:'e -> a',h:'1',c:'g'}
+,{cr:'m',z:'e -> a',h:'0',c:'r'}
 ,{cr:'m',z:'e -> i',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'a',h:'2',c:'g'}
+,{cr:'m',s:'1',z:'a',h:'0',c:'r'}
 ,{cr:'m',z:'a -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'a -> w',h:'0',c:'r'}
-,{cr:'c',z:'a -> r',h:'1',c:'g'}
+,{cr:'m',z:'a -> r',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'w',h:'0',c:'r'}
 ,{cr:'m',z:'w -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'w -> j',h:'0',c:'r'}
 ,{cr:'m',z:'w -> p',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'r',h:'2',c:'g'}
-,{cr:'c',z:'r -> reset_state',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'r',h:'0',c:'r'}
+,{cr:'m',z:'r -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'r -> l',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'b',h:'0',c:'r'}
 ,{cr:'m',z:'b -> reset_state',h:'0',c:'r'}
@@ -218,28 +218,28 @@ scopes:[{link:'z.htm?f=0&s=10',val:'work.rec_fsm'}]
 f102:{
 scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'1',val:'DUT'},{link:'z.htm?f=0&s=102',val:'rec'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg147',items:[{c:'R',p:'7.56',z:'state'}
-,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
+,{anchor:'cvg147',items:[{c:'R',p:'1.25',z:'state'}
+,{cr:'c',s:'1',z:'reset_state',h:'2',c:'g'}
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
-,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
+,{cr:'m',z:'reset_state -> e',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'t',h:'0',c:'r'}
 ,{cr:'m',z:'t -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'t -> m',h:'0',c:'r'}
 ,{cr:'m',z:'t -> n',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'e',h:'2',c:'g'}
+,{cr:'m',s:'1',z:'e',h:'0',c:'r'}
 ,{cr:'m',z:'e -> reset_state',h:'0',c:'r'}
-,{cr:'c',z:'e -> a',h:'1',c:'g'}
+,{cr:'m',z:'e -> a',h:'0',c:'r'}
 ,{cr:'m',z:'e -> i',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'a',h:'2',c:'g'}
+,{cr:'m',s:'1',z:'a',h:'0',c:'r'}
 ,{cr:'m',z:'a -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'a -> w',h:'0',c:'r'}
-,{cr:'c',z:'a -> r',h:'1',c:'g'}
+,{cr:'m',z:'a -> r',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'w',h:'0',c:'r'}
 ,{cr:'m',z:'w -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'w -> j',h:'0',c:'r'}
 ,{cr:'m',z:'w -> p',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'r',h:'2',c:'g'}
-,{cr:'c',z:'r -> reset_state',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'r',h:'0',c:'r'}
+,{cr:'m',z:'r -> reset_state',h:'0',c:'r'}
 ,{cr:'m',z:'r -> l',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'b',h:'0',c:'r'}
 ,{cr:'m',z:'b -> reset_state',h:'0',c:'r'}
