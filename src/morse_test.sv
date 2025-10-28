@@ -171,4 +171,29 @@ class word_parsing_test extends morse_test;
 	endtask
 endclass
 
+//------------------------------------------------------//
+//                   word test                          //  
+//------------------------------------------------------//
+
+class word_test extends morse_test;
+
+	`uvm_component_utils( word_test)
+	 word_sequence seq5;
+
+	function new(string name = " word_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq5 = word_sequence::type_id::create("seq5");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq5.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
 
