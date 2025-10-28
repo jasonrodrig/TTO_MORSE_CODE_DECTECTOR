@@ -1,20 +1,11 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-<<<<<<< HEAD
-Start time: 14:24:42 on Oct 28,2025
-=======
-Start time: 14:32:33 on Oct 28,2025
->>>>>>> 1080de791ebd69c0d054d4a70961deb9fb0b76ac
+Start time: 14:40:22 on Oct 28,2025
 vlog -sv "+acc" "+cover" "+fcover" -l morse_top.log morse_top.sv 
 -- Compiling interface morse_interface
 ** Note: (vlog-2286) morse_packages.sv(1): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling package morse_pkg
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 -- Compiling interface morse_assertions
-<<<<<<< HEAD
-** Error: morse_top.sv(9): (vlog-13006) Could not find the package (morse_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-End time: 14:24:43 on Oct 28,2025, Elapsed time: 0:00:01
-Errors: 38, Warnings: 0
-=======
 -- Compiling package morse_top_sv_unit
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 -- Importing package morse_pkg
@@ -22,6 +13,5 @@ Errors: 38, Warnings: 0
 
 Top level modules:
 	top
-End time: 14:32:34 on Oct 28,2025, Elapsed time: 0:00:01
+End time: 14:40:22 on Oct 28,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0
->>>>>>> 1080de791ebd69c0d054d4a70961deb9fb0b76ac
