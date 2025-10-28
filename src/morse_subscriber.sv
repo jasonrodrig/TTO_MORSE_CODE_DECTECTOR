@@ -21,23 +21,23 @@ class morse_coverage extends uvm_component;
 	//------------------------------------------------------//
 
     covergroup input_coverage;
-    RESET_CP : coverpoint reset {
+    RESET_CP : coverpoint active_mon.reset {
         bins reset_bin[] = {0, 1};
     }
-    DOT_INP_CP :coverpoint dot_inp {
+    DOT_INP_CP :coverpoint active_mon.dot_inp {
         bins dot_inp_bin[] ={0,1};
     }
-    DASH_SPACE_INP_CP:coverpoint dash_inp {
+    DASH_INP_CP:coverpoint active_mon.dash_inp {
         bins dash_inp_bin[] = {0,1};
     }
-    CHAR_SPACE_INP_CP : coverpoint char_space_inp {
+    CHAR_SPACE_INP_CP : coverpoint active_mon.char_space_inp {
         bins char_space_inp_bin[] = {0,1};
     }
-    WORD_SPACE_INP_CP : coverpoint word_space_inp {
+    WORD_SPACE_INP_CP : coverpoint active_mon.word_space_inp {
         bins word_space_inp_bin[] = {0,1};
     }
-    cross DOT_INP_CP,DASH_INP_CP;
-    cross CHAR_SPACE_INP_CP , WORD_SPACE_INP_CP;
+    cross DOT_INP_CP, DASH_INP_CP;
+    cross CHAR_SPACE_INP_CP, WORD_SPACE_INP_CP;
     endgroup
 
     //------------------------------------------------------//
@@ -45,12 +45,12 @@ class morse_coverage extends uvm_component;
     //------------------------------------------------------//
 
     covergroup output_coverage;
-    SOUT_CP: coverpoint sout{
-    bins alpahabet[] = { [ 97 : 122 ] };
-    bins numbers[] = { [ 48 : 57 ] };
-    bins word_space = { 32 };
-    ignore_bins ig_bin = default;
-        }	
+      SOUT_CP: coverpoint passive_mon.sout {
+      	bins alpahabet[] = { [ 97 : 122 ] };
+      	bins numbers[] = { [ 48 : 57 ] };
+     	bins word_space = { 32 };
+      	bins ig_bin = default;
+      }	
     endgroup
 
 	//------------------------------------------------------//
