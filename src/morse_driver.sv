@@ -46,10 +46,10 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
       send_to_interface();
       if(req.rst) begin
         if(req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp) begin
-          repeat(3) @(posedge vif.drv_cb);
+          repeat(1) @(posedge vif.drv_cb);
         end
         else if(!req.char_space_inp && !req.dot_inp && !req.dash_inp && req.word_space_inp) begin
-          repeat(7) @(posedge vif.drv_cb);
+          repeat(5) @(posedge vif.drv_cb);
         end
       end
      // else begin
@@ -63,6 +63,7 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
       vif.drv_cb.dash_inp 	<= req.dash_inp;
       vif.drv_cb.char_space_inp <= req.char_space_inp;
       vif.drv_cb.word_space_inp <= req.word_space_inp;
+      `uvm_info("DRV", $sformatf("rst = %0d, dot = %0d, dash = %0d, char_space = %0d, word_space = %0d", req.rst, req.dot_inp, req.dash_inp, req.char_space_inp, req.word_space_inp), UVM_LOW);
     endtask
 
 endclass

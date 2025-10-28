@@ -21,22 +21,22 @@ class morse_base_sequence extends uvm_sequence#(morse_sequence_item);
 	//------------------------------------------------------//
 
 	task send_dot();
-		`uvm_do_with(req, {req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 		req.print();
 	endtask
 
 	task send_dash();
-		`uvm_do_with(req, {req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
 		req.print();
 	endtask
 
 	task send_char_space();
-		`uvm_do_with(req, {req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
 		req.print();
 	endtask
 
 	task send_word_space();
-		`uvm_do_with(req, {req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
 		req.print();
 	endtask
 

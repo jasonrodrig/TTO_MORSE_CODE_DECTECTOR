@@ -66,7 +66,7 @@ class morse_scoreboard extends uvm_scoreboard;
       bit do_delete
     );
       if (expected_val == actual_val) begin
-        `uvm_info(tag, $sformatf("sout = %0h | actual=expected, MATCH", actual_val), UVM_LOW);
+        `uvm_info(tag, $sformatf("actual=%0h | expected=%0h, MATCH", actual_val, expected_val), UVM_LOW);
         if (do_delete) buffer.delete();
         `uvm_info(tag, $sformatf("buffer size = %0d", buffer.size()), UVM_LOW);
         PASS++;

@@ -53,13 +53,14 @@ class morse_active_monitor extends uvm_monitor;
       get_inp_from_if();
       if(received_item.rst) begin
         if(received_item.char_space_inp && !received_item.dot_inp && !received_item.dash_inp && !received_item.word_space_inp) begin
-          repeat(3) @(posedge vif.mon_cb);
+          repeat(1) @(posedge vif.mon_cb);
         end
         else if(!received_item.char_space_inp && !received_item.dot_inp && !received_item.dash_inp && received_item.word_space_inp) begin
-          repeat(7) @(posedge vif.mon_cb);
+          repeat(5) @(posedge vif.mon_cb);
         end
       end
       active_mon_port.write(received_item);
+      `uvm_info("INP_MON", $sformatf("rst = %0d, char_space = %0d, dot = %0d, dash = %0d, word_space = %0d", received_item.rst, received_item.char_space_inp, received_item.dot_inp, received_item.dash_inp, received_item.word_space_inp), UVM_LOW);
       repeat(2) @(posedge vif.mon_cb);
     endtask
   

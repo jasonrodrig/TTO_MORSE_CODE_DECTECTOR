@@ -2,27 +2,27 @@ var g_data = {
 f9:{
 scopes:[{link:'z.htm?f=0&s=9',val:'work.trans_fsm'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg79',items:[{c:'R',p:'39.74',z:'state'}
-,{cr:'c',s:'1',z:'s_idle',h:'6',c:'g'}
+,{anchor:'cvg79',items:[{c:'R',p:'31.73',z:'state'}
+,{cr:'c',s:'1',z:'s_idle',h:'5',c:'g'}
 ,{cr:'m',z:'s_idle -> s_word_1',h:'0',c:'r'}
-,{cr:'c',z:'s_idle -> s_char_1',h:'2',c:'g'}
-,{cr:'c',z:'s_idle -> s_dash',h:'1',c:'g'}
+,{cr:'c',z:'s_idle -> s_char_1',h:'1',c:'g'}
+,{cr:'c',z:'s_idle -> s_dash',h:'2',c:'g'}
 ,{cr:'c',z:'s_idle -> s_dot',h:'2',c:'g'}
 ,{cr:'m',s:'1',z:'s_word_1',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_1',h:'2',c:'g'}
+,{cr:'c',s:'1',z:'s_char_1',h:'1',c:'g'}
 ,{cr:'c',z:'s_char_1 -> s_char_2',h:'1',c:'g'}
 ,{cr:'m',z:'s_char_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_dash',h:'1',c:'g'}
-,{cr:'c',z:'s_dash -> s_idle',h:'1',c:'g'}
+,{cr:'c',s:'1',z:'s_dash',h:'2',c:'g'}
+,{cr:'c',z:'s_dash -> s_idle',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'s_dot',h:'2',c:'g'}
 ,{cr:'c',z:'s_dot -> s_idle',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'s_char_2',h:'1',c:'g'}
-,{cr:'c',z:'s_char_2 -> s_char_3',h:'1',c:'g'}
+,{cr:'m',z:'s_char_2 -> s_char_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_char_2 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_3',h:'1',c:'g'}
-,{cr:'c',z:'s_char_3 -> s_idle',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_char_3',h:'0',c:'r'}
+,{cr:'m',z:'s_char_3 -> s_idle',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_word_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_idle',h:'0',c:'r'}
@@ -47,27 +47,27 @@ scopes:[{link:'z.htm?f=0&s=9',val:'work.trans_fsm'}]
 f75:{
 scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'0',val:'DUT'},{link:'z.htm?f=0&s=75',val:'trans'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg79',items:[{c:'R',p:'39.74',z:'state'}
-,{cr:'c',s:'1',z:'s_idle',h:'6',c:'g'}
+,{anchor:'cvg79',items:[{c:'R',p:'31.73',z:'state'}
+,{cr:'c',s:'1',z:'s_idle',h:'5',c:'g'}
 ,{cr:'m',z:'s_idle -> s_word_1',h:'0',c:'r'}
-,{cr:'c',z:'s_idle -> s_char_1',h:'2',c:'g'}
-,{cr:'c',z:'s_idle -> s_dash',h:'1',c:'g'}
+,{cr:'c',z:'s_idle -> s_char_1',h:'1',c:'g'}
+,{cr:'c',z:'s_idle -> s_dash',h:'2',c:'g'}
 ,{cr:'c',z:'s_idle -> s_dot',h:'2',c:'g'}
 ,{cr:'m',s:'1',z:'s_word_1',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_1',h:'2',c:'g'}
+,{cr:'c',s:'1',z:'s_char_1',h:'1',c:'g'}
 ,{cr:'c',z:'s_char_1 -> s_char_2',h:'1',c:'g'}
 ,{cr:'m',z:'s_char_1 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_dash',h:'1',c:'g'}
-,{cr:'c',z:'s_dash -> s_idle',h:'1',c:'g'}
+,{cr:'c',s:'1',z:'s_dash',h:'2',c:'g'}
+,{cr:'c',z:'s_dash -> s_idle',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'s_dot',h:'2',c:'g'}
 ,{cr:'c',z:'s_dot -> s_idle',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'s_char_2',h:'1',c:'g'}
-,{cr:'c',z:'s_char_2 -> s_char_3',h:'1',c:'g'}
+,{cr:'m',z:'s_char_2 -> s_char_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_char_2 -> s_idle',h:'0',c:'r'}
-,{cr:'c',s:'1',z:'s_char_3',h:'1',c:'g'}
-,{cr:'c',z:'s_char_3 -> s_idle',h:'1',c:'g'}
+,{cr:'m',s:'1',z:'s_char_3',h:'0',c:'r'}
+,{cr:'m',z:'s_char_3 -> s_idle',h:'0',c:'r'}
 ,{cr:'m',s:'1',z:'s_word_2',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_word_3',h:'0',c:'r'}
 ,{cr:'m',z:'s_word_2 -> s_idle',h:'0',c:'r'}
@@ -93,7 +93,7 @@ f10:{
 scopes:[{link:'z.htm?f=0&s=10',val:'work.rec_fsm'}]
 ,FSMs:[{dummy:0}
 ,{anchor:'cvg147',items:[{c:'R',p:'7.56',z:'state'}
-,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
+,{cr:'c',s:'1',z:'reset_state',h:'3',c:'g'}
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
 ,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
 ,{cr:'m',s:'1',z:'t',h:'0',c:'r'}
@@ -219,7 +219,7 @@ f102:{
 scopes:[{s:'12',b:'1',val:'top'},{s:'46',b:'1',val:'DUT'},{link:'z.htm?f=0&s=102',val:'rec'}]
 ,FSMs:[{dummy:0}
 ,{anchor:'cvg147',items:[{c:'R',p:'7.56',z:'state'}
-,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
+,{cr:'c',s:'1',z:'reset_state',h:'3',c:'g'}
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
 ,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
 ,{cr:'m',s:'1',z:'t',h:'0',c:'r'}
