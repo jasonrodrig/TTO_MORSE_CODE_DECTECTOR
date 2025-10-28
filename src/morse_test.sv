@@ -54,7 +54,7 @@ class reset_test extends morse_test;
 	`uvm_component_utils( reset_test)
 	reset_sequence seq0;
 
-	function new(string name = " rst_ce_test", uvm_component parent);
+	function new(string name = " rst_test", uvm_component parent);
 		super.new(name,parent);
 	endfunction : new
 
@@ -69,3 +69,106 @@ class reset_test extends morse_test;
 		phase.drop_objection(this);
 	endtask
 endclass
+
+//------------------------------------------------------//
+//                 morse character test                 //  
+//------------------------------------------------------//
+
+class morse_character_test extends morse_test;
+
+	`uvm_component_utils( morse_character_test)
+	 morse_character_sequence seq1;
+
+	function new(string name = " morse_character_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq1 = morse_character_sequence::type_id::create("seq1");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq1.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
+//                 morse character test                 //  
+//------------------------------------------------------//
+
+class morse_number_test extends morse_test;
+
+	`uvm_component_utils( morse_number_test)
+	 morse_number_sequence seq2;
+
+	function new(string name = " morse_number_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq2 = morse_number_sequence::type_id::create("seq2");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq2.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
+//              morse alphanumeric test                 //  
+//------------------------------------------------------//
+
+class morse_alphanumeric_test extends morse_test;
+
+	`uvm_component_utils( morse_alphanumeric_test)
+	 morse_alphanumeric_sequence seq3;
+
+	function new(string name = "morse_alphanumeric_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq3 = morse_alphanumeric_sequence::type_id::create("seq3");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq3.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+
+//------------------------------------------------------//
+//                   word parsing test                  //  
+//------------------------------------------------------//
+
+class word_parsing_test extends morse_test;
+
+	`uvm_component_utils( word_parsing_test)
+	 word_parsing_sequence seq4;
+
+	function new(string name = " word_parsing_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq4 = word_parsing_sequence::type_id::create("seq4");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq4.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+
