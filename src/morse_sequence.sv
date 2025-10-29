@@ -19,25 +19,32 @@ class morse_base_sequence extends uvm_sequence#(morse_sequence_item);
 	//  char space and word space sequence items repeatedly //
 	//                  until completion                    //  
 	//------------------------------------------------------//
+  task reset();
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+	endtask
 
 	task send_dot();
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-		req.print();
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+	 //	req.print();
 	endtask
 
 	task send_dash();
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
-		req.print();
+	 //	req.print();
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 	endtask
 
 	task send_char_space();
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-		req.print();
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		//	req.print();
 	endtask
 
 	task send_word_space();
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
-		req.print();
+   	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		//req.print();
 	endtask
 
 endclass
@@ -266,7 +273,7 @@ endclass
 class word_parsing_sequence extends morse_base_sequence;
 	`uvm_object_utils(word_parsing_sequence)
 
-	string text = "sos 123";
+	string text = "e";
 
 	function new(string name="word_parsing_sequence");
 		super.new(name);
@@ -314,7 +321,7 @@ class word_parsing_sequence extends morse_base_sequence;
 		morse_table["0"] = "-----";
 
 		//text = "SOS 123";
-
+    reset();
 		foreach(text[i]) begin
 			alphanumeric = text.substr(i,i);
 			if (alphanumeric == " ") begin
