@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 12:22:21 on Oct 29,2025
+# Start time: 15:49:06 on Oct 29,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
@@ -97,8 +97,8 @@
 # UVM_INFO morse_driver.sv(96) @ 25: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 35: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 35: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 0, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(75) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] actual = 0 | expected = ff , MISMATCH
-# UVM_INFO morse_scoreboard.sv(77) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(69) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] actual=ff | expected=ff, MATCH
+# UVM_INFO morse_scoreboard.sv(71) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] buffer size = 0
 # UVM_INFO morse_scoreboard.sv(90) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] Reset detected | buffer cleared and sout=0xFF verified
 # UVM_INFO morse_driver.sv(96) @ 35: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 45: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
@@ -120,11 +120,11 @@
 # UVM_INFO morse_passive_monitor.sv(65) @ 75: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 75: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_scoreboard.sv(211) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] Multiple inputs are high at same cycle
-# UVM_INFO morse_scoreboard.sv(212) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] buffer size = 0 actual= 65 |   expected=x
+# UVM_INFO morse_scoreboard.sv(212) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] buffer size = 0 actual= ff |   expected=x
 # UVM_INFO morse_active_monitor.sv(63) @ 85: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 85: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_scoreboard.sv(211) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] Multiple inputs are high at same cycle
-# UVM_INFO morse_scoreboard.sv(212) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] buffer size = 0 actual= ff |   expected=x
+# UVM_INFO morse_scoreboard.sv(212) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] buffer size = 0 actual= 65 |   expected=x
 # UVM_INFO morse_passive_monitor.sv(65) @ 95: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 95: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_scoreboard.sv(211) @ 95: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD] Multiple inputs are high at same cycle
@@ -136,7 +136,7 @@
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 105: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # UVM_INFO morse_subscriber.sv(106) @ 105: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 71.43%,
 # UVM_INFO morse_subscriber.sv(107) @ 105: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 2.70%
-# Passes = 1 | Fails = 2
+# Passes = 2 | Fails = 1
 # 
 # --- UVM Report Summary ---
 # 
@@ -161,5 +161,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 105 ns  Iteration: 62  Instance: /top
 # Saving coverage database on exit...
-# End time: 12:22:25 on Oct 29,2025, Elapsed time: 0:00:04
+# End time: 15:49:10 on Oct 29,2025, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0

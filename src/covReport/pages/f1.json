@@ -92,7 +92,7 @@ scopes:[{s:'11',b:'1',val:'top'},{s:'29',b:'0',val:'DUT'},{link:'z.htm?f=0&s=58'
 f9:{
 scopes:[{link:'z.htm?f=0&s=9',val:'work.rec_fsm'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg130',items:[{c:'R',p:'3.78',z:'state'}
+,{anchor:'cvg129',items:[{c:'R',p:'3.78',z:'state'}
 ,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
 ,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
@@ -218,7 +218,7 @@ scopes:[{link:'z.htm?f=0&s=9',val:'work.rec_fsm'}]
 f85:{
 scopes:[{s:'11',b:'1',val:'top'},{s:'29',b:'1',val:'DUT'},{link:'z.htm?f=0&s=85',val:'rec'}]
 ,FSMs:[{dummy:0}
-,{anchor:'cvg130',items:[{c:'R',p:'3.78',z:'state'}
+,{anchor:'cvg129',items:[{c:'R',p:'3.78',z:'state'}
 ,{cr:'c',s:'1',z:'reset_state',h:'5',c:'g'}
 ,{cr:'m',z:'reset_state -> t',h:'0',c:'r'}
 ,{cr:'c',z:'reset_state -> e',h:'1',c:'g'}
