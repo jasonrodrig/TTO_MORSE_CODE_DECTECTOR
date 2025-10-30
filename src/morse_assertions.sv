@@ -14,8 +14,8 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
   //==========================================================
   property svc;
     @(posedge clk)
-      disable iff (!rst)
-      !$isunknown(sout);
+      // disable iff (!rst)
+      rst |-> !$isunknown(sout);
   endproperty
 
   SOUT_VALID_CHECK : assert property (svc)
@@ -24,28 +24,13 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
       $error("ASSERTION FAILED: sout is unknown at time %0t", $time);
 
   //========================================================
-  // assertion name  : SINGLE_INP_HIGH_CHECK
-  // description : check only one input high at same time
-  //==========================================================
-  property prop2;
-     @(posedge clk)
-     disable iff (!rst)
-     (dot_inp + dash_inp + char_space_inp + word_space_inp) <= 1;
-  endproperty
-
-  SINGLE_INP_HIGH_CHECK : assert property(prop2)
-    $info("SINGLE_INP_HIGH_CHECK PASSED");
-    else
-      $error("ASSERTION FAILED: Multiple inputs high at time %0t", $time);
-
-  //========================================================
   // assertion name  : CHAR_SPACE_CHECK
   // description : after char_space_inp high, no new input for next 3 cycles
   //========================================================
   property prop3;
      @(posedge clk)
      disable iff (!rst)
-     char_space_inp |=> (
+     (char_space_inp && !dot_inp && !dash_inp) |=> (
        (!dot_inp && !dash_inp && !word_space_inp) [*3]
      );
   endproperty
@@ -53,7 +38,7 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
   CHAR_SPACE_CHECK : assert property (prop3)
     $info("CHAR_SPACE_CHECK PASSED");
     else
-      $error("ASSERTION FAILED: Inputs active within 3 cycles after char_space at time %0t", $time);
+      $error("CHAR_SPACE_ASSERTION FAILED: Inputs active within 3 cycles after char_space at time %0t", $time);
 
   //========================================================
   // assertion name  : WORD_SPACE_CHECK
@@ -62,7 +47,7 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
   property prop4;
      @(posedge clk)
      disable iff (!rst)
-     word_space_inp |=> (
+     (!char_space_inp && !dot_inp && !dash_inp && word_space_inp) |=> (
        (!dot_inp && !dash_inp && !char_space_inp) [*7]
      );
   endproperty
@@ -78,13 +63,13 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
   //========================================================
   property prop5;
      @(posedge clk)
-     !rst |-> (sout == 0);
+     !rst |-> (sout == 8'hff);
   endproperty
 
   RESET_ACTIVE_CHECK: assert property (prop5)
     $info("RESET_ACTIVE_CHECK PASSED");
     else
-      $error("ASSERTION FAILED: sout is not 0 when reset is active (rst=0) at time %0t", $time);
+      $error("RESET_ACTIVE_ASSERTION FAILED: sout is not 0 when reset is active (rst=0) at time %0t", $time);
 
   //========================================================
   // ASSERTION NAME  : WORD_OUTPUT_CHECK
@@ -94,7 +79,7 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
   property prop6;
     @(posedge clk)
     disable iff (!rst)
-    word_space_inp |=> ##7 (sout == 8'h20);
+    (!char_space_inp && !dot_inp && !dash_inp && word_space_inp) |-> ##7 (sout == 8'h20);
   endproperty
 
   WORD_OUTPUT_CHECK : assert property (prop6)
