@@ -1,0 +1,20 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 16:15:09 on Oct 30,2025
+vlog -sv "+acc" "+cover" "+fcover" -l top.log top.sv 
+-- Compiling module morse_top
+-- Compiling module trans_fsm
+-- Compiling module rec_fsm
+-- Compiling interface morse_interface
+** Note: (vlog-2286) morse_packages.sv(1): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package morse_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Compiling interface morse_assertions
+-- Compiling package top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package morse_pkg
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 16:15:10 on Oct 30,2025, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
