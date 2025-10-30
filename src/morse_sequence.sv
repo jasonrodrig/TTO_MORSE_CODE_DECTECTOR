@@ -273,7 +273,7 @@ endclass
 class word_parsing_sequence extends morse_base_sequence;
 	`uvm_object_utils(word_parsing_sequence)
 
-	string text = "e";
+	string text = " s o s ";
 
 	function new(string name="word_parsing_sequence");
 		super.new(name);
