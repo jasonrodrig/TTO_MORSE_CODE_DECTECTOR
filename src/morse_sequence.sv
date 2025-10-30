@@ -457,6 +457,40 @@ class mid_reset_sequence extends uvm_sequence#(morse_sequence_item);
 endclass 
 
 //------------------------------------------------------//
+//                invalid sequence                      //  
+//------------------------------------------------------//
+
+class invalid_sequence extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(invalid_sequence)
+
+	function new(string name = "invalid_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+
+		`uvm_do_with(req,{ req.rst == 0; } )
+
+		repeat(6) begin
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		end
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+		repeat(6) begin
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		end
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+	endtask
+endclass 
+
+//------------------------------------------------------//
 //              cornercase1 sequence                    //  
 //------------------------------------------------------//
 
@@ -565,7 +599,7 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
    cornercase1_sequence seq7;
    cornercase2_sequence seq8;
    cornercase3_sequence seq9;
-
+   invalid_sequence seq10;
 	function new(string name = "morse_regression");
 		super.new(name);
 	endfunction
@@ -581,8 +615,8 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
     `uvm_do(seq7)         
 		`uvm_do(seq8) 
   	`uvm_do(seq9)         
-/*	`uvm_do(seq10)
-		`uvm_do(seq11)         
+  	`uvm_do(seq10)
+/*	`uvm_do(seq11)         
 		`uvm_do(seq12)
 		`uvm_do(seq13)
 		`uvm_do(seq14)

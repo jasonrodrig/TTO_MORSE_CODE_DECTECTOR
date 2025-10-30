@@ -454,7 +454,7 @@ class morse_scoreboard extends uvm_scoreboard;
          else if ({buffer[0],buffer[1],buffer[2],buffer[3]} == `z)
            check_and_report("SCOREBOARD-CHAR", 8'h7A, actual.sout, 1); // 'z'
          else
-           check_and_report("SCOREBOARD-CHAR", 8'hFF, actual.sout, 0); // Unknown or invalid
+           check_and_report("SCOREBOARD-CHAR", 8'hFF, actual.sout, 1); // Unknown or invalid
        end
        5: begin
          if ({buffer[0],buffer[1],buffer[2],buffer[3],buffer[4]} == `zero)
@@ -478,10 +478,10 @@ class morse_scoreboard extends uvm_scoreboard;
          else if ({buffer[0],buffer[1],buffer[2],buffer[3],buffer[4]} == `nine)
            check_and_report("SCOREBOARD-CHAR", 8'h39, actual.sout, 1); // '9'
          else
-           check_and_report("SCOREBOARD-CHAR", 8'hFF, actual.sout, 0); // Unknown or invalid
+           check_and_report("SCOREBOARD-CHAR", 8'hFF, actual.sout, 1); // Unknown or invalid
        end
        default: begin
-         check_and_report("SCOREBOARD-CHAR", 8'hFF, actual.sout, 0); // Unknown or invalid pattern
+         check_and_report("SCOREBOARD-CHAR", 8'hFF, actual.sout, 1); // Unknown or invalid pattern
        end
       endcase
     end

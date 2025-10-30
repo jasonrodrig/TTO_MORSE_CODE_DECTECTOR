@@ -297,6 +297,32 @@ class cornercase3_test extends morse_test;
 endclass
 
 //------------------------------------------------------//
+//                 invalid test                         //  
+//------------------------------------------------------//
+
+class invalid_test extends morse_test;
+
+	`uvm_component_utils( invalid_test)
+	 invalid_sequence seq10;
+
+	function new(string name = "invalid_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq10 = invalid_sequence::type_id::create("seq10");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq10.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+
+//------------------------------------------------------//
 //              morse_regression test                   //  
 //------------------------------------------------------//
 
