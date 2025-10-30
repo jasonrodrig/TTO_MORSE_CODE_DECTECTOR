@@ -36,7 +36,9 @@ simulate:
 clean:
 	rm -rf transcript work/
 	rm simulation.log
-	rm ./covReport/covsummary.html
+	rm covReport/covsummary.html
+	rm covReport/testlist.html
+	rm coverage.ucdb
+	rm dump.vcd
 	rm top.log
-	clear
 	clear
