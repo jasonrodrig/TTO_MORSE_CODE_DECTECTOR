@@ -1,4 +1,4 @@
-`define no_of_items 5
+`define no_of_items 50
 // ---------signals-----------//
 `define dot        3'b001
 `define dash       3'b010

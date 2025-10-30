@@ -112,21 +112,23 @@ class morse_character_sequence extends morse_base_sequence;
 		morse_table["y"] = "-.--";
 		morse_table["z"] = "--..";
 
-		if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
+		repeat(`no_of_items) begin
+			if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
 
-		letter = $sformatf("%s", byte'(character_number));
-		if (letter == " ") begin
-			send_word_space(); // space between word
-		end
-		else if (morse_table.exists(letter)) begin
-			string code = morse_table[letter];
-			foreach (code[j]) begin
-				if (code[j] == ".")
-					send_dot();
-				else if (code[j] == "-")
-					send_dash();
+			letter = $sformatf("%s", byte'(character_number));
+			if (letter == " ") begin
+				send_word_space(); // space between word
 			end
-			send_char_space(); // space between characters
+			else if (morse_table.exists(letter)) begin
+				string code = morse_table[letter];
+				foreach (code[j]) begin
+					if (code[j] == ".")
+						send_dot();
+					else if (code[j] == "-")
+						send_dash();
+				end
+				send_char_space(); // space between characters
+			end
 		end
 	endtask
 endclass
@@ -161,21 +163,23 @@ class morse_number_sequence extends morse_base_sequence;
 		morse_table["9"] = "----.";
 		morse_table["0"] = "-----";
 
-		if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
+		repeat(`no_of_items) begin
+			if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
 
-		number = $sformatf("%s", byte'(morse_number));
-		if (number == " ") begin
-			send_word_space(); // space between word
-		end
-		else if (morse_table.exists(number)) begin
-			string code = morse_table[number];
-			foreach (code[j]) begin
-				if (code[j] == ".")
-					send_dot();
-				else if (code[j] == "-")
-					send_dash();
+			number = $sformatf("%s", byte'(morse_number));
+			if (number == " ") begin
+				send_word_space(); // space between word
 			end
-			send_char_space(); // space between characters
+			else if (morse_table.exists(number)) begin
+				string code = morse_table[number];
+				foreach (code[j]) begin
+					if (code[j] == ".")
+						send_dot();
+					else if (code[j] == "-")
+						send_dash();
+				end
+				send_char_space(); // space between characters
+			end
 		end
 	endtask
 endclass
@@ -246,22 +250,23 @@ class morse_alphanumeric_sequence extends morse_base_sequence;
 		morse_table["8"] = "---..";
 		morse_table["9"] = "----.";
 		morse_table["0"] = "-----";
+		repeat(`no_of_items) begin
+			if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
 
-		if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
-
-		alphanumeric = $sformatf("%s", byte'(alphanumeric_number));
-		if (alphanumeric == " ") begin
-			send_word_space(); // space between word
-		end
-		else if (morse_table.exists(alphanumeric)) begin
-			string code = morse_table[alphanumeric];
-			foreach (code[j]) begin
-				if (code[j] == ".")
-					send_dot();
-				else if (code[j] == "-")
-					send_dash();
+			alphanumeric = $sformatf("%s", byte'(alphanumeric_number));
+			if (alphanumeric == " ") begin
+				send_word_space(); // space between word
 			end
-			send_char_space(); // space between characters
+			else if (morse_table.exists(alphanumeric)) begin
+				string code = morse_table[alphanumeric];
+				foreach (code[j]) begin
+					if (code[j] == ".")
+						send_dot();
+					else if (code[j] == "-")
+						send_dash();
+				end
+				send_char_space(); // space between characters
+			end
 		end
 	endtask
 endclass
@@ -321,7 +326,7 @@ class word_parsing_sequence extends morse_base_sequence;
 		morse_table["0"] = "-----";
 
 		//text = "SOS 123";
-    reset();
+    //reset();
 		foreach(text[i]) begin
 			alphanumeric = text.substr(i,i);
 			if (alphanumeric == " ") begin
@@ -349,7 +354,7 @@ class word_sequence extends morse_base_sequence;
 	`uvm_object_utils(word_sequence)
 
 	rand int index;
-	string text[5] = { "S O S" , "HELLO" , "9MORSE6" , "CODE123" , "555WORLD"  };
+	string text[5] = { "S O S" , "HE L LO" , "9MOR SE6" , "CO DE 12 3" , "555 WORLD"  };
 
 	constraint range{index inside {[0:4]};}
 
