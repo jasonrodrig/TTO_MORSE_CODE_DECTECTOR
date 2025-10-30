@@ -346,6 +346,31 @@ class invalid_test2 extends morse_test;
 	endtask
 endclass
 
+//------------------------------------------------------//
+//          invalid test for invlaid nuumbers           //  
+//------------------------------------------------------//
+
+class invalid_test3 extends morse_test;
+
+	`uvm_component_utils(invalid_test3)
+	 invalid_sequence3 seq12;
+
+	function new(string name = "invalid_test3", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq12 = invalid_sequence3::type_id::create("seq12");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq12.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
 
 //------------------------------------------------------//
 //              morse_regression test                   //  

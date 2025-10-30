@@ -606,7 +606,77 @@ class invalid_sequence2 extends morse_base_sequence;
     
 		reset();
 		
-		repeat(`no_of_items) begin
+		repeat(5) begin
+			if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
+
+			number = index;
+			if (number == " ") begin
+				send_word_space(); // space between word
+			end
+			else if (morse_table.exists(number)) begin
+				string code = morse_table[number];
+				foreach (code[j]) begin
+					if (code[j] == ".")
+						send_dot();
+					else if (code[j] == "-")
+						send_dash();
+				end
+				send_char_space(); // space between characters
+			end
+		end
+	endtask
+
+endclass
+
+//------------------------------------------------------//
+//         invalid sequence for numbers                 //  
+//------------------------------------------------------//
+
+class invalid_sequence3 extends morse_base_sequence;
+	`uvm_object_utils(invalid_sequence3)
+
+	rand int index ;
+	constraint range { index inside {[1:22]}; }
+	
+	function new(string name = "invalid_sequence3");
+		super.new(name);
+	endfunction
+
+	task body();
+		string morse_table[int];
+		int number;
+		// Morse lookup table for letters
+		morse_table[1] = "...-.";
+		morse_table[2] = "..-..";
+		morse_table[3] = "..-.-";
+		morse_table[4] = "..--.";
+  
+		morse_table[5] = ".-...";
+		morse_table[6] = ".-..-";
+		morse_table[7] = ".-.-.";
+		morse_table[8] = ".-.--";
+   
+		morse_table[9] = ".--..";
+		morse_table[10] = ".--.-";
+		morse_table[11] = ".---.";
+		morse_table[12] = "-...-";
+    
+		morse_table[13] = "-..-.";
+		morse_table[14] = "-..--";
+		morse_table[15] = "-.-..";
+		morse_table[16] = "-.-.-";
+
+  	morse_table[17] = "-.--.";
+		morse_table[18] = "-.---";
+		morse_table[19] = "--..-";
+		morse_table[20] = "--.-.";
+    
+  	morse_table[21] = "--.--";
+		morse_table[22] = "---.-";
+		
+		reset();
+		
+		repeat(2) begin
 			if (!randomize()) `uvm_fatal("RAND_FAIL", "Failed to randomize character_number")
 
 			number = index;
@@ -648,6 +718,7 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
    cornercase3_sequence seq9;
    invalid_sequence1 seq10;
 	 invalid_sequence2 seq11;
+	 invalid_sequence3 seq12;
 	function new(string name = "morse_regression");
 		super.new(name);
 	endfunction
@@ -665,8 +736,8 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
   	`uvm_do(seq9)         
   	`uvm_do(seq10)
    	`uvm_do(seq11)         
-/*	`uvm_do(seq12)
-		`uvm_do(seq13)
+	  `uvm_do(seq12)
+/*	`uvm_do(seq13)
 		`uvm_do(seq14)
 		`uvm_do(seq15)
 		`uvm_do(seq16)
