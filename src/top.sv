@@ -60,8 +60,10 @@ module top;
 	//  run_test("cornercase1_test"); 
 	//  run_test("cornercase2_test"); 
 	//  run_test("cornercase3_test"); 
-  //	run_test("invalid_test");	
-		run_test("morse_regression_test");
+  //	run_test("invalid_test1");	
+	//	run_test("invalid_test2");	
+	//	run_test("invalid_test3");	
+	  	run_test("morse_regression_test");
 		#1000 $finish;
 	end
 endmodule

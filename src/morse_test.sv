@@ -297,26 +297,51 @@ class cornercase3_test extends morse_test;
 endclass
 
 //------------------------------------------------------//
-//                 invalid test                         //  
+//    invalid test for continuous dot and dash          //  
 //------------------------------------------------------//
 
-class invalid_test extends morse_test;
+class invalid_test1 extends morse_test;
 
-	`uvm_component_utils( invalid_test)
-	 invalid_sequence seq10;
+	`uvm_component_utils(invalid_test1)
+	 invalid_sequence1 seq10;
 
-	function new(string name = "invalid_test", uvm_component parent);
+	function new(string name = "invalid_test1", uvm_component parent);
 		super.new(name,parent);
 	endfunction : new
 
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-		seq10 = invalid_sequence::type_id::create("seq10");
+		seq10 = invalid_sequence1::type_id::create("seq10");
 	endfunction : build_phase
 
 	task run_phase(uvm_phase phase);
 		phase.raise_objection(this);
 		seq10.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
+//        invalid test for invlaid characters           //  
+//------------------------------------------------------//
+
+class invalid_test2 extends morse_test;
+
+	`uvm_component_utils(invalid_test2)
+	 invalid_sequence2 seq11;
+
+	function new(string name = "invalid_test2", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq11 = invalid_sequence2::type_id::create("seq11");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq11.start(morse_env.morse_active_agt.morse_active_seqr);
 		phase.drop_objection(this);
 	endtask
 endclass
