@@ -278,7 +278,7 @@ endclass
 class word_parsing_sequence extends morse_base_sequence;
 	`uvm_object_utils(word_parsing_sequence)
 
-	string text = " s o s ";
+	string text = " a b c d e ";
 
 	function new(string name="word_parsing_sequence");
 		super.new(name);
@@ -326,7 +326,7 @@ class word_parsing_sequence extends morse_base_sequence;
 		morse_table["0"] = "-----";
 
 		//text = "SOS 123";
-    //reset();
+    reset();
 		foreach(text[i]) begin
 			alphanumeric = text.substr(i,i);
 			if (alphanumeric == " ") begin
@@ -347,7 +347,7 @@ class word_parsing_sequence extends morse_base_sequence;
 endclass
 
 //------------------------------------------------------//
-//                 word paring sequence                 //  
+//                     word sequence                    //  
 //------------------------------------------------------//
 
 class word_sequence extends morse_base_sequence;
@@ -429,6 +429,30 @@ class word_sequence extends morse_base_sequence;
 	endtask
 endclass
 
+
+class mid_reset_sequence extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(mid_reset_sequence)
+
+	function new(string name = "mid_reset_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		$display("RESET APPLIED");
+		`uvm_do_with(req,{ req.rst == 0; } )
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+	endtask
+endclass 
+
 //------------------------------------------------------//
 //                 regression sequence                  //  
 //------------------------------------------------------//
@@ -442,6 +466,7 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
 	 morse_alphanumeric_sequence seq3;
    word_parsing_sequence seq4;
 	 word_sequence seq5;
+   mid_reset_sequence seq6;
 
 	function new(string name = "morse_regression");
 		super.new(name);
@@ -454,8 +479,8 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
 		`uvm_do(seq3)         
 		`uvm_do(seq4)
 		`uvm_do(seq5)
-/*	`uvm_do(seq6)
-  	`uvm_do(seq7)         
+  	`uvm_do(seq6)
+/*  `uvm_do(seq7)         
 		`uvm_do(seq8) 
 		`uvm_do(seq9)         
 		`uvm_do(seq10)
@@ -468,3 +493,7 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
 */	endtask
 
 endclass
+
+
+
+

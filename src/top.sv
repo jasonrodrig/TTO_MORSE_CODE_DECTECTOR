@@ -54,9 +54,10 @@ module top;
 	//  run_test("morse_character_test");
   //  run_test("morse_number_test");
   //  run_test("morse_alphanumeric_test");
-  // 	run_test("word_parsing_test");
+  //  run_test("word_parsing_test");
 	//	run_test("word_test");
-	    run_test("morse_regression_test");
+	//    run_test("mid_reset_test");	
+	  run_test("morse_regression_test");
 		#1000 $finish;
 	end
 endmodule

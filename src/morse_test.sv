@@ -196,6 +196,35 @@ class word_test extends morse_test;
 	endtask
 endclass
 
+//------------------------------------------------------//
+//                   mid reset test                     //  
+//------------------------------------------------------//
+
+class mid_reset_test extends morse_test;
+
+	`uvm_component_utils( mid_reset_test)
+	 mid_reset_sequence seq6;
+
+	function new(string name = "mid_reset_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq6 = mid_reset_sequence::type_id::create("seq6");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq6.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
+//              morse_regression test                   //  
+//------------------------------------------------------//
+
 class morse_regression_test extends morse_test;
 
 	`uvm_component_utils(morse_regression_test)
