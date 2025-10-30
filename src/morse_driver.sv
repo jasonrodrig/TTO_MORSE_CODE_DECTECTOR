@@ -81,6 +81,9 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 				temp4 = 1; 
 				repeat(1) @(posedge vif.drv_cb); 
 			end
+			else begin// all inputs high will drive
+				repeat(1)@(posedge vif.drv_cb);
+		  end
 		end 
 		else begin
 			repeat(1) @(posedge vif.drv_cb);

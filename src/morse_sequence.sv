@@ -429,6 +429,9 @@ class word_sequence extends morse_base_sequence;
 	endtask
 endclass
 
+//------------------------------------------------------//
+//                mid_reset sequence                    //  
+//------------------------------------------------------//
 
 class mid_reset_sequence extends uvm_sequence#(morse_sequence_item);
 	`uvm_object_utils(mid_reset_sequence)
@@ -454,6 +457,77 @@ class mid_reset_sequence extends uvm_sequence#(morse_sequence_item);
 endclass 
 
 //------------------------------------------------------//
+//              cornercase1 sequence                    //  
+//------------------------------------------------------//
+
+class cornercase1_sequence extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(cornercase1_sequence)
+
+	function new(string name = "cornercase1_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+		$display("RESET APPLIED");
+		`uvm_do_with(req,{ req.rst == 0; } )
+  	$display("CHARACTER APPLIED");	
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+	endtask
+endclass 
+
+//------------------------------------------------------//
+//              cornercase2 sequence                    //  
+//------------------------------------------------------//
+
+class cornercase2_sequence extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(cornercase2_sequence)
+
+	function new(string name = "cornercase2_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+		$display("RESET APPLIED");
+		`uvm_do_with(req,{ req.rst == 0; } )
+  	$display("WORD APPLIED");	
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+	endtask
+endclass 
+
+//------------------------------------------------------//
+//              cornercase3 sequence                    //  
+//------------------------------------------------------//
+
+class cornercase3_sequence extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(cornercase3_sequence)
+
+	function new(string name = "cornercase3_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+		$display("RESET APPLIED");
+		`uvm_do_with(req,{ req.rst == 0; } )
+  
+		 $display("ALL INPUTS APPLIED");	
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==1; req.char_space_inp==1; req.word_space_inp==1;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		
+		 repeat(1)begin
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		 end
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+	endtask
+endclass 
+
+
+//------------------------------------------------------//
 //                 regression sequence                  //  
 //------------------------------------------------------//
 
@@ -467,6 +541,9 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
    word_parsing_sequence seq4;
 	 word_sequence seq5;
    mid_reset_sequence seq6;
+   cornercase1_sequence seq7;
+   cornercase2_sequence seq8;
+   cornercase3_sequence seq9;
 
 	function new(string name = "morse_regression");
 		super.new(name);
@@ -479,11 +556,11 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
 		`uvm_do(seq3)         
 		`uvm_do(seq4)
 		`uvm_do(seq5)
-  	`uvm_do(seq6)
-/*  `uvm_do(seq7)         
+    `uvm_do(seq6)
+    `uvm_do(seq7)         
 		`uvm_do(seq8) 
-		`uvm_do(seq9)         
-		`uvm_do(seq10)
+  	`uvm_do(seq9)         
+/*	`uvm_do(seq10)
 		`uvm_do(seq11)         
 		`uvm_do(seq12)
 		`uvm_do(seq13)

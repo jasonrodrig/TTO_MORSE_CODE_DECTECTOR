@@ -30,7 +30,7 @@ module top;
 	);
 	
 	// instantiating assertion signals
-/*	bind vif morse_assertions ASSERT(
+	bind vif morse_assertions ASSERT(
 		.clk(vif.clk),
 		.rst(vif.rst),
 		.dot_inp(vif.dot_inp),
@@ -39,7 +39,7 @@ module top;
 		.word_space_inp(vif.word_space_inp),
 		.sout(vif.sout)
 	);
-*/
+
 	// setting the config_db at the top module 
 	initial begin 
 		uvm_config_db#(virtual morse_interface)::set(null,"*","vif",vif);
@@ -56,8 +56,11 @@ module top;
   //  run_test("morse_alphanumeric_test");
   //  run_test("word_parsing_test");
 	//	run_test("word_test");
-	//    run_test("mid_reset_test");	
-	  run_test("morse_regression_test");
+	//  run_test("mid_reset_test");
+	//  run_test("cornercase1_test"); 
+	//  run_test("cornercase2_test"); 
+	//  run_test("cornercase3_test"); 
+	 run_test("morse_regression_test");
 		#1000 $finish;
 	end
 endmodule

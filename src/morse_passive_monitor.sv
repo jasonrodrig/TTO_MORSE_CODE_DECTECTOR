@@ -62,7 +62,7 @@ class morse_passive_monitor extends uvm_monitor;
 			*/  
 			seq_item.sout = vif.mon_cb.sout;            //capture output
 			//passive_mon_port.write(seq_item);
-			`uvm_info("OUT_MON", $sformatf("rst = %0d, char_space = %0d, dot = %0d, dash = %0d, word_space = %0d", seq_item.rst, seq_item.char_space_inp, seq_item.dot_inp, seq_item.dash_inp, seq_item.word_space_inp), UVM_LOW);
+			`uvm_info("OUT_MON", $sformatf("rst = %0d, sout = %0h", seq_item.rst, seq_item.sout), UVM_LOW);
 			passive_mon_port.write(seq_item);
 			//repeat(2) @(posedge vif.mon_cb);
 	endtask

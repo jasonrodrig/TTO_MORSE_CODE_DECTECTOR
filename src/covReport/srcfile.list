@@ -1,5 +1,6 @@
 morse_active_agent.sv
 morse_active_monitor.sv
+morse_assertions.sv
 morse_design.sv
 morse_driver.sv
 morse_environment.sv

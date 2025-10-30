@@ -222,6 +222,81 @@ class mid_reset_test extends morse_test;
 endclass
 
 //------------------------------------------------------//
+//                 cornercase1 test                     //  
+//------------------------------------------------------//
+
+class cornercase1_test extends morse_test;
+
+	`uvm_component_utils( cornercase1_test)
+	 cornercase1_sequence seq7;
+
+	function new(string name = "cornercase1_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq7 = cornercase1_sequence::type_id::create("seq7");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq7.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
+//                 cornercase2 test                     //  
+//------------------------------------------------------//
+
+class cornercase2_test extends morse_test;
+
+	`uvm_component_utils( cornercase2_test)
+	 cornercase2_sequence seq8;
+
+	function new(string name = "cornercase2_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq8 = cornercase2_sequence::type_id::create("seq8");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq8.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
+//                 cornercase3 test                     //  
+//------------------------------------------------------//
+
+class cornercase3_test extends morse_test;
+
+	`uvm_component_utils( cornercase3_test)
+	 cornercase3_sequence seq9;
+
+	function new(string name = "cornercase3_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		seq9 = cornercase3_sequence::type_id::create("seq9");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq9.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
 //              morse_regression test                   //  
 //------------------------------------------------------//
 
