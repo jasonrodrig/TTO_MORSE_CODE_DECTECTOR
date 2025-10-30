@@ -196,4 +196,23 @@ class word_test extends morse_test;
 	endtask
 endclass
 
+class morse_regression_test extends morse_test;
 
+	`uvm_component_utils(morse_regression_test)
+	morse_regression reg_test;
+
+	function new(string name = "morse_regression_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		reg_test = morse_regression::type_id::create("reg_test");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		reg_test.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass

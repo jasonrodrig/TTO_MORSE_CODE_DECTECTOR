@@ -424,3 +424,42 @@ class word_sequence extends morse_base_sequence;
 	endtask
 endclass
 
+//------------------------------------------------------//
+//                 regression sequence                  //  
+//------------------------------------------------------//
+
+class morse_regression extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(morse_regression)
+   
+   reset_sequence seq0;
+	 morse_character_sequence seq1;
+	 morse_number_sequence seq2;
+	 morse_alphanumeric_sequence seq3;
+   word_parsing_sequence seq4;
+	 word_sequence seq5;
+
+	function new(string name = "morse_regression");
+		super.new(name);
+	endfunction
+
+	task body();
+		`uvm_do(seq0)
+		`uvm_do(seq1)
+		`uvm_do(seq2)
+		`uvm_do(seq3)         
+		`uvm_do(seq4)
+		`uvm_do(seq5)
+/*	`uvm_do(seq6)
+  	`uvm_do(seq7)         
+		`uvm_do(seq8) 
+		`uvm_do(seq9)         
+		`uvm_do(seq10)
+		`uvm_do(seq11)         
+		`uvm_do(seq12)
+		`uvm_do(seq13)
+		`uvm_do(seq14)
+		`uvm_do(seq15)
+		`uvm_do(seq16)
+*/	endtask
+
+endclass

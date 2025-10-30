@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 09:25:08 on Oct 30,2025
+# Start time: 10:19:26 on Oct 30,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
@@ -53,12 +53,12 @@
 # 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test word_parsing_test...
+# UVM_INFO @ 0: reporter [RNTST] Running test morse_regression_test...
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # ------------------------------------------------------------------------
 # Name                        Type                             Size  Value
 # ------------------------------------------------------------------------
-# uvm_test_top                word_parsing_test                -     @471 
+# uvm_test_top                morse_regression_test            -     @471 
 #   morse_environment         morse_environment                -     @478 
 #     morse_active_agt        morse_active_agent               -     @493 
 #       morse_active_driv     morse_driver                     -     @636 
@@ -94,307 +94,310 @@
 #         put_export          uvm_put_imp                      -     @568 
 # ------------------------------------------------------------------------
 # 
-# UVM_INFO morse_driver.sv(96) @ 25: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 0, dash = 0, char_space = 0, word_space = 0
+# RESET APPLIED
+# UVM_INFO morse_driver.sv(96) @ 25: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 1, dash = 0, char_space = 1, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 35: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 35: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 0, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 35: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 0, char_space = 1, dot = 1, dash = 0, word_space = 0
 # UVM_INFO morse_scoreboard.sv(292) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] buffer size = 0
 # UVM_INFO morse_scoreboard.sv(315) @ 35: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] Reset detected | buffer cleared and sout=0xFF verified
-# UVM_INFO morse_driver.sv(96) @ 35: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
-# UVM_INFO morse_active_monitor.sv(63) @ 45: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
+# UVM_INFO morse_driver.sv(96) @ 35: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 45: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 45: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_scoreboard.sv(292) @ 45: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(292) @ 45: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 45: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 45: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 45: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
 # UVM_INFO morse_driver.sv(96) @ 45: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 55: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 55: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            2
-# UVM_INFO morse_scoreboard.sv(292) @ 55: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 55: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 65: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 55: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 65: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 65: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            3
-# UVM_INFO morse_scoreboard.sv(292) @ 65: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(292) @ 65: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 65: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 65: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(323) @ 65: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 65: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 75: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 75: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            4
-# UVM_INFO morse_scoreboard.sv(292) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 75: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 85: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 75: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 85: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 85: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            5
-# UVM_INFO morse_scoreboard.sv(292) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(292) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(331) @ 85: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 1 1 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 85: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 95: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 95: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            6
-# UVM_INFO morse_scoreboard.sv(292) @ 95: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 95: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 105: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 95: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 105: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 105: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word decodding at word_count =           6
-# UVM_INFO morse_scoreboard.sv(292) @ 105: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
+# UVM_INFO morse_scoreboard.sv(292) @ 105: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 105: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
-# UVM_INFO morse_scoreboard.sv(466) @ 105: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
+# UVM_INFO morse_scoreboard.sv(295) @ 105: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 4
+# UVM_INFO morse_scoreboard.sv(323) @ 105: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 2 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 105: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 115: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 115: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 125: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 115: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 125: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 125: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 125: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 125: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 125: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 4
+# UVM_INFO morse_driver.sv(96) @ 125: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 135: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 135: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 135: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
-# UVM_INFO morse_scoreboard.sv(323) @ 135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
-# 
-# 
-# UVM_INFO morse_driver.sv(96) @ 135: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 4
 # UVM_INFO morse_active_monitor.sv(63) @ 145: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 145: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 145: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 145: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 66 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 145: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 155: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 155: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
-# UVM_INFO morse_scoreboard.sv(323) @ 155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
-# 
-# 
-# UVM_INFO morse_driver.sv(96) @ 155: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 155: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 165: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 165: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 165: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 165: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 175: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 175: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 175: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
-# UVM_INFO morse_scoreboard.sv(323) @ 175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
+# UVM_INFO morse_scoreboard.sv(295) @ 175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(331) @ 175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2
 # 
 # 
 # UVM_INFO morse_driver.sv(96) @ 175: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 185: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 185: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 185: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 185: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 195: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 195: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 195: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(295) @ 195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(331) @ 195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2
+# 
+# 
 # UVM_INFO morse_driver.sv(96) @ 195: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 205: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 205: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# count is            2
-# UVM_INFO morse_scoreboard.sv(292) @ 205: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 205: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_driver.sv(96) @ 205: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 215: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 215: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# character decodding at count =           2
-# UVM_INFO morse_scoreboard.sv(292) @ 215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 73 | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 215: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(331) @ 215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 215: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 225: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 225: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 225: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 235: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 235: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_driver.sv(96) @ 235: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
-# UVM_INFO morse_active_monitor.sv(63) @ 245: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
+# UVM_INFO morse_active_monitor.sv(63) @ 235: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 235: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 235: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 4
+# UVM_INFO morse_scoreboard.sv(331) @ 235: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2 2 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 235: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 245: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 245: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_scoreboard.sv(292) @ 245: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 245: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
-# UVM_INFO morse_driver.sv(96) @ 245: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 245: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 255: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 255: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            2
-# UVM_INFO morse_scoreboard.sv(292) @ 255: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 255: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 255: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 255: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 255: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 5
+# UVM_INFO morse_scoreboard.sv(331) @ 255: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2 2 2 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 255: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 265: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 265: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            3
-# UVM_INFO morse_scoreboard.sv(292) @ 265: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 265: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_driver.sv(96) @ 265: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 275: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 275: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            4
-# UVM_INFO morse_scoreboard.sv(292) @ 275: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 275: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 275: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 275: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 275: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_driver.sv(96) @ 275: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 285: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 285: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            5
-# UVM_INFO morse_scoreboard.sv(292) @ 285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
 # UVM_INFO morse_passive_monitor.sv(65) @ 295: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 295: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            6
-# UVM_INFO morse_scoreboard.sv(292) @ 295: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 295: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 30 | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 295: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 295: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 305: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 305: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word decodding at word_count =           6
-# UVM_INFO morse_scoreboard.sv(292) @ 305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
-# UVM_INFO morse_scoreboard.sv(466) @ 305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
 # UVM_INFO morse_passive_monitor.sv(65) @ 315: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 315: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 325: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 315: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 325: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 325: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 325: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 325: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 325: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 325: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 325: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 335: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 335: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 335: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 335: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 1
-# UVM_INFO morse_scoreboard.sv(331) @ 335: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2
-# 
-# 
-# UVM_INFO morse_driver.sv(96) @ 335: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 345: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 335: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 335: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 345: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 345: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 345: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 345: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 345: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(331) @ 345: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 1 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 345: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 355: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 355: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 355: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 355: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 2
-# UVM_INFO morse_scoreboard.sv(331) @ 355: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2
-# 
-# 
-# UVM_INFO morse_driver.sv(96) @ 355: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 365: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 355: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 355: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 365: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 365: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 365: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 365: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 365: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 2
+# UVM_INFO morse_driver.sv(96) @ 365: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 375: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 375: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 375: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 3
-# UVM_INFO morse_scoreboard.sv(331) @ 375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2 2
-# 
-# 
-# UVM_INFO morse_driver.sv(96) @ 375: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 2
 # UVM_INFO morse_active_monitor.sv(63) @ 385: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 385: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 385: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 385: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 61 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 385: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 395: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 395: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 395: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 395: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
-# UVM_INFO morse_driver.sv(96) @ 395: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 395: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 405: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 405: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# count is            2
-# UVM_INFO morse_scoreboard.sv(292) @ 405: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 405: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_driver.sv(96) @ 405: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 415: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 415: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# character decodding at count =           2
-# UVM_INFO morse_scoreboard.sv(292) @ 415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 6f | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 415: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 0, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 425: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(315) @ 415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-RESET] Reset detected | buffer cleared and sout=0xFF verified
+# UVM_INFO morse_driver.sv(96) @ 415: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
+# UVM_INFO morse_active_monitor.sv(63) @ 425: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
 # UVM_INFO morse_passive_monitor.sv(65) @ 425: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 425: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 425: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_driver.sv(96) @ 425: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 435: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 435: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_driver.sv(96) @ 435: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
-# UVM_INFO morse_active_monitor.sv(63) @ 445: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
+# word count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 435: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 435: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 445: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 445: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word count is            3
 # UVM_INFO morse_scoreboard.sv(292) @ 445: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 445: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
-# UVM_INFO morse_driver.sv(96) @ 445: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 455: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 455: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            2
+# word count is            4
 # UVM_INFO morse_scoreboard.sv(292) @ 455: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 455: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 465: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 465: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            3
+# word count is            5
 # UVM_INFO morse_scoreboard.sv(292) @ 465: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 465: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 475: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 475: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            4
+# word count is            6
 # UVM_INFO morse_scoreboard.sv(292) @ 475: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 475: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 485: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 485: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            5
-# UVM_INFO morse_scoreboard.sv(292) @ 485: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# word decodding at word_count =           6
+# UVM_INFO morse_scoreboard.sv(292) @ 485: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 485: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 485: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(466) @ 485: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
 # UVM_INFO morse_passive_monitor.sv(65) @ 495: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 495: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            6
-# UVM_INFO morse_scoreboard.sv(292) @ 495: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 495: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 505: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 505: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word decodding at word_count =           6
-# UVM_INFO morse_scoreboard.sv(292) @ 505: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 505: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
-# UVM_INFO morse_scoreboard.sv(466) @ 505: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
+# UVM_INFO morse_driver.sv(96) @ 505: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 515: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 515: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 515: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 515: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 515: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 515: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 515: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 525: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 525: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_driver.sv(96) @ 525: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
@@ -403,8 +406,8 @@
 # UVM_INFO morse_scoreboard.sv(292) @ 535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
-# UVM_INFO morse_scoreboard.sv(323) @ 535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# UVM_INFO morse_scoreboard.sv(295) @ 535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(323) @ 535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
 # 
 # 
 # UVM_INFO morse_driver.sv(96) @ 535: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
@@ -416,137 +419,637 @@
 # UVM_INFO morse_scoreboard.sv(292) @ 555: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 555: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
-# UVM_INFO morse_scoreboard.sv(323) @ 555: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
+# UVM_INFO morse_scoreboard.sv(295) @ 555: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(323) @ 555: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
 # 
 # 
 # UVM_INFO morse_driver.sv(96) @ 555: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 565: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 565: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 565: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 565: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 575: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 575: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 575: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 575: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 575: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 575: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
-# UVM_INFO morse_scoreboard.sv(323) @ 575: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
-# 
-# 
+# UVM_INFO morse_scoreboard.sv(295) @ 575: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
 # UVM_INFO morse_driver.sv(96) @ 575: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 585: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 585: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_driver.sv(96) @ 585: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 585: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 585: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
 # UVM_INFO morse_passive_monitor.sv(65) @ 595: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 595: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_scoreboard.sv(292) @ 595: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# UVM_INFO morse_active_monitor.sv(63) @ 595: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 595: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 73 | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 595: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
-# UVM_INFO morse_driver.sv(96) @ 595: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 595: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 605: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 605: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# count is            2
-# UVM_INFO morse_scoreboard.sv(292) @ 605: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 605: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
 # UVM_INFO morse_passive_monitor.sv(65) @ 615: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 615: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# character decodding at count =           2
-# UVM_INFO morse_scoreboard.sv(292) @ 615: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 73 | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 615: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
-# UVM_INFO morse_active_monitor.sv(63) @ 625: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 615: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
+# UVM_INFO morse_active_monitor.sv(63) @ 625: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
 # UVM_INFO morse_passive_monitor.sv(65) @ 625: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 625: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 625: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_driver.sv(96) @ 625: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 635: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 635: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_driver.sv(96) @ 635: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
-# UVM_INFO morse_active_monitor.sv(63) @ 645: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
+# word count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 635: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 635: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 645: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 645: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word count is            3
 # UVM_INFO morse_scoreboard.sv(292) @ 645: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 645: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
-# UVM_INFO morse_driver.sv(96) @ 645: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 655: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 655: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            2
+# word count is            4
 # UVM_INFO morse_scoreboard.sv(292) @ 655: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 655: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 665: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 665: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            3
+# word count is            5
 # UVM_INFO morse_scoreboard.sv(292) @ 665: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 665: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 675: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 675: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            4
+# word count is            6
 # UVM_INFO morse_scoreboard.sv(292) @ 675: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(295) @ 675: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 685: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 685: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word count is            5
-# UVM_INFO morse_scoreboard.sv(292) @ 685: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# word decodding at word_count =           6
+# UVM_INFO morse_scoreboard.sv(292) @ 685: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(295) @ 685: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(295) @ 685: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(466) @ 685: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
 # UVM_INFO morse_passive_monitor.sv(65) @ 695: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
 # UVM_INFO morse_active_monitor.sv(63) @ 695: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# word count is            6
-# UVM_INFO morse_scoreboard.sv(292) @ 695: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 695: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 705: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 705: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# word decodding at word_count =           6
-# UVM_INFO morse_scoreboard.sv(292) @ 705: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
-# 
-# 
-# UVM_INFO morse_scoreboard.sv(295) @ 705: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
-# UVM_INFO morse_scoreboard.sv(466) @ 705: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
+# UVM_INFO morse_driver.sv(96) @ 705: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 715: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO morse_active_monitor.sv(63) @ 715: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 715: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 715: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 715: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(331) @ 715: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 715: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 725: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 725: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 725: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO morse_subscriber.sv(106) @ 725: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 92.86%,
-# UVM_INFO morse_subscriber.sv(107) @ 725: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 8.11%
-# Passes = 47 | Fails = 0
+# UVM_INFO morse_driver.sv(96) @ 725: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 735: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 735: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 735: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 735: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(331) @ 735: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 735: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 745: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 745: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 745: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 1, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 755: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 755: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 1, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 755: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 755: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(331) @ 755: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DASH] values in the buffer 2 2 2
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 755: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 765: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 765: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 765: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 775: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 775: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 775: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 775: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_driver.sv(96) @ 775: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 785: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 785: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 785: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 785: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_passive_monitor.sv(65) @ 795: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 795: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 795: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 6f | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 795: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 805: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 805: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_passive_monitor.sv(65) @ 815: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 815: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 815: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
+# UVM_INFO morse_active_monitor.sv(63) @ 825: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
+# UVM_INFO morse_passive_monitor.sv(65) @ 825: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 825: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 825: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_driver.sv(96) @ 825: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 835: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 835: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# word count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 835: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 835: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 845: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 845: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word count is            3
+# UVM_INFO morse_scoreboard.sv(292) @ 845: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 845: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 855: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 855: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# word count is            4
+# UVM_INFO morse_scoreboard.sv(292) @ 855: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 855: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 865: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 865: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word count is            5
+# UVM_INFO morse_scoreboard.sv(292) @ 865: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 865: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 875: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 875: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# word count is            6
+# UVM_INFO morse_scoreboard.sv(292) @ 875: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 875: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 885: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 885: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word decodding at word_count =           6
+# UVM_INFO morse_scoreboard.sv(292) @ 885: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 885: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(466) @ 885: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
+# UVM_INFO morse_passive_monitor.sv(65) @ 895: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 895: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 905: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 905: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 905: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 915: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 915: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 915: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 915: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 915: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 915: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 925: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 925: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 925: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 935: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 935: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 935: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 935: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(323) @ 935: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 935: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 945: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 945: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 945: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 955: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 955: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 955: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 955: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(323) @ 955: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 955: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 965: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 965: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 965: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 975: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 975: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 975: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 975: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_driver.sv(96) @ 975: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 985: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 985: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 985: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 985: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 3
+# UVM_INFO morse_passive_monitor.sv(65) @ 995: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 995: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 995: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 73 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 995: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1005: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1005: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_passive_monitor.sv(65) @ 1015: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1015: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1015: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
+# UVM_INFO morse_active_monitor.sv(63) @ 1025: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 1
+# UVM_INFO morse_passive_monitor.sv(65) @ 1025: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1025: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1025: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_driver.sv(96) @ 1025: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1035: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1035: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# word count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 1035: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1035: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1045: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1045: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word count is            3
+# UVM_INFO morse_scoreboard.sv(292) @ 1045: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1045: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1055: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1055: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# word count is            4
+# UVM_INFO morse_scoreboard.sv(292) @ 1055: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1055: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1065: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1065: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word count is            5
+# UVM_INFO morse_scoreboard.sv(292) @ 1065: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1065: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1075: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1075: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# word count is            6
+# UVM_INFO morse_scoreboard.sv(292) @ 1075: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1075: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD DELAY] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1085: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1085: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# word decodding at word_count =           6
+# UVM_INFO morse_scoreboard.sv(292) @ 1085: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] sout = 20 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1085: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(466) @ 1085: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-WORD] Word boundary detected | buffer cleared
+# UVM_INFO morse_passive_monitor.sv(65) @ 1095: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1095: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1105: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1105: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1105: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1115: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1115: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1115: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1115: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 1115: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1115: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1125: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1125: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1125: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1135: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1135: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(323) @ 1135: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1135: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1145: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1145: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1145: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1155: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1155: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(323) @ 1155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1155: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1165: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1165: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1165: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1175: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1175: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 4
+# UVM_INFO morse_scoreboard.sv(323) @ 1175: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1175: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1185: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1185: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1185: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1195: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1195: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 5
+# UVM_INFO morse_scoreboard.sv(323) @ 1195: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1195: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1205: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1205: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1205: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1215: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1215: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1215: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_driver.sv(96) @ 1215: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1225: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1225: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 1225: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1225: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_passive_monitor.sv(65) @ 1235: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1235: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 1235: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 35 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1235: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1245: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1245: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_passive_monitor.sv(65) @ 1255: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1255: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1255: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1265: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1265: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1265: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1265: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 1265: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1265: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1275: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1275: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1275: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1285: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1285: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(323) @ 1285: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1285: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1295: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1295: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1295: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1305: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1305: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(323) @ 1305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1305: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1315: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1315: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1315: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1325: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1325: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1325: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1325: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 4
+# UVM_INFO morse_scoreboard.sv(323) @ 1325: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1325: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1335: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1335: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1335: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1345: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1345: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1345: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1345: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 5
+# UVM_INFO morse_scoreboard.sv(323) @ 1345: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1345: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1355: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1355: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_driver.sv(96) @ 1355: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1365: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1365: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_scoreboard.sv(292) @ 1365: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1365: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_driver.sv(96) @ 1365: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1375: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1375: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 1375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1375: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_active_monitor.sv(63) @ 1385: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1385: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 1385: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 35 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1385: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1395: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1395: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1405: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1405: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1405: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1415: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1415: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 1
+# UVM_INFO morse_scoreboard.sv(323) @ 1415: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1415: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1425: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1425: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1425: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1435: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1435: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1435: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1435: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 2
+# UVM_INFO morse_scoreboard.sv(323) @ 1435: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1435: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1445: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1445: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1445: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1455: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1455: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1455: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1455: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 3
+# UVM_INFO morse_scoreboard.sv(323) @ 1455: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1455: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1465: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1465: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1465: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1475: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1475: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1475: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1475: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 4
+# UVM_INFO morse_scoreboard.sv(323) @ 1475: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1475: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1485: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1485: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1485: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1495: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1495: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1495: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1495: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] buffer size = 5
+# UVM_INFO morse_scoreboard.sv(323) @ 1495: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-DOT] values in the buffer 1 1 1 1 1
+# 
+# 
+# UVM_INFO morse_driver.sv(96) @ 1495: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1505: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1505: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_driver.sv(96) @ 1505: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 1, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1515: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1515: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 1, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_scoreboard.sv(292) @ 1515: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1515: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_driver.sv(96) @ 1515: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1525: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1525: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# count is            2
+# UVM_INFO morse_scoreboard.sv(292) @ 1525: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] sout = ff | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1525: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
+# UVM_INFO morse_passive_monitor.sv(65) @ 1535: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1535: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# character decodding at count =           2
+# UVM_INFO morse_scoreboard.sv(292) @ 1535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = 35 | actual=expected, MATCH
+# 
+# 
+# UVM_INFO morse_scoreboard.sv(295) @ 1535: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_active_monitor.sv(63) @ 1545: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO morse_passive_monitor.sv(65) @ 1545: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_passive_monitor.sv(65) @ 1555: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, char_space = x, dot = x, dash = x, word_space = x
+# UVM_INFO morse_active_monitor.sv(63) @ 1555: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1555: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO morse_subscriber.sv(106) @ 1555: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 92.86%,
+# UVM_INFO morse_subscriber.sv(107) @ 1555: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 18.92%
+# Passes = 92 | Fails = 0
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  288
+# UVM_INFO :  636
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
-# [DRV]    33
-# [INP_MON]    70
-# [OUT_MON]    70
+# [DRV]    98
+# [INP_MON]   153
+# [OUT_MON]   153
 # [Questa UVM]     2
 # [RNTST]     1
-# [SCOREBOARD-CHAR]     6
-# [SCOREBOARD-CHAR DELAY]    12
-# [SCOREBOARD-DASH]     9
-# [SCOREBOARD-DOT]    18
-# [SCOREBOARD-RESET]     3
+# [SCOREBOARD-CHAR]    18
+# [SCOREBOARD-CHAR DELAY]    36
+# [SCOREBOARD-DASH]    30
+# [SCOREBOARD-DOT]    75
+# [SCOREBOARD-RESET]     6
 # [SCOREBOARD-WORD]    12
 # [SCOREBOARD-WORD DELAY]    48
 # [TEST_DONE]     1
 # [UVMTOP]     1
 # [morse_coverage]     2
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 725 ns  Iteration: 62  Instance: /top
+#    Time: 1555 ns  Iteration: 66  Instance: /top
 # Saving coverage database on exit...
-# End time: 09:25:12 on Oct 30,2025, Elapsed time: 0:00:04
+# End time: 10:19:31 on Oct 30,2025, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
