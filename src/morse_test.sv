@@ -397,6 +397,30 @@ class cornercase4_test extends morse_test;
 endclass
 
 //------------------------------------------------------//
+//                 cornercase5 test                     //  
+//------------------------------------------------------//
+class cornercase5_test extends morse_test;
+
+  `uvm_component_utils( cornercase5_test)
+	 cornercase5_sequence seq14;
+
+  function new(string name = "cornercase5_test", uvm_component parent);
+		super.new(name,parent);
+	endfunction : new
+
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+      seq14 = cornercase5_sequence::type_id::create("seq14");
+	endfunction : build_phase
+
+	task run_phase(uvm_phase phase);
+		phase.raise_objection(this);
+		seq14.start(morse_env.morse_active_agt.morse_active_seqr);
+		phase.drop_objection(this);
+	endtask
+endclass
+
+//------------------------------------------------------//
 //              morse_regression test                   //  
 //------------------------------------------------------//
 

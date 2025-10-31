@@ -37,13 +37,17 @@ class morse_base_sequence extends uvm_sequence#(morse_sequence_item);
 
 	task send_char_space();
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-		//	req.print();
+  	 repeat(3) begin
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		 end
+			//	req.print();
 	endtask
 
 	task send_word_space();
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
-   	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		 repeat(7) begin
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		 end
 		//req.print();
 	endtask
 
@@ -477,7 +481,7 @@ class invalid_sequence1 extends uvm_sequence#(morse_sequence_item);
 		end
     
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+   	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
 		repeat(6) begin
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
@@ -485,7 +489,7 @@ class invalid_sequence1 extends uvm_sequence#(morse_sequence_item);
 		end
     
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
 	endtask
 endclass 
@@ -506,7 +510,7 @@ class cornercase1_sequence extends uvm_sequence#(morse_sequence_item);
 		`uvm_do_with(req,{ req.rst == 0; } )
   	$display("CHARACTER APPLIED");	
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	 repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 	 
 		 repeat(1)begin
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
@@ -514,7 +518,7 @@ class cornercase1_sequence extends uvm_sequence#(morse_sequence_item);
 		 end
     
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	 repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
 	endtask
 endclass 
@@ -535,7 +539,7 @@ class cornercase2_sequence extends uvm_sequence#(morse_sequence_item);
 		`uvm_do_with(req,{ req.rst == 0; } )
   	$display("WORD APPLIED");	
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	 repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
     
 		repeat(1)begin
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
@@ -543,10 +547,10 @@ class cornercase2_sequence extends uvm_sequence#(morse_sequence_item);
 		end
     
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
   	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
 	endtask
 endclass 
@@ -576,7 +580,7 @@ class cornercase3_sequence extends uvm_sequence#(morse_sequence_item);
 		 end
     
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	 repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
 	endtask
 endclass 
@@ -703,46 +707,202 @@ endclass
 //------------------------------------------------------//
 
 class cornercase4_sequence extends uvm_sequence#(morse_sequence_item);
-  `uvm_object_utils(cornercase4_sequence)
+	`uvm_object_utils(cornercase4_sequence)
 
-  function new(string name = "cornercase4_sequence");
+	function new(string name = "cornercase4_sequence");
 		super.new(name);
 	endfunction
 
 	task body();
 		$display("RESET APPLIED");
-        // charascter mid reset - >
-		
-        `uvm_do_with(req,{ req.rst == 0; } )
-  	
-       `uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-   	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-		
- 		 repeat(1)begin
-            `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-            `uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
- 		 end
-    
- 	//	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-     	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		// character mid reset - >
 
-      // word mid reset - >
-      `uvm_do_with(req,{ req.rst == 0; } )
-  	
-      `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req,{ req.rst == 0; } )
+
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+	
+			`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+	  repeat(1)`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 		
-		 repeat(1)begin
-           `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
-           `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-		 end
+
+		//	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+		repeat(3)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req,{ req.rst == 0; } )
+
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+	
+			`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(1)`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		
+
+		//	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+		repeat(3)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+		 `uvm_do_with(req,{ req.rst == 0; } )
+
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+	
+			`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(2)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(1)`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		
+
+		//	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+		repeat(3)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+
+		// word mid reset - >
+/*		`uvm_do_with(req,{ req.rst == 0; } )
+
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+		repeat(1)begin
+			`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+			`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		end
+
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+*/
+	endtask
+endclass 
+
+//------------------------------------------------------//
+//              cornercase5 sequence                    //  
+//------------------------------------------------------//
+
+class cornercase5_sequence extends uvm_sequence#(morse_sequence_item);
+	`uvm_object_utils(cornercase5_sequence)
+
+	function new(string name = "cornercase5_sequence");
+		super.new(name);
+	endfunction
+
+	task body();
+		$display("RESET APPLIED");
+		`uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
     
-        `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
-        `uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-    	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+		`uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(1)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+    `uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(2)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+		`uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(3)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+    `uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(4)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+    `uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(5)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+    `uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(6)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+    `uvm_do_with(req,{ req.rst == 0; }) 
+			 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+    
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+  	repeat(3) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==1;})
+  	repeat(7)`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})	
+		
+		`uvm_do_with(req, {req.rst==0; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+		repeat(7) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
 
 	endtask
 endclass 
+
 
 //------------------------------------------------------//
 //                 regression sequence                  //  
@@ -765,6 +925,8 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
 	 invalid_sequence2 seq11;
 	 invalid_sequence3 seq12;
    cornercase4_sequence seq13;
+	 cornercase5_sequence seq14;
+
 	function new(string name = "morse_regression");
 		super.new(name);
 	endfunction
@@ -777,17 +939,15 @@ class morse_regression extends uvm_sequence#(morse_sequence_item);
 		`uvm_do(seq4)
 		`uvm_do(seq5)
     `uvm_do(seq6)
-    `uvm_do(seq7)         
-		`uvm_do(seq8) 
-  	`uvm_do(seq9)         
-  	`uvm_do(seq10)
-   	`uvm_do(seq11)         
-	  `uvm_do(seq12)
-  	`uvm_do(seq13)
-/*	`uvm_do(seq14)
-		`uvm_do(seq15)
-		`uvm_do(seq16)
-*/	endtask
+    `uvm_do(seq7)         	
+  	`uvm_do(seq8) 
+    `uvm_do(seq9)         
+    `uvm_do(seq10)
+    `uvm_do(seq11)         
+  	`uvm_do(seq12)
+	  `uvm_do(seq13)
+  	`uvm_do(seq14)
+	endtask
 
 endclass
 
