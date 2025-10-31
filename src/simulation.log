@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 22:06:03 on Oct 30,2025
+# Start time: 10:47:15 on Oct 31,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
@@ -183,12 +183,12 @@
 # 
 # UVM_INFO morse_scoreboard.sv(339) @ 155: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
 # UVM_INFO morse_active_monitor.sv(63) @ 165: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
-# UVM_INFO morse_passive_monitor.sv(65) @ 165: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = 65
+# UVM_INFO morse_passive_monitor.sv(65) @ 165: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # character decodding at count =           2
-# UVM_INFO morse_scoreboard.sv(343) @ 165: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] actual = 65 | expected = ff , MISMATCH
+# UVM_INFO morse_scoreboard.sv(336) @ 165: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(346) @ 165: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(339) @ 165: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 175: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_active_monitor.sv(63) @ 175: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 185: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
@@ -273,21 +273,21 @@
 # 
 # 
 # UVM_INFO morse_scoreboard.sv(339) @ 305: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR DELAY] buffer size = 5
-# UVM_INFO morse_passive_monitor.sv(65) @ 315: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = 65
+# UVM_INFO morse_passive_monitor.sv(65) @ 315: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_active_monitor.sv(63) @ 315: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # character decodding at count =           2
-# UVM_INFO morse_scoreboard.sv(343) @ 315: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] actual = 65 | expected = ff , MISMATCH
+# UVM_INFO morse_scoreboard.sv(336) @ 315: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] sout = ff | actual=expected, MATCH
 # 
 # 
-# UVM_INFO morse_scoreboard.sv(346) @ 315: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
+# UVM_INFO morse_scoreboard.sv(339) @ 315: uvm_test_top.morse_environment.morse_scoreboard [SCOREBOARD-CHAR] buffer size = 0
 # UVM_INFO morse_active_monitor.sv(63) @ 325: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 325: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_passive_monitor.sv(65) @ 335: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_active_monitor.sv(63) @ 335: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 335: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # UVM_INFO morse_subscriber.sv(106) @ 335: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [ACTIVE_MONITOR] Coverage ------> 82.14%,
-# UVM_INFO morse_subscriber.sv(107) @ 335: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 2.70%
-# Passes = 15 | Fails = 2
+# UVM_INFO morse_subscriber.sv(107) @ 335: uvm_test_top.morse_environment.morse_coverage [morse_coverage] [PASSIVE_MONITOR] Coverage ------> 0.00%
+# Passes = 17 | Fails = 0
 # 
 # --- UVM Report Summary ---
 # 
@@ -313,5 +313,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 335 ns  Iteration: 62  Instance: /top
 # Saving coverage database on exit...
-# End time: 22:06:07 on Oct 30,2025, Elapsed time: 0:00:04
+# End time: 10:48:07 on Oct 31,2025, Elapsed time: 0:00:52
 # Errors: 0, Warnings: 0

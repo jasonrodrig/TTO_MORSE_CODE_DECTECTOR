@@ -1,7 +1,7 @@
 var g_db_data = [
 {dummy:0},
-{name:'input_coverage',f:1,type:6,id:1498,tb:'18',h:'14',m:'4',hp:'77.77%',cov:['82.14%','Y'],g:'100.00%',gp:['82.14%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/morse_pkg/morse_coverage',parent:'1493'},
-{name:'output_coverage',f:1,type:6,id:1506,tb:'37',h:'1',m:'36',hp:'2.70%',cov:['2.70%','R'],g:'100.00%',gp:['2.70%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/morse_pkg/morse_coverage',parent:'1493'},
-{name:'input_coverage',f:1,type:6,id:2311,tb:'18',h:'14',m:'4',hp:'77.77%',cov:['82.14%','Y'],g:'100.00%',gp:['82.14%','Y'],opts:[[],['merge_instance','true']],hdlPath:'work.morse_pkg::morse_coverage',parent:'2306'},
-{name:'output_coverage',f:1,type:6,id:2319,tb:'37',h:'1',m:'36',hp:'2.70%',cov:['2.70%','R'],g:'100.00%',gp:['2.70%','R'],opts:[[],['merge_instance','true']],hdlPath:'work.morse_pkg::morse_coverage',parent:'2306'}];
+{name:'input_coverage',f:1,type:6,id:1499,tb:'18',h:'14',m:'4',hp:'77.77%',cov:['82.14%','Y'],g:'100.00%',gp:['82.14%','Y'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/morse_pkg/morse_coverage',parent:'1494'},
+{name:'output_coverage',f:1,type:6,id:1507,tb:'37',h:'0',m:'37',hp:'0.00%',cov:['0.00%','R'],g:'100.00%',gp:['0.00%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/morse_pkg/morse_coverage',parent:'1494'},
+{name:'input_coverage',f:1,type:6,id:2312,tb:'18',h:'14',m:'4',hp:'77.77%',cov:['82.14%','Y'],g:'100.00%',gp:['82.14%','Y'],opts:[[],['merge_instance','true']],hdlPath:'work.morse_pkg::morse_coverage',parent:'2307'},
+{name:'output_coverage',f:1,type:6,id:2320,tb:'37',h:'0',m:'37',hp:'0.00%',cov:['0.00%','R'],g:'100.00%',gp:['0.00%','R'],opts:[[],['merge_instance','true']],hdlPath:'work.morse_pkg::morse_coverage',parent:'2307'}];
 processConsCovergroupsData(g_db_data);
