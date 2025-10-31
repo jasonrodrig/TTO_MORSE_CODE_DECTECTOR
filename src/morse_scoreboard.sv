@@ -355,6 +355,8 @@ class morse_scoreboard extends uvm_scoreboard;
 
      // RESET condition
     if (expected.rst == 0) begin
+			word_count = 0;
+			word_temp = 1;
       check_and_report("SCOREBOARD-RESET", 8'hFF, actual.sout, 1);
       `uvm_info("SCOREBOARD-RESET", "Reset detected | buffer cleared and sout=0xFF verified", UVM_LOW);
       return;
