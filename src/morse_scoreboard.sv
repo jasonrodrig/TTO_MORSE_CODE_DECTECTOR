@@ -388,7 +388,7 @@ class morse_scoreboard extends uvm_scoreboard;
     
     else if (expected.char_space_inp==0 && expected.dot_inp==0 && expected.dash_inp==0 && expected.word_space_inp==0 && char_temp == 0  ) begin
    
-      if(char_count == 2) begin
+      if(char_count == 3) begin
     // CHAR_SPACE conditin
         $display("character decodding at count = %d",char_count);
       char_temp = 1;
@@ -504,7 +504,7 @@ class morse_scoreboard extends uvm_scoreboard;
       
     // WORD_SPACE condition
     else if (expected.word_space_inp==0 && expected.dot_inp==0 && expected.dash_inp==0 && expected.char_space_inp==0 && word_temp == 0) begin
-      if(word_count == 6) begin
+      if(word_count == 7) begin
         $display("word decodding at word_count = %d",word_count);
         word_temp = 1;
         word_count = 0; 

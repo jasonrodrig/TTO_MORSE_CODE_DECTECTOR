@@ -1,5 +1,4 @@
 /*
-
 class morse_driver extends uvm_driver #(morse_sequence_item);
 
 	// declaring interface handle
@@ -150,6 +149,7 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 	int char_temp2 = 1 ;
 	int char_temp3 = 1 ;
 	int char_temp4 = 1 ;
+    int char_temp5 = 1 ;
 
 	int word_temp1 = 1 ;
 	int word_temp2 = 1 ;
@@ -159,6 +159,7 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 	int word_temp6 = 1 ;
 	int word_temp7 = 1 ;
 	int word_temp8 = 1 ;
+    int word_temp9 = 1 ;
 
 	int dot_temp = 1;
 	int dash_temp  = 1;
@@ -219,9 +220,15 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 						//4th word count ->
 		else if( !req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp && char_temp4 == 0 ) begin
 			char_temp4 = 1;
+            char_temp5 = 0;
 			repeat(1) @(posedge vif.drv_cb);  
 		end
-
+ 
+                 //5th word count ->       
+      else if( !req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp && char_temp5 == 0 ) begin
+			char_temp5 = 1;
+			repeat(1) @(posedge vif.drv_cb);  
+		end
 						//1st word count
 		else if( !req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp && word_temp1 == 0 ) begin
 			word_temp1 = 1;
@@ -272,9 +279,17 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 						// 8th word count
 		else if( !req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp && word_temp8 == 0 ) begin
 			word_temp8 = 1;
+            word_temp9 = 0;
 			repeat(1) @(posedge vif.drv_cb); 
 		end
-
+			
+      // 9th word count
+      else if( !req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp && word_temp9 == 0 ) begin
+			word_temp9 = 1;
+			repeat(1) @(posedge vif.drv_cb); 
+		end
+      
+      
 		else if( !req.char_space_inp && !req.dot_inp && !req.dash_inp && !req.word_space_inp && dot_temp == 0 ) begin
 			dot_temp = 1;
 			repeat(1) @(posedge vif.drv_cb); 
