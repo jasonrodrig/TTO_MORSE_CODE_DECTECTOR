@@ -79,7 +79,7 @@ interface morse_assertions(clk , rst , dot_inp , dash_inp , char_space_inp , wor
   property prop6;
     @(posedge clk)
     disable iff (!rst)
-    (!char_space_inp && !dot_inp && !dash_inp && word_space_inp) |-> ##7 (sout == 8'h20);
+    (!char_space_inp && !dot_inp && !dash_inp && word_space_inp) |=> ##7 (sout == 8'h20);
   endproperty
 
   WORD_OUTPUT_CHECK : assert property (prop6)

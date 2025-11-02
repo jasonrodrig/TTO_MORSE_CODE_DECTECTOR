@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 13:47:07 on Nov 02,2025
+# Start time: 13:52:28 on Nov 02,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
@@ -17497,13 +17497,13 @@
 # UVM_INFO morse_driver.sv(318) @ 19855: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 19855 ns Started: 19785 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 19855
-#    Time: 19855 ns Started: 19785 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 19855 ns Started: 19855 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_active_monitor.sv(63) @ 19865: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 19865: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_driver.sv(318) @ 19865: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 1
+# ** Info: WORD_OUTPUT_CHECK PASSED: sout correctly 0x20 after 7 cycles of word_space_inp
+#    Time: 19865 ns Started: 19785 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 86
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 19865 ns Started: 19865 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 19875: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
@@ -17586,13 +17586,13 @@
 # UVM_INFO morse_driver.sv(318) @ 19945: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 19945 ns Started: 19875 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 19945
-#    Time: 19945 ns Started: 19875 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 19945 ns Started: 19945 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 19955: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_active_monitor.sv(63) @ 19955: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_driver.sv(318) @ 19955: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 0, dash = 0, char_space = 0, word_space = 0
+# ** Info: WORD_OUTPUT_CHECK PASSED: sout correctly 0x20 after 7 cycles of word_space_inp
+#    Time: 19955 ns Started: 19875 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 86
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 19955 ns Started: 19955 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_active_monitor.sv(63) @ 19965: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 0, char_space = 0, dot = 0, dash = 0, word_space = 0
@@ -18079,13 +18079,13 @@
 # UVM_INFO morse_driver.sv(318) @ 20495: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 20495 ns Started: 20425 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 20495
-#    Time: 20495 ns Started: 20425 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 20495 ns Started: 20495 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_active_monitor.sv(63) @ 20505: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 20505: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_driver.sv(318) @ 20505: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# ** Info: WORD_OUTPUT_CHECK PASSED: sout correctly 0x20 after 7 cycles of word_space_inp
+#    Time: 20505 ns Started: 20425 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 86
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 20505 ns Started: 20505 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 20515: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
@@ -18443,13 +18443,13 @@
 # UVM_INFO morse_driver.sv(318) @ 20885: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 20885 ns Started: 20815 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 20885
-#    Time: 20885 ns Started: 20815 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 20885 ns Started: 20885 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 20895: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_active_monitor.sv(63) @ 20895: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_driver.sv(318) @ 20895: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 1, dash = 0, char_space = 0, word_space = 0
+# ** Info: WORD_OUTPUT_CHECK PASSED: sout correctly 0x20 after 7 cycles of word_space_inp
+#    Time: 20895 ns Started: 20815 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 86
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 20895 ns Started: 20895 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_active_monitor.sv(63) @ 20905: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 1, dash = 0, word_space = 0
@@ -18595,14 +18595,14 @@
 # UVM_INFO morse_driver.sv(318) @ 21045: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 21045 ns Started: 20975 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 21045
-#    Time: 21045 ns Started: 20975 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 21045 ns Started: 21045 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 21055: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_active_monitor.sv(63) @ 21055: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # RESET APPLIED
 # UVM_INFO morse_driver.sv(318) @ 21055: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 1, dash = 1, char_space = 0, word_space = 0
+# ** Info: WORD_OUTPUT_CHECK PASSED: sout correctly 0x20 after 7 cycles of word_space_inp
+#    Time: 21055 ns Started: 20975 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 86
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 21055 ns Started: 21055 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_active_monitor.sv(63) @ 21065: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 0, char_space = 0, dot = 1, dash = 1, word_space = 0
@@ -33020,8 +33020,6 @@
 # UVM_INFO morse_driver.sv(318) @ 37705: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 37705 ns Started: 37635 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 37705
-#    Time: 37705 ns Started: 37635 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 37705 ns Started: 37705 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 37715: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
@@ -33227,13 +33225,13 @@
 # UVM_INFO morse_driver.sv(318) @ 37955: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 1, dot = 0, dash = 0, char_space = 0, word_space = 0
 # ** Info: WORD_SPACE_CHECK PASSED
 #    Time: 37955 ns Started: 37885 ns  Scope: top.vif.ASSERT.WORD_SPACE_CHECK File: morse_assertions.sv Line: 56
-# ** Error: ASSERTION FAILED: sout != 0x20 after 7 cycles of word_space_inp at time 37955
-#    Time: 37955 ns Started: 37885 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 88 Expr: sout==32
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 37955 ns Started: 37955 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_active_monitor.sv(63) @ 37965: uvm_test_top.morse_environment.morse_active_agt.morse_active_mon [INP_MON] rst = 1, char_space = 0, dot = 0, dash = 0, word_space = 0
 # UVM_INFO morse_passive_monitor.sv(65) @ 37965: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
 # UVM_INFO morse_driver.sv(318) @ 37965: uvm_test_top.morse_environment.morse_active_agt.morse_active_driv [DRV] rst = 0, dot = 0, dash = 0, char_space = 0, word_space = 0
+# ** Info: WORD_OUTPUT_CHECK PASSED: sout correctly 0x20 after 7 cycles of word_space_inp
+#    Time: 37965 ns Started: 37885 ns  Scope: top.vif.ASSERT.WORD_OUTPUT_CHECK File: morse_assertions.sv Line: 86
 # ** Info: SOUT_VALID_CHECK PASSED
 #    Time: 37965 ns Started: 37965 ns  Scope: top.vif.ASSERT.SOUT_VALID_CHECK File: morse_assertions.sv Line: 22
 # UVM_INFO morse_passive_monitor.sv(65) @ 37975: uvm_test_top.morse_environment.morse_passive_agt.morse_passive_mon [OUT_MON] rst = x, sout = ff
@@ -33314,5 +33312,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 38055 ns  Iteration: 66  Instance: /top
 # Saving coverage database on exit...
-# End time: 13:47:15 on Nov 02,2025, Elapsed time: 0:00:08
-# Errors: 7, Warnings: 0
+# End time: 13:52:41 on Nov 02,2025, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0
