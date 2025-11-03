@@ -4,7 +4,7 @@ b9:[{dummy:0},
 ,{cr:'c',t:'I',z:'		if(!rst) begin',f:'morse_design.sv',l:'682',h:'87',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'morse_design.sv',l:'686',h:'3683',c:'g'}
 ]},
-{anchor:'cvg82',items:[{z:'			case(state)',f:'morse_design.sv',l:'687',c:'G',p:'92.85'}
+{anchor:'cvg82',items:[{z:'			case(state)',f:'morse_design.sv',l:'687',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'				s_idle:',f:'morse_design.sv',l:'688',h:'1690',c:'g'}
 ,{cr:'c',t:'T',z:'				s_dot:  begin parallel_out <= 3\'b001; state <= s_idle; end',f:'morse_design.sv',l:'704',h:'562',c:'g'}
 ,{cr:'c',t:'T',z:'				s_dash: begin parallel_out <= 3\'b010; state <= s_idle; end',f:'morse_design.sv',l:'705',h:'547',c:'g'}
@@ -18,7 +18,6 @@ b9:[{dummy:0},
 ,{cr:'c',t:'T',z:'				s_word_5: begin parallel_out <= 3\'b000; state <= s_word_6; end',f:'morse_design.sv',l:'717',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'				s_word_6: begin parallel_out <= 3\'b000; state <= s_word_7; end',f:'morse_design.sv',l:'718',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'				s_word_7: begin parallel_out <= 3\'b100; state <= s_idle;   end // Ret...',f:'morse_design.sv',l:'719',h:'7',c:'g'}
-,{cr:'m',t:'T',z:'				default:',f:'morse_design.sv',l:'721',h:'0',c:'r'}
 ]},
 {anchor:'cvg83',items:[{z:'						if (dot_inp)',f:'morse_design.sv',l:'691',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'						if (dot_inp)',f:'morse_design.sv',l:'691',h:'563',c:'g'}
@@ -32,7 +31,7 @@ b80:[{dummy:0},
 ,{cr:'c',t:'I',z:'		if(!rst) begin',f:'morse_design.sv',l:'682',h:'87',c:'g'}
 ,{cr:'c',t:'E',z:'		else begin',f:'morse_design.sv',l:'686',h:'3683',c:'g'}
 ]},
-{anchor:'cvg82',items:[{z:'			case(state)',f:'morse_design.sv',l:'687',c:'G',p:'92.85'}
+{anchor:'cvg82',items:[{z:'			case(state)',f:'morse_design.sv',l:'687',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'				s_idle:',f:'morse_design.sv',l:'688',h:'1690',c:'g'}
 ,{cr:'c',t:'T',z:'				s_dot:  begin parallel_out <= 3\'b001; state <= s_idle; end',f:'morse_design.sv',l:'704',h:'562',c:'g'}
 ,{cr:'c',t:'T',z:'				s_dash: begin parallel_out <= 3\'b010; state <= s_idle; end',f:'morse_design.sv',l:'705',h:'547',c:'g'}
@@ -46,7 +45,6 @@ b80:[{dummy:0},
 ,{cr:'c',t:'T',z:'				s_word_5: begin parallel_out <= 3\'b000; state <= s_word_6; end',f:'morse_design.sv',l:'717',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'				s_word_6: begin parallel_out <= 3\'b000; state <= s_word_7; end',f:'morse_design.sv',l:'718',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'				s_word_7: begin parallel_out <= 3\'b100; state <= s_idle;   end // Ret...',f:'morse_design.sv',l:'719',h:'7',c:'g'}
-,{cr:'m',t:'T',z:'				default:',f:'morse_design.sv',l:'721',h:'0',c:'r'}
 ]},
 {anchor:'cvg83',items:[{z:'						if (dot_inp)',f:'morse_design.sv',l:'691',c:'G',p:'100.00'}
 ,{cr:'c',t:'I',z:'						if (dot_inp)',f:'morse_design.sv',l:'691',h:'563',c:'g'}
