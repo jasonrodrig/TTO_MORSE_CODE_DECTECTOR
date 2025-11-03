@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<coverage_report>
+<code_coverage_report
+byFile="1">
+<fileData path="morse_active_agent.sv">
+<statements active="9" hits="0" percent="0.0"/>
+<branches active="4" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_active_monitor.sv">
+<statements active="21" hits="0" percent="0.0"/>
+<branches active="6" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_assertions.sv">
+<toggleSummary active="28" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_design.sv">
+<statements active="466" hits="0" percent="0.0"/>
+<branches active="277" hits="0" percent="0.0"/>
+<toggleSummary active="134" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_driver.sv">
+<statements active="91" hits="0" percent="0.0"/>
+<branches active="28" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_environment.sv">
+<statements active="15" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_interface.sv">
+<statements active="2" hits="0" percent="0.0"/>
+<toggleSummary active="28" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_passive_agent.sv">
+<statements active="6" hits="0" percent="0.0"/>
+<branches active="2" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_passive_monitor.sv">
+<statements active="16" hits="0" percent="0.0"/>
+<branches active="6" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_scoreboard.sv">
+<statements active="97" hits="0" percent="0.0"/>
+<branches active="82" hits="0" percent="0.0"/>
+<fec_conditions active="17" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_sequence.sv">
+<statements active="1606" hits="0" percent="0.0"/>
+<branches active="1732" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_sequence_item.sv">
+<statements active="107" hits="0" percent="0.0"/>
+<branches active="136" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_sequencer.sv">
+<statements active="4" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_subscriber.sv">
+<statements active="18" hits="0" percent="0.0"/>
+<branches active="4" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="morse_test.sv">
+<statements active="155" hits="0" percent="0.0"/>
+</fileData>
+<fileData path="top.sv">
+<statements active="8" hits="0" percent="0.0"/>
+<toggleSummary active="2" hits="0" percent="0.0"/>
+</fileData>
+</code_coverage_report>
+<asrtReport>
+<asrt><asrtname>/top/vif/ASSERT/SOUT_VALID_CHECK</asrtname><source>morse_assertions.sv(21)</source><failcount>0</failcount><passcount>0</passcount></asrt>
+<asrt><asrtname>/top/vif/ASSERT/CHAR_SPACE_CHECK</asrtname><source>morse_assertions.sv(38)</source><failcount>0</failcount><passcount>0</passcount></asrt>
+<asrt><asrtname>/top/vif/ASSERT/WORD_SPACE_CHECK</asrtname><source>morse_assertions.sv(55)</source><failcount>0</failcount><passcount>0</passcount></asrt>
+<asrt><asrtname>/top/vif/ASSERT/RESET_ACTIVE_CHECK</asrtname><source>morse_assertions.sv(69)</source><failcount>0</failcount><passcount>0</passcount></asrt>
+<asrt><asrtname>/top/vif/ASSERT/WORD_OUTPUT_CHECK</asrtname><source>morse_assertions.sv(85)</source><failcount>0</failcount><passcount>0</passcount></asrt>
+</asrtReport>
+</coverage_report>
