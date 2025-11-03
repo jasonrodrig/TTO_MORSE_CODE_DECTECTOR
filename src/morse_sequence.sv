@@ -586,14 +586,22 @@ class cornercase3_sequence extends uvm_sequence#(morse_sequence_item);
 		 $display("ALL INPUTS APPLIED");	
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==1; req.char_space_inp==1; req.word_space_inp==1;})
   	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-		
-		 repeat(1)begin
-		`uvm_do_with(req, {req.rst==1; req.dot_inp==1; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
-		 end
-    
+	 
 		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
       repeat(4) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==1; req.char_space_inp==1; req.word_space_inp==1;})
+  	`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+	 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+      repeat(4) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
+    `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==1;})
+      repeat(4) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+	 
+		`uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==1; req.word_space_inp==0;})
+      repeat(4) `uvm_do_with(req, {req.rst==1; req.dot_inp==0; req.dash_inp==0; req.char_space_inp==0; req.word_space_inp==0;})
+
 
 	endtask
 endclass 
