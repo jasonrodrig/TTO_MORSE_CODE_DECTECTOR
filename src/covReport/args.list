@@ -1,5 +1,5 @@
 -html
-coverage.ucdb
+coverage_excluded.ucdb
 -htmldir
 covReport
 -details

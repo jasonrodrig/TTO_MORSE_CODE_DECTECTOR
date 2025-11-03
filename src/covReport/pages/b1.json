@@ -104,301 +104,252 @@ b10:[{dummy:0},
 ,{cr:'c',t:'T',z:'			inv:',f:'morse_design.sv',l:'1197',h:'122',c:'g'}
 ,{cr:'c',t:'T',z:'			default:',f:'morse_design.sv',l:'1206',h:'1',c:'g'}
 ]},
-{anchor:'cvg105',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'798',c:'Y',p:'83.33'}
+{anchor:'cvg105',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'798',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'799',h:'291',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = e; s_out = 8\'hff; end',f:'morse_design.sv',l:'800',h:'147',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = t; s_out = 8\'hff; end',f:'morse_design.sv',l:'801',h:'128',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'802',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b100: begin next_state = reset_state; s_out = 8\'h20; end ',f:'morse_design.sv',l:'803',h:'7',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'804',h:'0',c:'r'}
 ]},
-{anchor:'cvg106',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'809',c:'Y',p:'80.00'}
+{anchor:'cvg106',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'809',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'810',h:'49',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = r; s_out = 8\'hff; end',f:'morse_design.sv',l:'811',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = w; s_out = 8\'hff; end',f:'morse_design.sv',l:'812',h:'19',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h61; end',f:'morse_design.sv',l:'813',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'814',h:'0',c:'r'}
 ]},
-{anchor:'cvg107',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'819',c:'Y',p:'80.00'}
+{anchor:'cvg107',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'819',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'820',h:'16',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = six; s_out = 8\'hff; end',f:'morse_design.sv',l:'821',h:'10',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'822',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h62; end',f:'morse_design.sv',l:'823',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'824',h:'0',c:'r'}
 ]},
-{anchor:'cvg108',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'829',c:'Y',p:'80.00'}
+{anchor:'cvg108',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'829',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'830',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'831',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'832',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h63; end',f:'morse_design.sv',l:'833',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'834',h:'0',c:'r'}
 ]},
-{anchor:'cvg109',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'839',c:'Y',p:'80.00'}
+{anchor:'cvg109',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'839',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'840',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = b; s_out = 8\'hff; end',f:'morse_design.sv',l:'841',h:'16',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = x; s_out = 8\'hff; end',f:'morse_design.sv',l:'842',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h64; end',f:'morse_design.sv',l:'843',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'844',h:'0',c:'r'}
 ]},
-{anchor:'cvg110',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'849',c:'Y',p:'80.00'}
+{anchor:'cvg110',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'849',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'850',h:'146',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = i; s_out = 8\'hff; end',f:'morse_design.sv',l:'851',h:'79',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = a; s_out = 8\'hff; end',f:'morse_design.sv',l:'852',h:'49',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h65; end',f:'morse_design.sv',l:'853',h:'15',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'854',h:'0',c:'r'}
 ]},
-{anchor:'cvg111',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'859',c:'Y',p:'80.00'}
+{anchor:'cvg111',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'859',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'860',h:'10',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'861',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'862',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h66; end',f:'morse_design.sv',l:'863',h:'4',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'864',h:'0',c:'r'}
 ]},
-{anchor:'cvg112',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'869',c:'Y',p:'80.00'}
+{anchor:'cvg112',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'869',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'870',h:'14',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = z; s_out = 8\'hff; end',f:'morse_design.sv',l:'871',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = q; s_out = 8\'hff; end',f:'morse_design.sv',l:'872',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h67; end',f:'morse_design.sv',l:'873',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'874',h:'0',c:'r'}
 ]},
-{anchor:'cvg113',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'879',c:'Y',p:'80.00'}
+{anchor:'cvg113',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'879',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'880',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = five; s_out = 8\'hff; end',f:'morse_design.sv',l:'881',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = four; s_out = 8\'hff; end',f:'morse_design.sv',l:'882',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h68; end',f:'morse_design.sv',l:'883',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'884',h:'0',c:'r'}
 ]},
-{anchor:'cvg114',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'889',c:'Y',p:'80.00'}
+{anchor:'cvg114',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'889',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'890',h:'79',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = s; s_out = 8\'hff; end',f:'morse_design.sv',l:'891',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = u; s_out = 8\'hff; end',f:'morse_design.sv',l:'892',h:'36',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h69; end',f:'morse_design.sv',l:'893',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'894',h:'0',c:'r'}
 ]},
-{anchor:'cvg115',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'899',c:'Y',p:'80.00'}
+{anchor:'cvg115',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'899',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'900',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'901',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = one; s_out = 8\'hff; end',f:'morse_design.sv',l:'902',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6A; end',f:'morse_design.sv',l:'903',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'904',h:'0',c:'r'}
 ]},
-{anchor:'cvg116',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'909',c:'Y',p:'80.00'}
+{anchor:'cvg116',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'909',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'910',h:'23',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = c; s_out = 8\'hff; end',f:'morse_design.sv',l:'911',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = y; s_out = 8\'hff; end',f:'morse_design.sv',l:'912',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6B; end',f:'morse_design.sv',l:'913',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'914',h:'0',c:'r'}
 ]},
-{anchor:'cvg117',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'919',c:'Y',p:'80.00'}
+{anchor:'cvg117',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'919',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'920',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'921',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'922',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6C; end',f:'morse_design.sv',l:'923',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'924',h:'0',c:'r'}
 ]},
-{anchor:'cvg118',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'929',c:'Y',p:'80.00'}
+{anchor:'cvg118',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'929',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'930',h:'69',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = g; s_out = 8\'hff; end',f:'morse_design.sv',l:'931',h:'14',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = o; s_out = 8\'hff; end',f:'morse_design.sv',l:'932',h:'52',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6D; end',f:'morse_design.sv',l:'933',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'934',h:'0',c:'r'}
 ]},
-{anchor:'cvg119',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'939',c:'Y',p:'80.00'}
+{anchor:'cvg119',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'939',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'940',h:'56',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = d; s_out = 8\'hff; end',f:'morse_design.sv',l:'941',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = k; s_out = 8\'hff; end',f:'morse_design.sv',l:'942',h:'23',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6E; end',f:'morse_design.sv',l:'943',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'944',h:'0',c:'r'}
 ]},
-{anchor:'cvg120',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'949',c:'Y',p:'80.00'}
+{anchor:'cvg120',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'949',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'950',h:'52',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = ds2; s_out = 8\'hff; end',f:'morse_design.sv',l:'951',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = ds1; s_out = 8\'hff; end',f:'morse_design.sv',l:'952',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6F; end',f:'morse_design.sv',l:'953',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'954',h:'0',c:'r'}
 ]},
-{anchor:'cvg121',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'959',c:'Y',p:'80.00'}
+{anchor:'cvg121',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'959',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'960',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'961',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'962',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h70; end',f:'morse_design.sv',l:'963',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'964',h:'0',c:'r'}
 ]},
-{anchor:'cvg122',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'969',c:'Y',p:'80.00'}
+{anchor:'cvg122',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'969',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'970',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'971',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'972',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h71; end',f:'morse_design.sv',l:'973',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'974',h:'0',c:'r'}
 ]},
-{anchor:'cvg123',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'979',c:'Y',p:'80.00'}
+{anchor:'cvg123',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'979',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'980',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = l; s_out = 8\'hff; end',f:'morse_design.sv',l:'981',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'982',h:'16',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h72; end',f:'morse_design.sv',l:'983',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'984',h:'0',c:'r'}
 ]},
-{anchor:'cvg124',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'989',c:'Y',p:'80.00'}
+{anchor:'cvg124',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'989',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'990',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = h; s_out = 8\'hff; end',f:'morse_design.sv',l:'991',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = v; s_out = 8\'hff; end',f:'morse_design.sv',l:'992',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h73; end',f:'morse_design.sv',l:'993',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'994',h:'0',c:'r'}
 ]},
-{anchor:'cvg125',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'999',c:'Y',p:'80.00'}
+{anchor:'cvg125',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'999',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1000',h:'127',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = n; s_out = 8\'hff; end',f:'morse_design.sv',l:'1001',h:'56',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = m; s_out = 8\'hff; end',f:'morse_design.sv',l:'1002',h:'69',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h74; end',f:'morse_design.sv',l:'1003',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1004',h:'0',c:'r'}
 ]},
-{anchor:'cvg126',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1009',c:'Y',p:'80.00'}
+{anchor:'cvg126',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1009',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1010',h:'36',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = f; s_out = 8\'hff; end',f:'morse_design.sv',l:'1011',h:'10',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = ds3; s_out = 8\'hff; end',f:'morse_design.sv',l:'1012',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h75; end',f:'morse_design.sv',l:'1013',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1014',h:'0',c:'r'}
 ]},
-{anchor:'cvg127',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1019',c:'Y',p:'80.00'}
+{anchor:'cvg127',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1019',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1020',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1021',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = three; s_out = 8\'hff; end',f:'morse_design.sv',l:'1022',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h76; end',f:'morse_design.sv',l:'1023',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1024',h:'0',c:'r'}
 ]},
-{anchor:'cvg128',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1029',c:'Y',p:'80.00'}
+{anchor:'cvg128',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1029',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1030',h:'19',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = p; s_out = 8\'hff; end',f:'morse_design.sv',l:'1031',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = j; s_out = 8\'hff; end',f:'morse_design.sv',l:'1032',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h77; end',f:'morse_design.sv',l:'1033',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1034',h:'0',c:'r'}
 ]},
-{anchor:'cvg129',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1039',c:'Y',p:'80.00'}
+{anchor:'cvg129',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1039',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1040',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1041',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1042',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h78; end',f:'morse_design.sv',l:'1043',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1044',h:'0',c:'r'}
 ]},
-{anchor:'cvg130',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1049',c:'Y',p:'60.00'}
+{anchor:'cvg130',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1049',c:'Y',p:'75.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1050',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1051',h:'3',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1052',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h79; end',f:'morse_design.sv',l:'1053',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1054',h:'0',c:'r'}
 ]},
-{anchor:'cvg131',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1059',c:'Y',p:'80.00'}
+{anchor:'cvg131',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1059',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1060',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = seven; s_out = 8\'hff; end',f:'morse_design.sv',l:'1061',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1062',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h7A; end',f:'morse_design.sv',l:'1063',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1064',h:'0',c:'r'}
 ]},
-{anchor:'cvg132',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1069',c:'R',p:'40.00'}
+{anchor:'cvg132',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1069',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1070',h:'5',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1071',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1072',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h31; end',f:'morse_design.sv',l:'1073',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1074',h:'0',c:'r'}
 ]},
-{anchor:'cvg133',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1079',c:'R',p:'40.00'}
+{anchor:'cvg133',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1079',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1080',h:'9',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1081',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1082',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h32; end',f:'morse_design.sv',l:'1083',h:'9',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1084',h:'0',c:'r'}
 ]},
-{anchor:'cvg134',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1089',c:'R',p:'40.00'}
+{anchor:'cvg134',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1089',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1090',h:'6',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1091',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1092',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h33; end',f:'morse_design.sv',l:'1093',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1094',h:'0',c:'r'}
 ]},
-{anchor:'cvg135',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1099',c:'R',p:'40.00'}
+{anchor:'cvg135',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1099',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1100',h:'12',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1101',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1102',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h34; end',f:'morse_design.sv',l:'1103',h:'12',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1104',h:'0',c:'r'}
 ]},
-{anchor:'cvg136',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1109',c:'Y',p:'60.00'}
+{anchor:'cvg136',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1109',c:'Y',p:'75.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1110',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1111',h:'1',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1112',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h35; end',f:'morse_design.sv',l:'1113',h:'11',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1114',h:'0',c:'r'}
 ]},
-{anchor:'cvg137',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1119',c:'R',p:'40.00'}
+{anchor:'cvg137',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1119',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1120',h:'10',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1121',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1122',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h36; end',f:'morse_design.sv',l:'1123',h:'10',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1124',h:'0',c:'r'}
 ]},
-{anchor:'cvg138',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1129',c:'R',p:'40.00'}
+{anchor:'cvg138',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1129',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1130',h:'6',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1131',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1132',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h37; end',f:'morse_design.sv',l:'1133',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1134',h:'0',c:'r'}
 ]},
-{anchor:'cvg139',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1139',c:'R',p:'40.00'}
+{anchor:'cvg139',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1139',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1140',h:'5',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1141',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1142',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h38; end',f:'morse_design.sv',l:'1143',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1144',h:'0',c:'r'}
 ]},
-{anchor:'cvg140',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1149',c:'R',p:'40.00'}
+{anchor:'cvg140',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1149',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1150',h:'9',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1151',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1152',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h39; end',f:'morse_design.sv',l:'1153',h:'9',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1154',h:'0',c:'r'}
 ]},
-{anchor:'cvg141',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1159',c:'Y',p:'60.00'}
+{anchor:'cvg141',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1159',c:'Y',p:'75.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1160',h:'7',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1161',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1162',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h30; end',f:'morse_design.sv',l:'1163',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1164',h:'0',c:'r'}
 ]},
-{anchor:'cvg142',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1169',c:'Y',p:'80.00'}
+{anchor:'cvg142',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1169',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1170',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = nine; s_out = 8\'hff; end',f:'morse_design.sv',l:'1171',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = zero; s_out = 8\'hff; end',f:'morse_design.sv',l:'1172',h:'7',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1173',h:'11',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1174',h:'0',c:'r'}
 ]},
-{anchor:'cvg143',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1179',c:'Y',p:'80.00'}
+{anchor:'cvg143',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1179',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1180',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = eight; s_out = 8\'hff; end',f:'morse_design.sv',l:'1181',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1182',h:'4',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1183',h:'15',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1184',h:'0',c:'r'}
 ]},
-{anchor:'cvg144',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1189',c:'Y',p:'80.00'}
+{anchor:'cvg144',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1189',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1190',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1191',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = two; s_out = 8\'hff; end',f:'morse_design.sv',l:'1192',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1193',h:'13',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1194',h:'0',c:'r'}
 ]},
-{anchor:'cvg145',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1198',c:'Y',p:'80.00'}
+{anchor:'cvg145',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1198',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1199',h:'61',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1200',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1201',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1202',h:'56',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1203',h:'0',c:'r'}
-]},
-{anchor:'cvg146',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1207',c:'R',p:'16.66'}
-,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1208',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1209',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1210',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1211',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					3\'b100: begin next_state = reset_state; s_out = 8\'hff; end ',f:'morse_design.sv',l:'1212',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1213',h:'0',c:'r'}
 ]}],
 b102:[{dummy:0},
 {anchor:'cvg103',items:[{z:'		if (!rst)',f:'morse_design.sv',l:'785',c:'G',p:'100.00'}
@@ -449,301 +400,252 @@ b102:[{dummy:0},
 ,{cr:'c',t:'T',z:'			inv:',f:'morse_design.sv',l:'1197',h:'122',c:'g'}
 ,{cr:'c',t:'T',z:'			default:',f:'morse_design.sv',l:'1206',h:'1',c:'g'}
 ]},
-{anchor:'cvg105',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'798',c:'Y',p:'83.33'}
+{anchor:'cvg105',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'798',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'799',h:'291',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = e; s_out = 8\'hff; end',f:'morse_design.sv',l:'800',h:'147',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = t; s_out = 8\'hff; end',f:'morse_design.sv',l:'801',h:'128',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'802',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b100: begin next_state = reset_state; s_out = 8\'h20; end ',f:'morse_design.sv',l:'803',h:'7',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'804',h:'0',c:'r'}
 ]},
-{anchor:'cvg106',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'809',c:'Y',p:'80.00'}
+{anchor:'cvg106',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'809',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'810',h:'49',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = r; s_out = 8\'hff; end',f:'morse_design.sv',l:'811',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = w; s_out = 8\'hff; end',f:'morse_design.sv',l:'812',h:'19',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h61; end',f:'morse_design.sv',l:'813',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'814',h:'0',c:'r'}
 ]},
-{anchor:'cvg107',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'819',c:'Y',p:'80.00'}
+{anchor:'cvg107',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'819',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'820',h:'16',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = six; s_out = 8\'hff; end',f:'morse_design.sv',l:'821',h:'10',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'822',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h62; end',f:'morse_design.sv',l:'823',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'824',h:'0',c:'r'}
 ]},
-{anchor:'cvg108',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'829',c:'Y',p:'80.00'}
+{anchor:'cvg108',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'829',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'830',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'831',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'832',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h63; end',f:'morse_design.sv',l:'833',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'834',h:'0',c:'r'}
 ]},
-{anchor:'cvg109',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'839',c:'Y',p:'80.00'}
+{anchor:'cvg109',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'839',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'840',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = b; s_out = 8\'hff; end',f:'morse_design.sv',l:'841',h:'16',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = x; s_out = 8\'hff; end',f:'morse_design.sv',l:'842',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h64; end',f:'morse_design.sv',l:'843',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'844',h:'0',c:'r'}
 ]},
-{anchor:'cvg110',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'849',c:'Y',p:'80.00'}
+{anchor:'cvg110',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'849',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'850',h:'146',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = i; s_out = 8\'hff; end',f:'morse_design.sv',l:'851',h:'79',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = a; s_out = 8\'hff; end',f:'morse_design.sv',l:'852',h:'49',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h65; end',f:'morse_design.sv',l:'853',h:'15',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'854',h:'0',c:'r'}
 ]},
-{anchor:'cvg111',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'859',c:'Y',p:'80.00'}
+{anchor:'cvg111',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'859',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'860',h:'10',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'861',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'862',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h66; end',f:'morse_design.sv',l:'863',h:'4',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'864',h:'0',c:'r'}
 ]},
-{anchor:'cvg112',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'869',c:'Y',p:'80.00'}
+{anchor:'cvg112',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'869',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'870',h:'14',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = z; s_out = 8\'hff; end',f:'morse_design.sv',l:'871',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = q; s_out = 8\'hff; end',f:'morse_design.sv',l:'872',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h67; end',f:'morse_design.sv',l:'873',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'874',h:'0',c:'r'}
 ]},
-{anchor:'cvg113',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'879',c:'Y',p:'80.00'}
+{anchor:'cvg113',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'879',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'880',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = five; s_out = 8\'hff; end',f:'morse_design.sv',l:'881',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = four; s_out = 8\'hff; end',f:'morse_design.sv',l:'882',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h68; end',f:'morse_design.sv',l:'883',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'884',h:'0',c:'r'}
 ]},
-{anchor:'cvg114',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'889',c:'Y',p:'80.00'}
+{anchor:'cvg114',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'889',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'890',h:'79',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = s; s_out = 8\'hff; end',f:'morse_design.sv',l:'891',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = u; s_out = 8\'hff; end',f:'morse_design.sv',l:'892',h:'36',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h69; end',f:'morse_design.sv',l:'893',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'894',h:'0',c:'r'}
 ]},
-{anchor:'cvg115',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'899',c:'Y',p:'80.00'}
+{anchor:'cvg115',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'899',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'900',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'901',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = one; s_out = 8\'hff; end',f:'morse_design.sv',l:'902',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6A; end',f:'morse_design.sv',l:'903',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'904',h:'0',c:'r'}
 ]},
-{anchor:'cvg116',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'909',c:'Y',p:'80.00'}
+{anchor:'cvg116',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'909',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'910',h:'23',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = c; s_out = 8\'hff; end',f:'morse_design.sv',l:'911',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = y; s_out = 8\'hff; end',f:'morse_design.sv',l:'912',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6B; end',f:'morse_design.sv',l:'913',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'914',h:'0',c:'r'}
 ]},
-{anchor:'cvg117',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'919',c:'Y',p:'80.00'}
+{anchor:'cvg117',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'919',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'920',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'921',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'922',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6C; end',f:'morse_design.sv',l:'923',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'924',h:'0',c:'r'}
 ]},
-{anchor:'cvg118',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'929',c:'Y',p:'80.00'}
+{anchor:'cvg118',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'929',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'930',h:'69',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = g; s_out = 8\'hff; end',f:'morse_design.sv',l:'931',h:'14',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = o; s_out = 8\'hff; end',f:'morse_design.sv',l:'932',h:'52',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6D; end',f:'morse_design.sv',l:'933',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'934',h:'0',c:'r'}
 ]},
-{anchor:'cvg119',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'939',c:'Y',p:'80.00'}
+{anchor:'cvg119',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'939',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'940',h:'56',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = d; s_out = 8\'hff; end',f:'morse_design.sv',l:'941',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = k; s_out = 8\'hff; end',f:'morse_design.sv',l:'942',h:'23',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6E; end',f:'morse_design.sv',l:'943',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'944',h:'0',c:'r'}
 ]},
-{anchor:'cvg120',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'949',c:'Y',p:'80.00'}
+{anchor:'cvg120',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'949',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'950',h:'52',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = ds2; s_out = 8\'hff; end',f:'morse_design.sv',l:'951',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = ds1; s_out = 8\'hff; end',f:'morse_design.sv',l:'952',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h6F; end',f:'morse_design.sv',l:'953',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'954',h:'0',c:'r'}
 ]},
-{anchor:'cvg121',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'959',c:'Y',p:'80.00'}
+{anchor:'cvg121',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'959',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'960',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'961',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'962',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h70; end',f:'morse_design.sv',l:'963',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'964',h:'0',c:'r'}
 ]},
-{anchor:'cvg122',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'969',c:'Y',p:'80.00'}
+{anchor:'cvg122',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'969',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'970',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'971',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'972',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h71; end',f:'morse_design.sv',l:'973',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'974',h:'0',c:'r'}
 ]},
-{anchor:'cvg123',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'979',c:'Y',p:'80.00'}
+{anchor:'cvg123',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'979',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'980',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = l; s_out = 8\'hff; end',f:'morse_design.sv',l:'981',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'982',h:'16',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h72; end',f:'morse_design.sv',l:'983',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'984',h:'0',c:'r'}
 ]},
-{anchor:'cvg124',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'989',c:'Y',p:'80.00'}
+{anchor:'cvg124',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'989',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'990',h:'38',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = h; s_out = 8\'hff; end',f:'morse_design.sv',l:'991',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = v; s_out = 8\'hff; end',f:'morse_design.sv',l:'992',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h73; end',f:'morse_design.sv',l:'993',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'994',h:'0',c:'r'}
 ]},
-{anchor:'cvg125',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'999',c:'Y',p:'80.00'}
+{anchor:'cvg125',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'999',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1000',h:'127',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = n; s_out = 8\'hff; end',f:'morse_design.sv',l:'1001',h:'56',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = m; s_out = 8\'hff; end',f:'morse_design.sv',l:'1002',h:'69',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h74; end',f:'morse_design.sv',l:'1003',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1004',h:'0',c:'r'}
 ]},
-{anchor:'cvg126',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1009',c:'Y',p:'80.00'}
+{anchor:'cvg126',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1009',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1010',h:'36',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = f; s_out = 8\'hff; end',f:'morse_design.sv',l:'1011',h:'10',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = ds3; s_out = 8\'hff; end',f:'morse_design.sv',l:'1012',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h75; end',f:'morse_design.sv',l:'1013',h:'2',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1014',h:'0',c:'r'}
 ]},
-{anchor:'cvg127',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1019',c:'Y',p:'80.00'}
+{anchor:'cvg127',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1019',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1020',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1021',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = three; s_out = 8\'hff; end',f:'morse_design.sv',l:'1022',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h76; end',f:'morse_design.sv',l:'1023',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1024',h:'0',c:'r'}
 ]},
-{anchor:'cvg128',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1029',c:'Y',p:'80.00'}
+{anchor:'cvg128',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1029',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1030',h:'19',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = p; s_out = 8\'hff; end',f:'morse_design.sv',l:'1031',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = j; s_out = 8\'hff; end',f:'morse_design.sv',l:'1032',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h77; end',f:'morse_design.sv',l:'1033',h:'3',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1034',h:'0',c:'r'}
 ]},
-{anchor:'cvg129',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1039',c:'Y',p:'80.00'}
+{anchor:'cvg129',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1039',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1040',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1041',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1042',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h78; end',f:'morse_design.sv',l:'1043',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1044',h:'0',c:'r'}
 ]},
-{anchor:'cvg130',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1049',c:'Y',p:'60.00'}
+{anchor:'cvg130',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1049',c:'Y',p:'75.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1050',h:'8',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1051',h:'3',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1052',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h79; end',f:'morse_design.sv',l:'1053',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1054',h:'0',c:'r'}
 ]},
-{anchor:'cvg131',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1059',c:'Y',p:'80.00'}
+{anchor:'cvg131',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1059',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1060',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = seven; s_out = 8\'hff; end',f:'morse_design.sv',l:'1061',h:'6',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1062',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h7A; end',f:'morse_design.sv',l:'1063',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1064',h:'0',c:'r'}
 ]},
-{anchor:'cvg132',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1069',c:'R',p:'40.00'}
+{anchor:'cvg132',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1069',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1070',h:'5',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1071',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1072',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h31; end',f:'morse_design.sv',l:'1073',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1074',h:'0',c:'r'}
 ]},
-{anchor:'cvg133',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1079',c:'R',p:'40.00'}
+{anchor:'cvg133',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1079',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1080',h:'9',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1081',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1082',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h32; end',f:'morse_design.sv',l:'1083',h:'9',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1084',h:'0',c:'r'}
 ]},
-{anchor:'cvg134',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1089',c:'R',p:'40.00'}
+{anchor:'cvg134',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1089',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1090',h:'6',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1091',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1092',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h33; end',f:'morse_design.sv',l:'1093',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1094',h:'0',c:'r'}
 ]},
-{anchor:'cvg135',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1099',c:'R',p:'40.00'}
+{anchor:'cvg135',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1099',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1100',h:'12',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1101',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1102',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h34; end',f:'morse_design.sv',l:'1103',h:'12',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1104',h:'0',c:'r'}
 ]},
-{anchor:'cvg136',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1109',c:'Y',p:'60.00'}
+{anchor:'cvg136',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1109',c:'Y',p:'75.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1110',h:'12',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1111',h:'1',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1112',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h35; end',f:'morse_design.sv',l:'1113',h:'11',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1114',h:'0',c:'r'}
 ]},
-{anchor:'cvg137',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1119',c:'R',p:'40.00'}
+{anchor:'cvg137',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1119',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1120',h:'10',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1121',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1122',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h36; end',f:'morse_design.sv',l:'1123',h:'10',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1124',h:'0',c:'r'}
 ]},
-{anchor:'cvg138',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1129',c:'R',p:'40.00'}
+{anchor:'cvg138',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1129',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1130',h:'6',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1131',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1132',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h37; end',f:'morse_design.sv',l:'1133',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1134',h:'0',c:'r'}
 ]},
-{anchor:'cvg139',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1139',c:'R',p:'40.00'}
+{anchor:'cvg139',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1139',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1140',h:'5',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1141',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1142',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h38; end',f:'morse_design.sv',l:'1143',h:'5',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1144',h:'0',c:'r'}
 ]},
-{anchor:'cvg140',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1149',c:'R',p:'40.00'}
+{anchor:'cvg140',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1149',c:'Y',p:'50.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1150',h:'9',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1151',h:'0',c:'r'}
 ,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1152',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h39; end',f:'morse_design.sv',l:'1153',h:'9',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1154',h:'0',c:'r'}
 ]},
-{anchor:'cvg141',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1159',c:'Y',p:'60.00'}
+{anchor:'cvg141',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1159',c:'Y',p:'75.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1160',h:'7',c:'g'}
 ,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1161',h:'0',c:'r'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1162',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'h30; end',f:'morse_design.sv',l:'1163',h:'6',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1164',h:'0',c:'r'}
 ]},
-{anchor:'cvg142',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1169',c:'Y',p:'80.00'}
+{anchor:'cvg142',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1169',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1170',h:'27',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = nine; s_out = 8\'hff; end',f:'morse_design.sv',l:'1171',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = zero; s_out = 8\'hff; end',f:'morse_design.sv',l:'1172',h:'7',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1173',h:'11',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1174',h:'0',c:'r'}
 ]},
-{anchor:'cvg143',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1179',c:'Y',p:'80.00'}
+{anchor:'cvg143',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1179',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1180',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = eight; s_out = 8\'hff; end',f:'morse_design.sv',l:'1181',h:'5',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1182',h:'4',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1183',h:'15',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1184',h:'0',c:'r'}
 ]},
-{anchor:'cvg144',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1189',c:'Y',p:'80.00'}
+{anchor:'cvg144',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1189',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1190',h:'24',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = inv; s_out = 8\'hff; end',f:'morse_design.sv',l:'1191',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = two; s_out = 8\'hff; end',f:'morse_design.sv',l:'1192',h:'9',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1193',h:'13',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1194',h:'0',c:'r'}
 ]},
-{anchor:'cvg145',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1198',c:'Y',p:'80.00'}
+{anchor:'cvg145',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1198',c:'G',p:'100.00'}
 ,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1199',h:'61',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1200',h:'3',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1201',h:'2',c:'g'}
 ,{cr:'c',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1202',h:'56',c:'g'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1203',h:'0',c:'r'}
-]},
-{anchor:'cvg146',items:[{z:'				case (p_in)',f:'morse_design.sv',l:'1207',c:'R',p:'16.66'}
-,{cr:'c',t:'T',z:'					3\'b000: begin next_state = state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1208',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'					3\'b001: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1209',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					3\'b010: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1210',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					3\'b011: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1211',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					3\'b100: begin next_state = reset_state; s_out = 8\'hff; end ',f:'morse_design.sv',l:'1212',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'					default: begin next_state = reset_state; s_out = 8\'hff; end',f:'morse_design.sv',l:'1213',h:'0',c:'r'}
 ]}],
 b914:[{dummy:0},
 {anchor:'cvg915',items:[{z:'	`uvm_object_utils_begin(morse_sequence_item)',f:'morse_sequence_item.sv',l:'21',c:'R',p:'0.00'}

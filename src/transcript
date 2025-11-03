@@ -1,0 +1,79 @@
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# coverage read -dataset coverage coverage.ucdb
+# coverage.ucdb opened as coverage dataset "coverage"
+coverage exclude -src morse_design.sv -line 804
+coverage exclude -src morse_design.sv -line 814
+coverage exclude -src morse_design.sv -line 824
+coverage exclude -src morse_design.sv -line 834
+coverage exclude -src morse_design.sv -line 844
+coverage exclude -src morse_design.sv -line 854
+coverage exclude -src morse_design.sv -line 864
+coverage exclude -src morse_design.sv -line 874
+coverage exclude -src morse_design.sv -line 884
+coverage exclude -src morse_design.sv -scope /top/DUT/rec -line 894
+coverage exclude -src morse_design.sv -line 899
+coverage exclude -src morse_design.sv -scope /top/DUT/rec -line 900
+coverage exclude -clear -src morse_design.sv -line 900
+coverage exclude -clear -src morse_design.sv -line 901
+coverage exclude -clear -src morse_design.sv -scope /top/DUT/rec -line 900
+coverage exclude -clear -src morse_design.sv -line 902
+coverage exclude -clear -src morse_design.sv -line 903
+coverage exclude -src morse_design.sv -scope /top/DUT/rec -line 904
+coverage exclude -src morse_design.sv -scope /top/DUT/rec -line 914
+coverage exclude -src morse_design.sv -scope /top/DUT/rec -line 924
+coverage exclude -src morse_design.sv -line 934
+coverage exclude -src morse_design.sv -scope /top/DUT/rec -line 934
+# ** Warning: (vish-4036) The 'coverage exclude' command had no effect on some/all objects because
+#     * matching coverage data is already excluded.
+# 
+coverage exclude -src morse_design.sv -line 944
+coverage exclude -src morse_design.sv -line 954
+coverage exclude -src morse_design.sv -line 964
+coverage exclude -src morse_design.sv -line 974
+coverage exclude -src morse_design.sv -line 984
+coverage exclude -src morse_design.sv -line 994
+coverage exclude -src morse_design.sv -line 1004
+coverage exclude -src morse_design.sv -line 1014
+coverage exclude -src morse_design.sv -line 1024
+coverage exclude -src morse_design.sv -line 1034
+coverage exclude -src morse_design.sv -line 1044
+coverage exclude -src morse_design.sv -line 1054
+coverage exclude -src morse_design.sv -line 1064
+coverage exclude -src morse_design.sv -line 1074
+coverage exclude -src morse_design.sv -line 1084
+coverage exclude -src morse_design.sv -line 1094
+coverage exclude -src morse_design.sv -line 1104
+coverage exclude -src morse_design.sv -line 1114
+coverage exclude -src morse_design.sv -line 1124
+coverage exclude -src morse_design.sv -line 1134
+coverage exclude -src morse_design.sv -line 1144
+coverage exclude -src morse_design.sv -line 1154
+coverage exclude -src morse_design.sv -line 1164
+coverage exclude -src morse_design.sv -line 1174
+coverage exclude -src morse_design.sv -line 1184
+coverage exclude -src morse_design.sv -line 1194
+coverage exclude -src morse_design.sv -line 1203
+coverage exclude -src morse_design.sv -line 1207
+coverage save coverage_excluded.ucdb
+vcover report -html coverage_excluded.ucdb -htmldir covReport -details
+# QuestaSim vcover 10.6c Coverage Utility 2017.07 Jul 25 2017
+# Start time: 14:06:28 on Nov 03,2025
+# vcover report -html coverage_excluded.ucdb -htmldir covReport -details 
+# Report created in covReport/index.html
+# End time: 14:06:28 on Nov 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+quit -sim
+quit

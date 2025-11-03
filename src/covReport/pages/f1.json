@@ -97,136 +97,96 @@ scopes:[{link:'z.htm?f=0&s=10',val:'work.rec_fsm'}]
 ,{cr:'c',z:'reset_state -> t',h:'127',c:'g'}
 ,{cr:'c',z:'reset_state -> e',h:'145',c:'g'}
 ,{cr:'c',s:'1',z:'t',h:'254',c:'g'}
-,{cr:'c',z:'t -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'t -> m',h:'69',c:'g'}
 ,{cr:'c',z:'t -> n',h:'56',c:'g'}
 ,{cr:'c',s:'1',z:'e',h:'289',c:'g'}
-,{cr:'c',z:'e -> reset_state',h:'17',c:'g'}
 ,{cr:'c',z:'e -> a',h:'49',c:'g'}
 ,{cr:'c',z:'e -> i',h:'79',c:'g'}
 ,{cr:'c',s:'1',z:'a',h:'97',c:'g'}
-,{cr:'c',z:'a -> reset_state',h:'6',c:'g'}
 ,{cr:'c',z:'a -> w',h:'19',c:'g'}
 ,{cr:'c',z:'a -> r',h:'24',c:'g'}
 ,{cr:'c',s:'1',z:'w',h:'38',c:'g'}
-,{cr:'c',z:'w -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'w -> j',h:'8',c:'g'}
 ,{cr:'c',z:'w -> p',h:'8',c:'g'}
 ,{cr:'c',s:'1',z:'r',h:'48',c:'g'}
-,{cr:'c',z:'r -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'r -> inv',h:'16',c:'g'}
 ,{cr:'c',z:'r -> l',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'b',h:'32',c:'g'}
-,{cr:'c',z:'b -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'b -> inv',h:'5',c:'g'}
 ,{cr:'c',z:'b -> six',h:'10',c:'g'}
 ,{cr:'c',s:'1',z:'inv',h:'122',c:'g'}
-,{cr:'c',z:'inv -> reset_state',h:'61',c:'g'}
 ,{cr:'c',s:'1',z:'six',h:'20',c:'g'}
-,{cr:'c',z:'six -> reset_state',h:'10',c:'g'}
 ,{cr:'c',s:'1',z:'c',h:'24',c:'g'}
-,{cr:'c',z:'c -> reset_state',h:'6',c:'g'}
 ,{cr:'c',z:'c -> inv',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'d',h:'54',c:'g'}
-,{cr:'c',z:'d -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'d -> x',h:'9',c:'g'}
 ,{cr:'c',z:'d -> b',h:'16',c:'g'}
 ,{cr:'c',s:'1',z:'x',h:'18',c:'g'}
-,{cr:'c',z:'x -> reset_state',h:'5',c:'g'}
 ,{cr:'c',z:'x -> inv',h:'4',c:'g'}
 ,{cr:'c',s:'1',z:'i',h:'158',c:'g'}
-,{cr:'c',z:'i -> reset_state',h:'5',c:'g'}
 ,{cr:'c',z:'i -> u',h:'36',c:'g'}
 ,{cr:'c',z:'i -> s',h:'38',c:'g'}
 ,{cr:'c',s:'1',z:'f',h:'20',c:'g'}
-,{cr:'c',z:'f -> reset_state',h:'4',c:'g'}
 ,{cr:'c',z:'f -> inv',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'g',h:'28',c:'g'}
-,{cr:'c',z:'g -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'g -> q',h:'3',c:'g'}
 ,{cr:'c',z:'g -> z',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'q',h:'6',c:'g'}
-,{cr:'c',z:'q -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'q -> inv',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'z',h:'18',c:'g'}
-,{cr:'c',z:'z -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'z -> inv',h:'2',c:'g'}
 ,{cr:'c',z:'z -> seven',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'h',h:'54',c:'g'}
-,{cr:'c',z:'h -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'h -> four',h:'12',c:'g'}
 ,{cr:'c',z:'h -> five',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'four',h:'24',c:'g'}
-,{cr:'c',z:'four -> reset_state',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'five',h:'24',c:'g'}
-,{cr:'c',z:'five -> reset_state',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'u',h:'72',c:'g'}
-,{cr:'c',z:'u -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'u -> ds3',h:'24',c:'g'}
 ,{cr:'c',z:'u -> f',h:'10',c:'g'}
 ,{cr:'c',s:'1',z:'s',h:'76',c:'g'}
-,{cr:'c',z:'s -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'s -> v',h:'8',c:'g'}
 ,{cr:'c',z:'s -> h',h:'27',c:'g'}
 ,{cr:'c',s:'1',z:'j',h:'16',c:'g'}
-,{cr:'c',z:'j -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'j -> one',h:'5',c:'g'}
 ,{cr:'c',z:'j -> inv',h:'1',c:'g'}
 ,{cr:'c',s:'1',z:'one',h:'10',c:'g'}
-,{cr:'c',z:'one -> reset_state',h:'5',c:'g'}
 ,{cr:'c',s:'1',z:'k',h:'46',c:'g'}
-,{cr:'c',z:'k -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'k -> y',h:'8',c:'g'}
 ,{cr:'c',z:'k -> c',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'y',h:'16',c:'g'}
-,{cr:'c',z:'y -> reset_state',h:'5',c:'g'}
 ,{cr:'c',z:'y -> inv',h:'3',c:'g'}
 ,{cr:'c',s:'1',z:'l',h:'12',c:'g'}
-,{cr:'c',z:'l -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'l -> inv',h:'3',c:'g'}
 ,{cr:'c',s:'1',z:'m',h:'138',c:'g'}
-,{cr:'c',z:'m -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'m -> o',h:'52',c:'g'}
 ,{cr:'c',z:'m -> g',h:'14',c:'g'}
 ,{cr:'c',s:'1',z:'o',h:'104',c:'g'}
-,{cr:'c',z:'o -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'o -> ds1',h:'27',c:'g'}
 ,{cr:'c',z:'o -> ds2',h:'24',c:'g'}
 ,{cr:'c',s:'1',z:'n',h:'112',c:'g'}
-,{cr:'c',z:'n -> reset_state',h:'6',c:'g'}
 ,{cr:'c',z:'n -> k',h:'23',c:'g'}
 ,{cr:'c',z:'n -> d',h:'27',c:'g'}
 ,{cr:'c',s:'1',z:'ds1',h:'54',c:'g'}
-,{cr:'c',z:'ds1 -> reset_state',h:'11',c:'g'}
 ,{cr:'c',z:'ds1 -> zero',h:'7',c:'g'}
 ,{cr:'c',z:'ds1 -> nine',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'ds2',h:'48',c:'g'}
-,{cr:'c',z:'ds2 -> reset_state',h:'15',c:'g'}
 ,{cr:'c',z:'ds2 -> inv',h:'4',c:'g'}
 ,{cr:'c',z:'ds2 -> eight',h:'5',c:'g'}
 ,{cr:'c',s:'1',z:'p',h:'16',c:'g'}
-,{cr:'c',z:'p -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'p -> inv',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'v',h:'16',c:'g'}
-,{cr:'c',z:'v -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'v -> three',h:'6',c:'g'}
 ,{cr:'c',z:'v -> inv',h:'1',c:'g'}
 ,{cr:'c',s:'1',z:'ds3',h:'48',c:'g'}
-,{cr:'c',z:'ds3 -> reset_state',h:'13',c:'g'}
 ,{cr:'c',z:'ds3 -> two',h:'9',c:'g'}
 ,{cr:'c',z:'ds3 -> inv',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'three',h:'12',c:'g'}
-,{cr:'c',z:'three -> reset_state',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'seven',h:'12',c:'g'}
-,{cr:'c',z:'seven -> reset_state',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'two',h:'18',c:'g'}
-,{cr:'c',z:'two -> reset_state',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'eight',h:'10',c:'g'}
-,{cr:'c',z:'eight -> reset_state',h:'5',c:'g'}
 ,{cr:'c',s:'1',z:'nine',h:'18',c:'g'}
-,{cr:'c',z:'nine -> reset_state',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'zero',h:'14',c:'g'}
-,{cr:'c',z:'zero -> reset_state',h:'7',c:'g'}
 ]}
 
 ],
@@ -239,136 +199,96 @@ scopes:[{s:'12',b:'1',val:'top'},{s:'51',b:'1',val:'DUT'},{link:'z.htm?f=0&s=102
 ,{cr:'c',z:'reset_state -> t',h:'127',c:'g'}
 ,{cr:'c',z:'reset_state -> e',h:'145',c:'g'}
 ,{cr:'c',s:'1',z:'t',h:'254',c:'g'}
-,{cr:'c',z:'t -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'t -> m',h:'69',c:'g'}
 ,{cr:'c',z:'t -> n',h:'56',c:'g'}
 ,{cr:'c',s:'1',z:'e',h:'289',c:'g'}
-,{cr:'c',z:'e -> reset_state',h:'17',c:'g'}
 ,{cr:'c',z:'e -> a',h:'49',c:'g'}
 ,{cr:'c',z:'e -> i',h:'79',c:'g'}
 ,{cr:'c',s:'1',z:'a',h:'97',c:'g'}
-,{cr:'c',z:'a -> reset_state',h:'6',c:'g'}
 ,{cr:'c',z:'a -> w',h:'19',c:'g'}
 ,{cr:'c',z:'a -> r',h:'24',c:'g'}
 ,{cr:'c',s:'1',z:'w',h:'38',c:'g'}
-,{cr:'c',z:'w -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'w -> j',h:'8',c:'g'}
 ,{cr:'c',z:'w -> p',h:'8',c:'g'}
 ,{cr:'c',s:'1',z:'r',h:'48',c:'g'}
-,{cr:'c',z:'r -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'r -> inv',h:'16',c:'g'}
 ,{cr:'c',z:'r -> l',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'b',h:'32',c:'g'}
-,{cr:'c',z:'b -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'b -> inv',h:'5',c:'g'}
 ,{cr:'c',z:'b -> six',h:'10',c:'g'}
 ,{cr:'c',s:'1',z:'inv',h:'122',c:'g'}
-,{cr:'c',z:'inv -> reset_state',h:'61',c:'g'}
 ,{cr:'c',s:'1',z:'six',h:'20',c:'g'}
-,{cr:'c',z:'six -> reset_state',h:'10',c:'g'}
 ,{cr:'c',s:'1',z:'c',h:'24',c:'g'}
-,{cr:'c',z:'c -> reset_state',h:'6',c:'g'}
 ,{cr:'c',z:'c -> inv',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'d',h:'54',c:'g'}
-,{cr:'c',z:'d -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'d -> x',h:'9',c:'g'}
 ,{cr:'c',z:'d -> b',h:'16',c:'g'}
 ,{cr:'c',s:'1',z:'x',h:'18',c:'g'}
-,{cr:'c',z:'x -> reset_state',h:'5',c:'g'}
 ,{cr:'c',z:'x -> inv',h:'4',c:'g'}
 ,{cr:'c',s:'1',z:'i',h:'158',c:'g'}
-,{cr:'c',z:'i -> reset_state',h:'5',c:'g'}
 ,{cr:'c',z:'i -> u',h:'36',c:'g'}
 ,{cr:'c',z:'i -> s',h:'38',c:'g'}
 ,{cr:'c',s:'1',z:'f',h:'20',c:'g'}
-,{cr:'c',z:'f -> reset_state',h:'4',c:'g'}
 ,{cr:'c',z:'f -> inv',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'g',h:'28',c:'g'}
-,{cr:'c',z:'g -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'g -> q',h:'3',c:'g'}
 ,{cr:'c',z:'g -> z',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'q',h:'6',c:'g'}
-,{cr:'c',z:'q -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'q -> inv',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'z',h:'18',c:'g'}
-,{cr:'c',z:'z -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'z -> inv',h:'2',c:'g'}
 ,{cr:'c',z:'z -> seven',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'h',h:'54',c:'g'}
-,{cr:'c',z:'h -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'h -> four',h:'12',c:'g'}
 ,{cr:'c',z:'h -> five',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'four',h:'24',c:'g'}
-,{cr:'c',z:'four -> reset_state',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'five',h:'24',c:'g'}
-,{cr:'c',z:'five -> reset_state',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'u',h:'72',c:'g'}
-,{cr:'c',z:'u -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'u -> ds3',h:'24',c:'g'}
 ,{cr:'c',z:'u -> f',h:'10',c:'g'}
 ,{cr:'c',s:'1',z:'s',h:'76',c:'g'}
-,{cr:'c',z:'s -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'s -> v',h:'8',c:'g'}
 ,{cr:'c',z:'s -> h',h:'27',c:'g'}
 ,{cr:'c',s:'1',z:'j',h:'16',c:'g'}
-,{cr:'c',z:'j -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'j -> one',h:'5',c:'g'}
 ,{cr:'c',z:'j -> inv',h:'1',c:'g'}
 ,{cr:'c',s:'1',z:'one',h:'10',c:'g'}
-,{cr:'c',z:'one -> reset_state',h:'5',c:'g'}
 ,{cr:'c',s:'1',z:'k',h:'46',c:'g'}
-,{cr:'c',z:'k -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'k -> y',h:'8',c:'g'}
 ,{cr:'c',z:'k -> c',h:'12',c:'g'}
 ,{cr:'c',s:'1',z:'y',h:'16',c:'g'}
-,{cr:'c',z:'y -> reset_state',h:'5',c:'g'}
 ,{cr:'c',z:'y -> inv',h:'3',c:'g'}
 ,{cr:'c',s:'1',z:'l',h:'12',c:'g'}
-,{cr:'c',z:'l -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'l -> inv',h:'3',c:'g'}
 ,{cr:'c',s:'1',z:'m',h:'138',c:'g'}
-,{cr:'c',z:'m -> reset_state',h:'3',c:'g'}
 ,{cr:'c',z:'m -> o',h:'52',c:'g'}
 ,{cr:'c',z:'m -> g',h:'14',c:'g'}
 ,{cr:'c',s:'1',z:'o',h:'104',c:'g'}
-,{cr:'c',z:'o -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'o -> ds1',h:'27',c:'g'}
 ,{cr:'c',z:'o -> ds2',h:'24',c:'g'}
 ,{cr:'c',s:'1',z:'n',h:'112',c:'g'}
-,{cr:'c',z:'n -> reset_state',h:'6',c:'g'}
 ,{cr:'c',z:'n -> k',h:'23',c:'g'}
 ,{cr:'c',z:'n -> d',h:'27',c:'g'}
 ,{cr:'c',s:'1',z:'ds1',h:'54',c:'g'}
-,{cr:'c',z:'ds1 -> reset_state',h:'11',c:'g'}
 ,{cr:'c',z:'ds1 -> zero',h:'7',c:'g'}
 ,{cr:'c',z:'ds1 -> nine',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'ds2',h:'48',c:'g'}
-,{cr:'c',z:'ds2 -> reset_state',h:'15',c:'g'}
 ,{cr:'c',z:'ds2 -> inv',h:'4',c:'g'}
 ,{cr:'c',z:'ds2 -> eight',h:'5',c:'g'}
 ,{cr:'c',s:'1',z:'p',h:'16',c:'g'}
-,{cr:'c',z:'p -> reset_state',h:'2',c:'g'}
 ,{cr:'c',z:'p -> inv',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'v',h:'16',c:'g'}
-,{cr:'c',z:'v -> reset_state',h:'1',c:'g'}
 ,{cr:'c',z:'v -> three',h:'6',c:'g'}
 ,{cr:'c',z:'v -> inv',h:'1',c:'g'}
 ,{cr:'c',s:'1',z:'ds3',h:'48',c:'g'}
-,{cr:'c',z:'ds3 -> reset_state',h:'13',c:'g'}
 ,{cr:'c',z:'ds3 -> two',h:'9',c:'g'}
 ,{cr:'c',z:'ds3 -> inv',h:'2',c:'g'}
 ,{cr:'c',s:'1',z:'three',h:'12',c:'g'}
-,{cr:'c',z:'three -> reset_state',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'seven',h:'12',c:'g'}
-,{cr:'c',z:'seven -> reset_state',h:'6',c:'g'}
 ,{cr:'c',s:'1',z:'two',h:'18',c:'g'}
-,{cr:'c',z:'two -> reset_state',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'eight',h:'10',c:'g'}
-,{cr:'c',z:'eight -> reset_state',h:'5',c:'g'}
 ,{cr:'c',s:'1',z:'nine',h:'18',c:'g'}
-,{cr:'c',z:'nine -> reset_state',h:'9',c:'g'}
 ,{cr:'c',s:'1',z:'zero',h:'14',c:'g'}
-,{cr:'c',z:'zero -> reset_state',h:'7',c:'g'}
 ]}
 
 ],
