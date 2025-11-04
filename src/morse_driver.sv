@@ -169,7 +169,7 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 		send_to_interface();
 		//if(req.rst) begin
 
-		if( req.rst ) begin
+		if( !req.rst ) begin
 			repeat(1) @(posedge vif.drv_cb);
 		end
 
