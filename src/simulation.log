@@ -1,5 +1,5 @@
 # vsim -vopt work.top -voptargs="+acc=npr" -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit" 
-# Start time: 09:35:20 on Nov 04,2025
+# Start time: 10:21:58 on Nov 04,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "rec_fsm(fast)".
 # ** Note: (vopt-143) Recognized 1 FSM in module "trans_fsm(fast)".
@@ -33450,5 +33450,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 38205 ns  Iteration: 66  Instance: /top
 # Saving coverage database on exit...
-# End time: 09:35:27 on Nov 04,2025, Elapsed time: 0:00:07
+# End time: 10:22:04 on Nov 04,2025, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
