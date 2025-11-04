@@ -141,9 +141,6 @@ class morse_driver extends uvm_driver #(morse_sequence_item);
 			seq_item_port.item_done();
 		end
 	endtask
-	
-  int temp1 = 1;
-	int temp2 = 1;
 
 	int char_temp1 = 1 ;
 	int char_temp2 = 1 ;
