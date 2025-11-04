@@ -51,7 +51,7 @@ class morse_coverage extends uvm_component;
       	bins numbers[] = { [ 48 : 57 ] };
      	bins word_space = { 32 };
       	bins ig_bin = default;
-      }	
+      }
     endgroup
 
 	//------------------------------------------------------//

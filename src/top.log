@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 15:48:06 on Nov 03,2025
+Start time: 09:35:19 on Nov 04,2025
 vlog -sv "+acc" "+cover" "+fcover" -l top.log top.sv 
 -- Compiling module morse_top
 -- Compiling module trans_fsm
@@ -16,5 +16,5 @@ vlog -sv "+acc" "+cover" "+fcover" -l top.log top.sv
 
 Top level modules:
 	top
-End time: 15:48:07 on Nov 03,2025, Elapsed time: 0:00:01
+End time: 09:35:20 on Nov 04,2025, Elapsed time: 0:00:01
 Errors: 0, Warnings: 0

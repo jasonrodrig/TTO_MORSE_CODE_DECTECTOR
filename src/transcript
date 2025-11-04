@@ -14,8 +14,110 @@
 # //
 # coverage read -dataset coverage coverage.ucdb
 # coverage.ucdb opened as coverage dataset "coverage"
+coverage exclude -src morse_design.sv -line 804
+coverage exclude -src morse_design.sv -line 814
+coverage exclude -src morse_design.sv -line 824
+coverage exclude -src morse_design.sv -line 834
+coverage exclude -src morse_design.sv -line 844
+coverage exclude -src morse_design.sv -line 854
+coverage exclude -src morse_design.sv -line 864
+coverage exclude -src morse_design.sv -line 874
+coverage exclude -src morse_design.sv -line 884
+coverage exclude -src morse_design.sv -line 894
+coverage exclude -src morse_design.sv -line 904
+coverage exclude -src morse_design.sv -line 914
+coverage exclude -src morse_design.sv -line 924
+coverage exclude -src morse_design.sv -line 934
+coverage exclude -src morse_design.sv -line 944
+coverage exclude -src morse_design.sv -line 954
+coverage exclude -src morse_design.sv -line 964
+coverage exclude -src morse_design.sv -line 974
+coverage exclude -src morse_design.sv -line 984
+coverage exclude -src morse_design.sv -line 994
+coverage exclude -src morse_design.sv -line 1004
+coverage exclude -src morse_design.sv -line 1014
+coverage exclude -src morse_design.sv -line 1024
+coverage exclude -src morse_design.sv -line 1034
+coverage exclude -src morse_design.sv -line 1044
+coverage exclude -src morse_design.sv -line 1054
+coverage exclude -src morse_design.sv -line 1052
+coverage exclude -src morse_design.sv -line 1064
+coverage exclude -src morse_design.sv -line 1074
+coverage exclude -src morse_design.sv -line 1072
+coverage exclude -src morse_design.sv -line 1071
+coverage exclude -src morse_design.sv -line 1079
+coverage exclude -src morse_design.sv -line 1089
+coverage exclude -src morse_design.sv -line 1099
+coverage exclude -src morse_design.sv -line 1109
+coverage exclude -src morse_design.sv -line 1119
+coverage exclude -src morse_design.sv -line 1129
+coverage exclude -clear -src morse_design.sv -line 1130
+coverage exclude -clear -src morse_design.sv -line 1131
+coverage exclude -clear -src morse_design.sv -line 1132
+coverage exclude -clear -src morse_design.sv -line 1133
+coverage exclude -clear -src morse_design.sv -line 1134
+coverage exclude -clear -src morse_design.sv -line 1120
+coverage exclude -clear -src morse_design.sv -line 1121
+coverage exclude -clear -src morse_design.sv -line 1122
+coverage exclude -clear -src morse_design.sv -line 1124
+coverage exclude -clear -src morse_design.sv -line 1090
+coverage exclude -clear -src morse_design.sv -line 1091
+coverage exclude -clear -src morse_design.sv -line 1092
+coverage exclude -clear -src morse_design.sv -line 1094
+coverage exclude -clear -src morse_design.sv -line 1093
+coverage exclude -clear -src morse_design.sv -line 1100
+coverage exclude -clear -src morse_design.sv -line 1101
+coverage exclude -clear -src morse_design.sv -line 1102
+coverage exclude -clear -src morse_design.sv -line 1104
+coverage exclude -clear -src morse_design.sv -line 1103
+coverage exclude -clear -src morse_design.sv -line 1110
+coverage exclude -clear -src morse_design.sv -line 1111
+coverage exclude -clear -src morse_design.sv -line 1112
+coverage exclude -clear -src morse_design.sv -line 1113
+coverage exclude -clear -src morse_design.sv -line 1114
+coverage exclude -clear -src morse_design.sv -line 1123
+coverage exclude -clear -src morse_design.sv -line 1080
+coverage exclude -clear -src morse_design.sv -line 1081
+coverage exclude -clear -src morse_design.sv -line 1082
+coverage exclude -clear -src morse_design.sv -line 1083
+coverage exclude -clear -src morse_design.sv -line 1084
+coverage exclude -src morse_design.sv -line 1081
+coverage exclude -src morse_design.sv -line 1082
+coverage exclude -src morse_design.sv -line 1084
+coverage exclude -src morse_design.sv -line 1091
+coverage exclude -src morse_design.sv -line 1092
+coverage exclude -src morse_design.sv -line 1094
+coverage exclude -src morse_design.sv -line 1101
+coverage exclude -src morse_design.sv -line 1102
+coverage exclude -src morse_design.sv -line 1104
+coverage exclude -src morse_design.sv -line 1112
+coverage exclude -src morse_design.sv -line 1114
+coverage exclude -src morse_design.sv -line 1121
+coverage exclude -src morse_design.sv -line 1122
+coverage exclude -src morse_design.sv -line 1124
+coverage exclude -src morse_design.sv -line 1131
+coverage exclude -src morse_design.sv -line 1132
+coverage exclude -src morse_design.sv -line 1134
+coverage exclude -src morse_design.sv -line 1141
+coverage exclude -src morse_design.sv -line 1142
+coverage exclude -src morse_design.sv -line 1144
+coverage exclude -src morse_design.sv -line 1151
+coverage exclude -src morse_design.sv -line 1152
+coverage exclude -src morse_design.sv -line 1154
+coverage exclude -src morse_design.sv -line 1161
+coverage exclude -src morse_design.sv -line 1164
+coverage exclude -src morse_design.sv -line 1174
+coverage exclude -src morse_design.sv -line 1184
+coverage exclude -src morse_design.sv -line 1194
+coverage exclude -src morse_design.sv -line 1203
+coverage exclude -src morse_design.sv -line 1209
+coverage exclude -src morse_design.sv -line 1210
+coverage exclude -src morse_design.sv -line 1211
+coverage exclude -src morse_design.sv -line 1212
+coverage exclude -src morse_design.sv -line 1213
+coverage exclude -src morse_design.sv -line 722
 coverage exclude -src morse_design.sv -line 721
 coverage save coverage_excluded.ucdb
 coverage save coverage_excluded.ucdb
+coverage save coverage_excluded.ucdb
 quit -sim
-quit
