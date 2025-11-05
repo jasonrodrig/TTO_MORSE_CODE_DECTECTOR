@@ -12,94 +12,79 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# coverage read -dataset coverage coverage.ucdb
-# coverage.ucdb opened as coverage dataset "coverage"
-coverage exclude -src morse_design.sv -line 722
-coverage exclude -src morse_design.sv -line 721
-coverage exclude -src morse_design.sv -line 804
-coverage exclude -src morse_design.sv -line 814
-coverage exclude -src morse_design.sv -line 824
-coverage exclude -src morse_design.sv -line 834
-coverage exclude -src morse_design.sv -line 844
-coverage exclude -src morse_design.sv -line 854
-coverage exclude -src morse_design.sv -line 864
-coverage exclude -src morse_design.sv -line 874
-coverage exclude -src morse_design.sv -line 884
-coverage exclude -src morse_design.sv -line 894
-coverage exclude -src morse_design.sv -line 904
-coverage exclude -src morse_design.sv -line 914
-coverage exclude -src morse_design.sv -line 924
-coverage exclude -src morse_design.sv -line 934
-coverage exclude -src morse_design.sv -line 944
-coverage exclude -src morse_design.sv -line 954
-coverage exclude -src morse_design.sv -line 964
-coverage exclude -src morse_design.sv -line 974
-coverage exclude -src morse_design.sv -line 983
-coverage exclude -clear -src morse_design.sv -line 983
-coverage exclude -src morse_design.sv -line 984
-coverage exclude -src morse_design.sv -line 994
-coverage exclude -src morse_design.sv -line 1004
-coverage exclude -src morse_design.sv -line 1014
-coverage exclude -src morse_design.sv -line 1024
-coverage exclude -src morse_design.sv -line 1034
-coverage exclude -src morse_design.sv -line 1044
-coverage exclude -src morse_design.sv -line 1054
-coverage exclude -src morse_design.sv -line 1051
-coverage exclude -clear -src morse_design.sv -line 1051
-coverage exclude -src morse_design.sv -line 1052
-coverage exclude -src morse_design.sv -line 1064
-coverage exclude -src morse_design.sv -line 1071
-coverage exclude -src morse_design.sv -line 1072
+# coverage read -dataset morse_coverage morse_coverage.ucdb
+# morse_coverage.ucdb opened as coverage dataset "morse_coverage"
+coverage exclude -src morse_design.sv -line 724
+coverage exclude -src morse_design.sv -line 723
+coverage exclude -src morse_design.sv -line 807
+coverage exclude -src morse_design.sv -line 817
+coverage exclude -src morse_design.sv -line 827
+coverage exclude -src morse_design.sv -line 847
+coverage exclude -src morse_design.sv -line 837
+coverage exclude -src morse_design.sv -line 857
+coverage exclude -src morse_design.sv -line 867
+coverage exclude -src morse_design.sv -line 877
+coverage exclude -src morse_design.sv -line 887
+coverage exclude -src morse_design.sv -line 897
+coverage exclude -src morse_design.sv -line 907
+coverage exclude -src morse_design.sv -line 917
+coverage exclude -src morse_design.sv -line 927
+coverage exclude -src morse_design.sv -line 937
+coverage exclude -src morse_design.sv -line 947
+coverage exclude -src morse_design.sv -line 957
+coverage exclude -src morse_design.sv -line 967
+coverage exclude -src morse_design.sv -line 977
+coverage exclude -src morse_design.sv -line 987
+coverage exclude -src morse_design.sv -line 997
+coverage exclude -src morse_design.sv -line 1007
+coverage exclude -src morse_design.sv -line 1017
+coverage exclude -src morse_design.sv -line 1027
+coverage exclude -src morse_design.sv -line 1037
+coverage exclude -src morse_design.sv -line 1047
+coverage exclude -src morse_design.sv -line 1057
+coverage exclude -src morse_design.sv -line 1055
+coverage exclude -src morse_design.sv -line 1067
+coverage exclude -src morse_design.sv -line 1075
 coverage exclude -src morse_design.sv -line 1074
-coverage exclude -src morse_design.sv -line 1081
-coverage exclude -src morse_design.sv -line 1082
+coverage exclude -src morse_design.sv -line 1077
+coverage exclude -src morse_design.sv -line 1085
 coverage exclude -src morse_design.sv -line 1084
-coverage exclude -src morse_design.sv -line 1091
-coverage exclude -src morse_design.sv -line 1092
+coverage exclude -src morse_design.sv -line 1087
 coverage exclude -src morse_design.sv -line 1094
-coverage exclude -src morse_design.sv -line 1101
-coverage exclude -src morse_design.sv -line 1102
+coverage exclude -src morse_design.sv -line 1095
+coverage exclude -src morse_design.sv -line 1097
 coverage exclude -src morse_design.sv -line 1104
-coverage exclude -src morse_design.sv -line 1112
-coverage exclude -src morse_design.sv -line 1114
-coverage exclude -src morse_design.sv -line 1121
-coverage exclude -src morse_design.sv -line 1122
+coverage exclude -src morse_design.sv -scope /top/DUT/trans -line 1105
+# ** Warning: (vish-4036) The 'coverage exclude' command had no effect on some/all objects because
+# no matching coverage data was found.
+# 
+coverage exclude -src morse_design.sv -line 1105
+coverage exclude -src morse_design.sv -line 1107
+coverage exclude -src morse_design.sv -line 1115
+coverage exclude -src morse_design.sv -line 1117
 coverage exclude -src morse_design.sv -line 1124
-coverage exclude -src morse_design.sv -line 1131
-coverage exclude -src morse_design.sv -line 1132
+coverage exclude -src morse_design.sv -line 1125
+coverage exclude -src morse_design.sv -line 1127
 coverage exclude -src morse_design.sv -line 1134
-coverage exclude -src morse_design.sv -line 1141
-coverage exclude -src morse_design.sv -line 1142
+coverage exclude -src morse_design.sv -line 1135
+coverage exclude -src morse_design.sv -line 1137
 coverage exclude -src morse_design.sv -line 1144
-coverage exclude -src morse_design.sv -line 1151
-coverage exclude -src morse_design.sv -line 1152
+coverage exclude -src morse_design.sv -line 1145
+coverage exclude -src morse_design.sv -line 1147
 coverage exclude -src morse_design.sv -line 1154
-coverage exclude -src morse_design.sv -line 1161
+coverage exclude -src morse_design.sv -line 1155
+coverage exclude -src morse_design.sv -line 1157
 coverage exclude -src morse_design.sv -line 1164
-coverage exclude -src morse_design.sv -line 1174
-coverage exclude -src morse_design.sv -line 1184
-coverage exclude -src morse_design.sv -line 1194
-coverage exclude -src morse_design.sv -line 1203
-coverage exclude -src morse_design.sv -line 1209
-coverage exclude -src morse_design.sv -line 1210
-coverage exclude -src morse_design.sv -line 1211
+coverage exclude -src morse_design.sv -line 1167
+coverage exclude -src morse_design.sv -line 1177
+coverage exclude -src morse_design.sv -line 1187
+coverage exclude -src morse_design.sv -line 1197
+coverage exclude -src morse_design.sv -line 1206
 coverage exclude -src morse_design.sv -line 1212
 coverage exclude -src morse_design.sv -line 1213
-examine -r /* | grep sout
-# ** Error: (vish-4014) No objects found matching '|'.
-# 
-
-find signals *sout*
-
-find signals *sout*
-
-
-find instances
-
-find siganls *sout*
-# unknown or ambiguous subcommand "siganls": must be blocks, classes, connections, drivers, infiles, insource, instances, loads, nets, objects, signals, or virtuals
-find signals *sout*
-coverage save coverage_excluded.ucdb
-coverage save coverage_excluded.ucdb
-coverage save coverage_excluded.ucdb
+coverage exclude -src morse_design.sv -line 1214
+coverage exclude -src morse_design.sv -line 1215
+coverage exclude -src morse_design.sv -line 1216
+coverage save code_coverage.ucdb
+coverage save code_coverage.ucdb
 quit -sim

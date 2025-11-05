@@ -17,9 +17,9 @@ main:
 	source $(QUESTA)
 	make clean
 	vlog -sv +acc +cover +fcover -l top.log top.sv
-	vsim -vopt work.top -voptargs=+acc=npr -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll coverage.ucdb; run -all; exit"
+	vsim -vopt work.top -voptargs=+acc=npr -assertdebug -l simulation.log -coverage -c -do "coverage save -onexit -assert -directive -cvg -codeAll morse_coverage.ucdb; run -all; exit"
 	#coverage save coverage_excluded.ucdb
-	vcover report -html coverage_excluded.ucdb -htmldir covReport -details
+	vcover report -html morse_coverage.ucdb -htmldir covReport -details
  
 read:
 	source $(QUESTA)

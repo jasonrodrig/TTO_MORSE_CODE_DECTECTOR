@@ -632,7 +632,9 @@ module morse_top(
 	trans_fsm trans (.clk(clk),.rst(rst),.dot_inp(dot_inp),.dash_inp(dash_inp),.char_space_inp(char_space_inp),.word_space_inp(word_space_inp),.parallel_out(trans_out));
 
 	rec_fsm rec(.clk(clk),.p_in(trans_out),.rst(rst),.s_out(serial_out));
-
+  
+  //coverage toggle_ignore serial_out 5
+ //coverage toggle_ignore sout 5
 	always @(*) begin
 		sout = serial_out;
 	end
@@ -732,9 +734,10 @@ module rec_fsm(clk,p_in,rst,s_out);
 	input [2:0] p_in; 
 
 	output reg [7:0] s_out;
-
+  //coverage toggle_ignore s_out 5
 	reg [7:0] state;
 	reg [7:0] next_state;
+	
 	//reg [7:0] s_out;
 
 	parameter [7:0] reset_state = 8'hff;
